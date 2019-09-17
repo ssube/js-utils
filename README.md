@@ -2,6 +2,21 @@
 
 This project contains the base configuration and build scripts for most of my Typescript/Rollup projects.
 
+[![Pipeline status](https://img.shields.io/gitlab/pipeline/ssube/rollup-template.svg?gitlab_url=https%3A%2F%2Fgit.apextoaster.com&logo=gitlab)](https://git.apextoaster.com/ssube/rollup-template/commits/master)
+[![Test coverage](https://sonarcloud.io/api/project_badges/measure?project=ssube_rollup-template&metric=coverage)](https://sonarcloud.io/dashboard?id=ssube_rollup-template)
+[![MIT license](https://img.shields.io/github/license/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/blob/master/LICENSE.md)
+
+[![Renovate badge](https://badges.renovateapi.com/github/ssube/rollup-template)](https://renovatebot.com)
+[![Known vulnerabilities](https://snyk.io/test/github/ssube/rollup-template/badge.svg)](https://snyk.io/test/github/ssube/rollup-template)
+[![Dependency status](https://img.shields.io/david/ssube/rollup-template.svg)](https://david-dm.org/ssube/rollup-template)
+[![Dev dependency status](https://img.shields.io/david/dev/ssube/rollup-template.svg)](https://david-dm.org/ssube/rollup-template?type=dev)
+
+[![Maintainability score](https://api.codeclimate.com/v1/badges/0ca333e0379bda050d84/maintainability)](https://codeclimate.com/github/ssube/rollup-template/maintainability)
+[![Technical debt ratio](https://img.shields.io/codeclimate/tech-debt/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/trends/technical_debt)
+[![Quality issues](https://img.shields.io/codeclimate/issues/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/issues)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ssube/rollup-template.svg?logo=lgtm)](https://lgtm.com/projects/g/ssube/rollup-template/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/ssube/rollup-template.svg)](https://lgtm.com/projects/g/ssube/rollup-template/alerts/)
+
 ## Contents
 
 - [Rollup Template](#rollup-template)
@@ -36,8 +51,9 @@ This project contains the base configuration and build scripts for most of my Ty
 
 To create a new repository from this template:
 
-- `git clone git@github.com:ssube/rollup-template.git new-project`
-- create your new repo
+- create your new repo on Github & Gitlab (your server or Gitlab.com)
+- `git clone git@github.com:ssube/rollup-template.git your-project`
+- `cd your-project`
 - `git remote add github git@github.com:yourname/your-project.git`
 - `git remote add gitlab git@gitlab.com:yourname/your-project.git`
 - set up repository mirroring in Gitlab
@@ -63,8 +79,8 @@ Gitlab.com).
 
 ### Maintenance Bots
 
-Good tests and clever bots can eliminate the most painful parts of project maintenance. This repository is configured
-to work with:
+Good tests and clever bots can eliminate the most painful parts of project maintenance. This repository is
+configured to work with:
 
 - [CodeCov](https://codecov.io/)
 - [Code Climate](https://codeclimate.com/)
