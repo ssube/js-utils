@@ -28,6 +28,7 @@ This project contains the base configuration and build scripts for most of my Ty
     - [Daily](#daily)
   - [External Services](#external-services)
     - [Maintenance Bots](#maintenance-bots)
+  - [External Secrets](#external-secrets)
 
 ## Features
 
@@ -90,3 +91,9 @@ configured to work with:
 - [SonarCloud](https://sonarcloud.io/)
 
 None of these are required, but Renovate and Snyk can be very helpful when dependencies release a security patch.
+
+## External Secrets
+
+This template expects a few secrets to exist in the environment, including tokens for the [external services](#external-services).
+
+**TODO:** doc secrets
