@@ -34,9 +34,10 @@
   before_script:
     - mkdir ${HOME}/.docker
     - echo "${DOCKER_SECRET}" | base64 -d > ${HOME}/.docker/config.json
-    - docker info
   script:
-    - echo "Building image: ${IMAGE_TAG}"
+    - docker info
+    - |
+      echo "Building image: ${IMAGE_TAG}"
     - docker build -t $IMAGE_TAG .
     - docker push $IMAGE_TAG
   after_script:
