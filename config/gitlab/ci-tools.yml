@@ -36,6 +36,7 @@
     - echo "${DOCKER_SECRET}" | base64 -d > ${HOME}/.docker/config.json
     - docker info
   script:
+    - echo "Building image: ${IMAGE_TAG}"
     - docker build -t $IMAGE_TAG .
     - docker push $IMAGE_TAG
   after_script:
@@ -44,7 +45,7 @@
   variables:
     DOCKER_DRIVER: overlay2
     DOCKER_HOST: tcp://localhost:2375
-    IMAGE_TAG: ${CI_PROJECT_PATH}:${CI_COMMIT_TAG:-${CI_COMMIT_REF_SLUG}}
+    IMAGE_TAG: "${CI_PROJECT_PATH}:${CI_COMMIT_TAG:-${CI_COMMIT_REF_SLUG}}"
 
 .build-node:
   image: apextoaster/node:10.1
