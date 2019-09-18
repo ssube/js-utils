@@ -4,11 +4,12 @@ FROM node:12-stretch
 COPY package.json /app/package.json
 COPY yarn.lock /app/yarn.lock
 
-COPY . /app
-
 WORKDIR /app
 
 RUN yarn install --production
+
+COPY . /app
+
 RUN yarn global add file:$(pwd)
 ENV PATH="${PATH}:$(yarn global bin)"
 
