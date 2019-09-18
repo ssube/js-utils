@@ -24,8 +24,9 @@ This project contains the base configuration and build scripts for most of my Ty
   - [Features](#features)
     - [Intentionally Omitted Features](#intentionally-omitted-features)
   - [Usage](#usage)
-    - [Setup](#setup)
-    - [Daily](#daily)
+    - [To Setup](#to-setup)
+    - [To Build](#to-build)
+    - [To Release](#to-release)
   - [External Services](#external-services)
     - [Maintenance Bots](#maintenance-bots)
   - [External Secrets](#external-secrets)
@@ -48,7 +49,7 @@ This project contains the base configuration and build scripts for most of my Ty
 
 ## Usage
 
-### Setup
+### To Setup
 
 To create a new repository from this template:
 
@@ -63,7 +64,7 @@ To create a new repository from this template:
 - install your dependencies
 - write some code
 
-### Daily
+### To Build
 
 Once your project is set up:
 
@@ -72,6 +73,16 @@ Once your project is set up:
 - `make git-push`
 
 The `git-push` target pushed to Github first, to avoid conflicts with changes from bots and other contributors.
+
+### To Release
+
+When your project is ready to release:
+
+- `make release-dry` to make sure your changelog and options look right
+- `make release`
+
+Additional options can be passed with the `RELEASE_OPTS` variable. Frequently-used options include `--release-as minor`
+and `--prerelease`.
 
 ## External Services
 
