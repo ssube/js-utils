@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1](https://github.com/ssube/rollup-template/compare/v0.2.0...v0.2.1) (2019-09-18)
+
+
+### Bug Fixes
+
+* **build:** pick a unique package name ([309e986](https://github.com/ssube/rollup-template/commit/309e986))
+* **docs:** note CC reporter ID ([d61ae9e](https://github.com/ssube/rollup-template/commit/d61ae9e))
+* **docs:** note release process ([7592e50](https://github.com/ssube/rollup-template/commit/7592e50))
+
 ## 0.2.0 (2019-09-18)
 
 
