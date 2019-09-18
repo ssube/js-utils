@@ -2,7 +2,9 @@ FROM node:12-stretch
 # alpine may be smaller, but comes with a 10-15% perf hit
 
 COPY package.json /app/package.json
-COPY out/ /app/out/
+COPY yarn.lock /app/yarn.lock
+
+COPY . /app
 
 WORKDIR /app
 
