@@ -11,6 +11,7 @@ This project contains the base configuration and build scripts for most of my Ty
 [![Dev dependency status](https://img.shields.io/david/dev/ssube/rollup-template.svg)](https://david-dm.org/ssube/rollup-template?type=dev)
 
 [![Maintainability score](https://api.codeclimate.com/v1/badges/0ca333e0379bda050d84/maintainability)](https://codeclimate.com/github/ssube/rollup-template/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/0ca333e0379bda050d84/test_coverage)](https://codeclimate.com/github/ssube/rollup-template/test_coverage)
 [![Technical debt ratio](https://img.shields.io/codeclimate/tech-debt/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/trends/technical_debt)
 [![Quality issues](https://img.shields.io/codeclimate/issues/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/issues)
 
@@ -30,15 +31,17 @@ This project contains the base configuration and build scripts for most of my Ty
 
 ## Features
 
-- bundled with rollup
-- tested with mocha
-- type checking from typescript
-- style checking from tslint (with plugins)
-- code coverage with source maps from nyc
-- pipeline and published tags with gitlab CI
-- identical local and CI builds with make
-- test harness with mocha, source map support, and helpers for async leak tracking
-- changelog from standard-release
+- build scripts with `make`
+- build pipeline with `gitlab`
+  - update github commit status
+  - publish docker images from branches & tags
+  - publish npm packages from tags
+- bundled with `rollup`
+- type checking with `typescript`
+- style checking with `tslint` (and plugins)
+- tested with `mocha` (with source map supports and helpers for async leak tracking)
+- code coverage with `nyc`
+- changelog with `standard-release`
 
 ### Intentionally Omitted Features
 
