@@ -9,8 +9,10 @@ import typescript from 'rollup-plugin-typescript2';
 
 const metadata = require('../package.json');
 const namedExports = require('./rollup-named.json');
-const targetPath = process.env['TARGET_PATH'];
 const shebang = '#! /usr/bin/env node\n\n';
+
+const rootPath = process.env['ROOT_PATH'];
+const targetPath = process.env['TARGET_PATH'];
 
 const bundle = {
 	external: [
@@ -19,24 +21,24 @@ const bundle = {
 		'sinon',
 	],
 	input: [
-		'src/index.ts',
-		'test/harness.ts',
-		'test/**/Test*.ts',
+		join(rootPath, 'src/index.ts'),
+		join(rootPath, 'test/harness.ts'),
+		join(rootPath, 'test/**/Test*.ts'),
 	],
 	manualChunks(id) {
-		if (id.includes('/test/')) {
+		if (id.match(/[\/\\]test[\/\\]/)) {
 			return 'test'
 		}
 
-		if (id.includes('/node_modules/')) {
+		if (id.match(/[\/\\]node_modules[\/\\]/)) {
 			return 'vendor';
 		}
 
-		if (id.includes('/src/index')) {
+		if (id.match(/[\/\\]src[\/\\]index[\/\\]/)) {
 			return 'index';
 		}
 
-		if (id.includes('/src/')) {
+		if (id.match(/[\/\\]src[\/\\]/)) {
 			return 'main';
 		}
 	},
@@ -72,11 +74,11 @@ const bundle = {
 			namedExports,
 		}),
 		tslint({
-			configuration: './config/tslint.json',
+			configuration: require('./tslint.json'),
 			throwOnError: true,
 		}),
 		typescript({
-			cacheRoot: 'out/cache/rts2',
+			cacheRoot: join(targetPath, 'cache/rts2'),
 			rollupCommonJSResolveHack: true,
 		}),
 	],
