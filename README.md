@@ -117,3 +117,5 @@ This template expects a few secrets to exist in the environment, including token
 | GITHUB_SECRET       | github.com token, required for publishing status      |
 | NPM_SECRET          | npmjs.com token, required for publishing npm packages |
 | SONAR_SECRET        | sonarcloud token                                      |
+
+Secrets should be provided as environment variables, with the secret value `base64`-encoded.
