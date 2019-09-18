@@ -96,4 +96,11 @@ None of these are required, but Renovate and Snyk can be very helpful when depen
 
 This template expects a few secrets to exist in the environment, including tokens for the [external services](#external-services).
 
-**TODO:** doc secrets
+| Name               | Description                                           |
+| ------------------ | ----------------------------------------------------- |
+| CODECLIMATE_SECRET | code climate token                                    |
+| CODECOV_SECRET     | codecov token                                         |
+| DOCKER_SECRET      | docker config, required for publishing images         |
+| GITHUB_SECRET      | github.com token, required for publishing status      |
+| NPM_SECRET         | npmjs.com token, required for publishing npm packages |
+| SONAR_SECRET       | sonarcloud token                                      |
