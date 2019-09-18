@@ -9,5 +9,4 @@
 |  Package | Description |
 |  --- | --- |
 |  [@apextoaster/rollup-template](./rollup-template.md) |  |
-|  [template](./template.md) |  |
 

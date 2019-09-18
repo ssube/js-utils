@@ -1,4 +1,4 @@
-import { join } from 'path';
+import { join, sep } from 'path';
 import commonjs from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
 import multiEntry from 'rollup-plugin-multi-entry';
@@ -21,24 +21,24 @@ const bundle = {
 		'sinon',
 	],
 	input: [
-		join(rootPath, 'src/index.ts'),
-		join(rootPath, 'test/harness.ts'),
-		join(rootPath, 'test/**/Test*.ts'),
+		join(rootPath, 'src', 'index.ts'),
+		join(rootPath, 'test', 'harness.ts'),
+		join(rootPath, 'test', '**', 'Test*.ts'),
 	],
 	manualChunks(id) {
-		if (id.match(/[\/\\]test[\/\\]/)) {
+		if (id.includes(`${sep}test${sep}`)) {
 			return 'test'
 		}
 
-		if (id.match(/[\/\\]node_modules[\/\\]/)) {
+		if (id.includes(`${sep}node_modules${sep}`)) {
 			return 'vendor';
 		}
 
-		if (id.match(/[\/\\]src[\/\\]index[\/\\]/)) {
+		if (id.includes(`${sep}src${sep}index`)) {
 			return 'index';
 		}
 
-		if (id.match(/[\/\\]src[\/\\]/)) {
+		if (id.includes(`${sep}src${sep}`)) {
 			return 'main';
 		}
 	},
