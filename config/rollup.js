@@ -1,3 +1,4 @@
+import { join } from 'path';
 import commonjs from 'rollup-plugin-commonjs';
 import json from 'rollup-plugin-json';
 import multiEntry from 'rollup-plugin-multi-entry';
@@ -6,8 +7,9 @@ import resolve from 'rollup-plugin-node-resolve';
 import tslint from 'rollup-plugin-tslint';
 import typescript from 'rollup-plugin-typescript2';
 
-const namedExports = require('./rollup-named.json');
 const metadata = require('../package.json');
+const namedExports = require('./rollup-named.json');
+const targetPath = process.env['TARGET_PATH'];
 const shebang = '#! /usr/bin/env node\n\n';
 
 const bundle = {
@@ -39,7 +41,7 @@ const bundle = {
 		}
 	},
 	output: {
-		dir: 'out/',
+		dir: targetPath,
 		chunkFileNames: '[name].js',
 		entryFileNames: 'entry-[name].js',
 		format: 'cjs',
