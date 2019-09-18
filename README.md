@@ -3,7 +3,6 @@
 This project contains the base configuration and build scripts for most of my Typescript/Rollup projects.
 
 [![Pipeline status](https://img.shields.io/gitlab/pipeline/ssube/rollup-template.svg?gitlab_url=https%3A%2F%2Fgit.apextoaster.com&logo=gitlab)](https://git.apextoaster.com/ssube/rollup-template/commits/master)
-[![Test coverage](https://sonarcloud.io/api/project_badges/measure?project=ssube_rollup-template&metric=coverage)](https://sonarcloud.io/dashboard?id=ssube_rollup-template)
 [![MIT license](https://img.shields.io/github/license/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/blob/master/LICENSE.md)
 
 [![Renovate badge](https://badges.renovateapi.com/github/ssube/rollup-template)](https://renovatebot.com)
@@ -14,8 +13,6 @@ This project contains the base configuration and build scripts for most of my Ty
 [![Maintainability score](https://api.codeclimate.com/v1/badges/0ca333e0379bda050d84/maintainability)](https://codeclimate.com/github/ssube/rollup-template/maintainability)
 [![Technical debt ratio](https://img.shields.io/codeclimate/tech-debt/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/trends/technical_debt)
 [![Quality issues](https://img.shields.io/codeclimate/issues/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/issues)
-[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ssube/rollup-template.svg?logo=lgtm)](https://lgtm.com/projects/g/ssube/rollup-template/context:javascript)
-[![Total alerts](https://img.shields.io/lgtm/alerts/g/ssube/rollup-template.svg)](https://lgtm.com/projects/g/ssube/rollup-template/alerts/)
 
 ## Contents
 
@@ -40,7 +37,8 @@ This project contains the base configuration and build scripts for most of my Ty
 - code coverage with source maps from nyc
 - pipeline and published tags with gitlab CI
 - identical local and CI builds with make
-- test harness with source map support and helpers for async leak tracking
+- test harness with mocha, source map support, and helpers for async leak tracking
+- changelog from standard-release
 
 ### Intentionally Omitted Features
 
