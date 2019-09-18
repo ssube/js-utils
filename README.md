@@ -37,11 +37,11 @@ This project contains the base configuration and build scripts for most of my Ty
   - publish docker images from branches & tags
   - publish npm packages from tags
 - bundled with `rollup`
-- type checking with `typescript`
-- style checking with `tslint` (and plugins)
-- tested with `mocha` (with source map supports and helpers for async leak tracking)
-- code coverage with `nyc`
-- changelog with `standard-release`
+- type checked with `typescript`
+- style checked with `tslint` (and plugins)
+- tested with `mocha` (with source map support and helpers for async leak tracking)
+- code coverage measured with `nyc`
+- changelog generated with `standard-release`
 
 ### Intentionally Omitted Features
 
@@ -73,7 +73,7 @@ Once your project is set up:
 - commit
 - `make git-push`
 
-The `git-push` target pushed to Github first, to avoid conflicts with changes from bots and other contributors.
+The `git-push` target pushes to Github first, to avoid conflicts with changes from bots and other contributors.
 
 ### To Release
 
