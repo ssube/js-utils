@@ -1,4 +1,4 @@
-#! /bin/bash
+#! /bin/sh
 
 IMAGE_PUSH="${1:---skip}"
 IMAGE_TAG="${CI_PROJECT_PATH}:${CI_COMMIT_TAG:-${CI_COMMIT_REF_SLUG}}"
