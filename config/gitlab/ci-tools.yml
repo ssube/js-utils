@@ -35,7 +35,7 @@
     - mkdir ${HOME}/.docker
     - echo "${DOCKER_SECRET}" | base64 -d > ${HOME}/.docker/config.json
   script:
-    - ${CI_PROJECT_DIR}/scripts/docker-build.sh
+    - ${CI_PROJECT_DIR}/scripts/docker-build.sh --push
   after_script:
     - rm -rfv ${HOME}/.docker
 
