@@ -104,7 +104,7 @@ github-pending:
     - .build-curl
 
   script:
-    - ./scripts/github-status.sh pending
+    - ${CI_PROJECT_DIR}/scripts/github-status.sh pending
 
 github-failure:
   stage: status-post
@@ -113,7 +113,7 @@ github-failure:
 
   when: on_failure
   script:
-    - ./scripts/github-status.sh failure
+    - ${CI_PROJECT_DIR}/scripts/github-status.sh failure
 
 github-success:
   stage: status-post
@@ -122,4 +122,4 @@ github-success:
 
   when: on_success
   script:
-    - ./scripts/github-status.sh success
+    - ${CI_PROJECT_DIR}/scripts/github-status.sh success
