@@ -34,13 +34,8 @@
   before_script:
     - mkdir ${HOME}/.docker
     - echo "${DOCKER_SECRET}" | base64 -d > ${HOME}/.docker/config.json
-    - export IMAGE_TAG="${CI_PROJECT_PATH}:${CI_COMMIT_TAG:-${CI_COMMIT_REF_SLUG}}"
   script:
-    - docker info
-    - |
-      echo "Building image: ${IMAGE_TAG}"
-    - docker build -t $IMAGE_TAG .
-    - docker push $IMAGE_TAG
+    - ./scripts/docker-build.sh
   after_script:
     - rm -rfv ${HOME}/.docker
 
