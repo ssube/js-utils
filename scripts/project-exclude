@@ -1,3 +1,15 @@
-docs/api/
+CHANGELOG.md
+config/rollup-named.json
+Dockerfile
+docs/api/index.md
+docs/api/rollup-template.md
+LICENSE.md
+package.json
+README.md
+scripts/project-create.sh
+scripts/project-exclude
+scripts/project-newonly
+scripts/project-update.sh
 src/app.ts
 test/TestApp.ts
+yarn.lock
