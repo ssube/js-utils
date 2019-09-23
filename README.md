@@ -1,6 +1,7 @@
 # Rollup Template
 
-This project contains the base configuration and build scripts for most of my Typescript/Rollup projects.
+This project contains the base configuration and build scripts for most of
+my Typescript projects, along with scripts to createe a new project.
 
 [![Pipeline status](https://img.shields.io/gitlab/pipeline/ssube/rollup-template.svg?gitlab_url=https%3A%2F%2Fgit.apextoaster.com&logo=gitlab)](https://git.apextoaster.com/ssube/rollup-template/commits/master)
 [![MIT license](https://img.shields.io/github/license/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/blob/master/LICENSE.md)
@@ -73,7 +74,8 @@ Once your project is set up:
 - commit
 - `make git-push`
 
-The `git-push` target pushes to Github first, to avoid conflicts with changes from bots and other contributors.
+The `git-push` target pushes to Github first, to avoid conflicts with changes from bots and
+other contributors.
 
 ### To Release
 
@@ -82,18 +84,18 @@ When your project is ready to release:
 - `make release-dry` to make sure your changelog and options look right
 - `make release`
 
-Additional options can be passed with the `RELEASE_OPTS` variable. Frequently-used options include `--release-as minor`
-and `--prerelease`.
+Additional options can be passed with the `RELEASE_OPTS` variable. Frequently-used options
+include `--release-as minor` and `--prerelease`.
 
 ## External Services
 
-This template works with or expects a few external services, namely a Gitlab CI server (self-hosted or using
-Gitlab.com).
+This template works with or expects a few external services, namely a Gitlab CI server
+(self-hosted or using Gitlab.com).
 
 ### Maintenance Bots
 
-Good tests and clever bots can eliminate the most painful parts of project maintenance. This repository is
-configured to work with:
+Good tests and clever bots can eliminate the most painful parts of project maintenance. This
+repository is configured to work with:
 
 - [CodeCov](https://codecov.io/)
 - [Code Climate](https://codeclimate.com/)
@@ -102,11 +104,13 @@ configured to work with:
 - [Snyk](https://snyk.io/)
 - [SonarCloud](https://sonarcloud.io/)
 
-None of these are required, but Renovate and Snyk can be very helpful when dependencies release a security patch.
+None of these are required, but Renovate and Snyk can be very helpful when dependencies release
+a security patch (and even more so when they decline).
 
 ## External Secrets
 
-This template expects a few secrets to exist in the environment, including tokens for the [external services](#external-services).
+This template expects a few secrets to exist in the environment, including tokens for
+the [external services](#external-services).
 
 | Name                | Description                                           |
 | ------------------- | ----------------------------------------------------- |

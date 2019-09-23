@@ -9,8 +9,8 @@ pushd ../"${PROJECT_NAME}"
 
 echo "Setting up repository..."
 git init
-git remote add github git@github.com:${PROJECT_PATH}/${PROJECT_NAME}.git
-git remote add gitlab git@git.apextoaster.com:${PROJECT_PATH}/${PROJECT_NAME}.git
+git remote add github "git@github.com:${PROJECT_PATH}/${PROJECT_NAME}.git"
+git remote add gitlab "git@git.apextoaster.com:${PROJECT_PATH}/${PROJECT_NAME}.git"
 
 echo "Setting up template..."
 popd
