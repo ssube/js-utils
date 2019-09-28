@@ -1,3 +1,4 @@
 config/rollup-named.json
 LICENSE.md
 README.md
+run.mk
