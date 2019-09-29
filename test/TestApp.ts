@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import { spy } from 'sinon';
 
-import { createApp } from '../src/app';
+import { main } from '../src/app';
 import { describeLeaks, itLeaks } from './helpers/async';
 
 describeLeaks('app', async () => {
@@ -9,7 +9,7 @@ describeLeaks('app', async () => {
     /* tslint:disable-next-line:no-console no-unbound-method */
     const logSpy = spy(console, 'log');
 
-    await createApp();
+    await main([]);
 
     expect(logSpy).to.have.callCount(1);
   });
