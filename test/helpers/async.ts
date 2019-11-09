@@ -1,12 +1,17 @@
 import { AsyncHook, createHook } from 'async_hooks';
 
 // this will pull Mocha internals out of the stacks
-// tslint:disable-next-line:no-var-requires
+/* eslint-disable-next-line @typescript-eslint/no-var-requires */
 const { stackTraceFilter } = require('mocha/lib/utils');
 const filterStack = stackTraceFilter();
 
 type AsyncMochaTest = (this: Mocha.Context | void) => Promise<void>;
 type AsyncMochaSuite = (this: Mocha.Suite) => Promise<void>;
+
+function isNil<T>(val: T | null | undefined): val is null | undefined {
+  /* eslint-disable-next-line no-null/no-null */
+  return val === null || val === undefined;
+}
 
 export interface TrackedResource {
   source: string;
@@ -16,10 +21,6 @@ export interface TrackedResource {
 
 function debugMode() {
   return Reflect.has(process.env, 'DEBUG');
-}
-
-function isNil<T>(val: T | null | undefined): val is null | undefined {
-  return val === null || val === undefined;
 }
 
 /**
@@ -70,8 +71,8 @@ export class Tracker {
     this.hook.disable();
   }
 
+  /* eslint-disable no-console, no-invalid-this */
   public dump() {
-    /* tslint:disable:no-console */
     console.error(`tracking ${this.resources.size} async resources`);
     this.resources.forEach((res, id) => {
       console.error(`${id}: ${res.type}`);
@@ -80,7 +81,6 @@ export class Tracker {
         console.error('\n');
       }
     });
-    /* tslint:enable:no-console */
   }
 
   public enable() {
@@ -114,7 +114,7 @@ export function describeLeaks(description: string, cb: AsyncMochaSuite): Mocha.S
         if (debugMode()) {
           throw new Error(msg);
         } else {
-          // tslint:disable-next-line:no-console
+          /* eslint-disable-next-line no-console */
           console.warn(msg);
         }
       }
@@ -124,7 +124,7 @@ export function describeLeaks(description: string, cb: AsyncMochaSuite): Mocha.S
 
     const suite: PromiseLike<void> | undefined = cb.call(this);
     if (isNil(suite) || !Reflect.has(suite, 'then')) {
-      // tslint:disable-next-line:no-console
+      /* eslint-disable-next-line no-console */
       console.error(`test suite '${description}' did not return a promise`);
     }
 
