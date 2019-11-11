@@ -1,34 +1,8 @@
 # Rollup Template
 
-This project contains the base configuration and build scripts for most of
-my Typescript projects, along with scripts to createe a new project.
-
-[![Pipeline status](https://img.shields.io/gitlab/pipeline/ssube/rollup-template.svg?gitlab_url=https%3A%2F%2Fgit.apextoaster.com&logo=gitlab)](https://git.apextoaster.com/ssube/rollup-template/commits/master)
-[![MIT license](https://img.shields.io/github/license/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/blob/master/LICENSE.md)
-
-[![Renovate badge](https://badges.renovateapi.com/github/ssube/rollup-template)](https://renovatebot.com)
-[![Known vulnerabilities](https://snyk.io/test/github/ssube/rollup-template/badge.svg)](https://snyk.io/test/github/ssube/rollup-template)
-[![Dependency status](https://img.shields.io/david/ssube/rollup-template.svg)](https://david-dm.org/ssube/rollup-template)
-[![Dev dependency status](https://img.shields.io/david/dev/ssube/rollup-template.svg)](https://david-dm.org/ssube/rollup-template?type=dev)
-
-[![Maintainability score](https://api.codeclimate.com/v1/badges/0ca333e0379bda050d84/maintainability)](https://codeclimate.com/github/ssube/rollup-template/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/0ca333e0379bda050d84/test_coverage)](https://codeclimate.com/github/ssube/rollup-template/test_coverage)
-[![Technical debt ratio](https://img.shields.io/codeclimate/tech-debt/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/trends/technical_debt)
-[![Quality issues](https://img.shields.io/codeclimate/issues/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/issues)
-
-## Contents
-
-- [Rollup Template](#rollup-template)
-  - [Contents](#contents)
-  - [Features](#features)
-    - [Intentionally Omitted Features](#intentionally-omitted-features)
-  - [Usage](#usage)
-    - [To Setup](#to-setup)
-    - [To Build](#to-build)
-    - [To Release](#to-release)
-  - [External Services](#external-services)
-    - [Maintenance Bots](#maintenance-bots)
-  - [External Secrets](#external-secrets)
+This project contains the configuration and build scripts for most of
+my Typescript projects, with scripts to create a new project and keep
+existing ones up-to-date. Even this readme is a template for others.
 
 ## Features
 
@@ -48,6 +22,55 @@ my Typescript projects, along with scripts to createe a new project.
 
 - everything frontend: React, CSS, etc
 - heavy backend libraries: ORMs, etc
+
+## Contents
+
+- [Rollup Template](#rollup-template)
+  - [Features](#features)
+    - [Intentionally Omitted Features](#intentionally-omitted-features)
+  - [Contents](#contents)
+  - [Status](#status)
+  - [Releases](#releases)
+  - [Usage](#usage)
+    - [To Setup](#to-setup)
+    - [To Build](#to-build)
+    - [To Release](#to-release)
+  - [External Services](#external-services)
+    - [Maintenance Bots](#maintenance-bots)
+  - [External Secrets](#external-secrets)
+
+## Status
+
+[![Pipeline status](https://img.shields.io/gitlab/pipeline/ssube/rollup-template.svg?gitlab_url=https%3A%2F%2Fgit.apextoaster.com&logo=gitlab)](https://git.apextoaster.com/ssube/rollup-template/commits/master)
+[![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ssube_rollup-template&metric=ncloc)](https://sonarcloud.io/dashboard?id=ssube_rollup-template)
+[![Test coverage](https://codecov.io/gh/ssube/rollup-template/branch/master/graph/badge.svg)](https://codecov.io/gh/ssube/rollup-template)
+[![MIT license](https://img.shields.io/github/license/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/blob/master/LICENSE.md)
+[![FOSSA Status](https://app.fossa.com/api/projects/git%2Bgithub.com%2Fssube%2Frollup-template.svg?type=shield)](https://app.fossa.com/projects/git%2Bgithub.com%2Fssube%2Frollup-template?ref=badge_shield)
+
+[![Open bug count](https://img.shields.io/github/issues-raw/ssube/rollup-template/type-bug.svg)](https://github.com/ssube/rollup-template/issues?q=is%3Aopen+is%3Aissue+label%3Atype%2Fbug)
+[![Open issue count](https://img.shields.io/github/issues-raw/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/issues?q=is%3Aopen+is%3Aissue)
+[![Closed issue count](https://img.shields.io/github/issues-closed-raw/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/issues?q=is%3Aissue+is%3Aclosed)
+
+[![Renovate badge](https://badges.renovateapi.com/github/ssube/rollup-template)](https://renovatebot.com)
+[![Dependency status](https://img.shields.io/david/ssube/rollup-template.svg)](https://david-dm.org/ssube/rollup-template)
+[![Dev dependency status](https://img.shields.io/david/dev/ssube/rollup-template.svg)](https://david-dm.org/ssube/rollup-template?type=dev)
+[![Known vulnerabilities](https://snyk.io/test/github/ssube/rollup-template/badge.svg)](https://snyk.io/test/github/ssube/rollup-template)
+
+[![Maintainability score](https://api.codeclimate.com/v1/badges/0ca333e0379bda050d84/maintainability)](https://codeclimate.com/github/ssube/rollup-template/maintainability)
+[![Technical debt ratio](https://img.shields.io/codeclimate/tech-debt/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/trends/technical_debt)
+[![Quality issues](https://img.shields.io/codeclimate/issues/ssube/rollup-template.svg)](https://codeclimate.com/github/ssube/rollup-template/issues)
+[![Language grade: JavaScript](https://img.shields.io/lgtm/grade/javascript/g/ssube/rollup-template.svg?logo=lgtm)](https://lgtm.com/projects/g/ssube/rollup-template/context:javascript)
+[![Total alerts](https://img.shields.io/lgtm/alerts/g/ssube/rollup-template.svg)](https://lgtm.com/projects/g/ssube/rollup-template/alerts/)
+
+## Releases
+
+[![github release link](https://img.shields.io/badge/github-release-blue?logo=github)](https://github.com/ssube/rollup-template/releases)
+[![github release version](https://img.shields.io/github/tag/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/releases)
+[![github commits since release](https://img.shields.io/github/commits-since/ssube/rollup-template/v0.1.0.svg)](https://github.com/ssube/rollup-template/compare/v0.1.0...master)
+
+[![npm package link](https://img.shields.io/badge/npm-package-blue?logo=npm)](https://www.npmjs.com/package/rollup-template)
+[![npm release version](https://img.shields.io/npm/v/rollup-template.svg)](https://www.npmjs.com/package/rollup-template)
+[![Typescript definitions](https://img.shields.io/npm/types/rollup-template.svg)](https://www.npmjs.com/package/rollup-template)
 
 ## Usage
 
