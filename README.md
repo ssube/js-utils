@@ -13,7 +13,7 @@ existing ones up-to-date. Even this readme is a template for others.
   - publish npm packages from tags
 - bundled with `rollup`
 - type checked with `typescript`
-- style checked with `tslint` (and plugins)
+- style checked with `eslint` (with `tslint` rules and other plugins)
 - tested with `mocha` (with source map support and helpers for async leak tracking)
 - code coverage measured with `nyc`
 - changelog generated with `standard-release`
