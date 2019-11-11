@@ -128,7 +128,7 @@ maintenance. This repository is configured to work with:
 - [SonarCloud](https://sonarcloud.io/)
 
 None of these are required, but Renovate and Snyk can be very helpful when
-dependencies release a security patch (and even more so when they decline).
+dependencies release a security patch.
 
 ## External Secrets
 
