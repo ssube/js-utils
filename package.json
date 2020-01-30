@@ -26,7 +26,7 @@
     "@microsoft/api-extractor": "7.7.8",
     "@types/chai": "4.2.7",
     "@types/chai-as-promised": "7.1.2",
-    "@types/mocha": "5.2.7",
+    "@types/mocha": "7.0.1",
     "@types/sinon-chai": "3.2.3",
     "@types/source-map-support": "0.5.1",
     "@typescript-eslint/eslint-plugin": "2.18.0",
