@@ -1,6 +1,4 @@
-# Merge
-
-Something is ready to be merged!
+<!-- Something is ready to be merged! -->
 
 ## Issues
 

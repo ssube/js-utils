@@ -66,7 +66,7 @@ existing ones up-to-date. Even this readme is a template for others.
 
 [![github release link](https://img.shields.io/badge/github-release-blue?logo=github)](https://github.com/ssube/rollup-template/releases)
 [![github release version](https://img.shields.io/github/tag/ssube/rollup-template.svg)](https://github.com/ssube/rollup-template/releases)
-[![github commits since release](https://img.shields.io/github/commits-since/ssube/rollup-template/v0.2.2.svg)](https://github.com/ssube/rollup-template/compare/v0.2.2...master)
+[![github commits since release](https://img.shields.io/github/commits-since/ssube/rollup-template/v0.2.4.svg)](https://github.com/ssube/rollup-template/compare/v0.2.4...master)
 
 [![npm package link](https://img.shields.io/badge/npm-package-blue?logo=npm)](https://www.npmjs.com/package/@apextoaster/rollup-template)
 [![npm release version](https://img.shields.io/npm/v/@apextoaster/rollup-template.svg)](https://www.npmjs.com/package/@apextoaster/rollup-template)
