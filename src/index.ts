@@ -28,6 +28,7 @@ export {
 } from './utils';
 export {
   ArrayMapper,
+  ArrayMapperOptions,
 } from './utils/ArrayMapper';
 export {
   defer,
@@ -37,17 +38,33 @@ export {
   concat,
   encode,
 } from './utils/Buffer';
-export { waitForChild } from './utils/Child';
+export {
+  Checklist,
+  ChecklistMode,
+  ChecklistOptions,
+} from './utils/Checklist';
+export {
+  ChildOptions,
+  ChildResult,
+  ChildSpawner,
+  waitForChild,
+  writeValue,
+} from './utils/Child';
 export { ExternalModule, ModuleCtor } from './utils/ExternalModule';
 export { isDebug } from './utils/Env';
 export {
   Dict,
   MapLike,
   entriesOf,
+  getHead,
+  getHeadOrDefault,
+  getOrDefault,
   makeDict,
   makeMap,
   mergeMap,
   mustGet,
+  normalizeMap,
+  pairsToMap,
   pushMergeMap,
   setOrPush,
 } from './utils/Map';
@@ -56,6 +73,7 @@ export {
   writePid,
 } from './utils/PidFile';
 export {
+  constructorName,
   getConstructor,
   getMethods,
 } from './utils/Reflect';
@@ -65,3 +83,7 @@ export {
   SIGNAL_STOP,
   signal,
 } from './utils/Signal';
+export {
+  leftPad,
+  trim,
+} from './utils/String';

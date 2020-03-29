@@ -22,6 +22,7 @@
 |  Function | Description |
 |  --- | --- |
 |  [concat(chunks)](./js-utils.concat.md) |  |
+|  [constructorName(val)](./js-utils.constructorname.md) |  |
 |  [countOf(val)](./js-utils.countof.md) | Calculate the "length" of an array or value.<!-- -->Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add. |
 |  [defaultWhen(condition, items)](./js-utils.defaultwhen.md) |  |
 |  [defer(ms, val)](./js-utils.defer.md) | Resolve after a set amount of time. |
@@ -29,9 +30,15 @@
 |  [encode(chunks, encoding)](./js-utils.encode.md) |  |
 |  [entriesOf(map)](./js-utils.entriesof.md) |  |
 |  [filterNil(list)](./js-utils.filternil.md) | Remove any null or undefined items from the list. |
+|  [getConstructor(val)](./js-utils.getconstructor.md) |  |
+|  [getHead(map, key)](./js-utils.gethead.md) |  |
+|  [getHeadOrDefault(map, key, defaultValue)](./js-utils.getheadordefault.md) |  |
+|  [getMethods(value)](./js-utils.getmethods.md) |  |
+|  [getOrDefault(map, key, defaultValue)](./js-utils.getordefault.md) |  |
 |  [getTestLogger(verbose)](./js-utils.gettestlogger.md) |  |
 |  [isDebug()](./js-utils.isdebug.md) |  |
 |  [isNil(val)](./js-utils.isnil.md) |  |
+|  [leftPad(val, min, fill)](./js-utils.leftpad.md) |  |
 |  [makeDict(map)](./js-utils.makedict.md) | Turns a map or dict into a dict |
 |  [makeMap(val)](./js-utils.makemap.md) | Clone a map or map-like object into a new map. |
 |  [mergeList(parts)](./js-utils.mergelist.md) | Merge arguments, which may or may not be arrays, into one return that is definitely an array. |
@@ -40,19 +47,26 @@
 |  [mustExist(val)](./js-utils.mustexist.md) | Assert that a variable is not nil and return the value. |
 |  [mustFind(list, predicate)](./js-utils.mustfind.md) | Find a value matching the given predicate or throw. |
 |  [mustGet(map, key)](./js-utils.mustget.md) | Get an element from a Map and guard against nil values. |
+|  [normalizeMap(map)](./js-utils.normalizemap.md) |  |
+|  [pairsToMap(pairs)](./js-utils.pairstomap.md) |  |
 |  [pushMergeMap(args)](./js-utils.pushmergemap.md) |  |
 |  [removePid(path)](./js-utils.removepid.md) |  |
 |  [setOrPush(map, key, val)](./js-utils.setorpush.md) | Set a map key to a new array or push to the existing value. |
 |  [signal(signals)](./js-utils.signal.md) |  |
 |  [spyLogger(spies)](./js-utils.spylogger.md) |  |
 |  [timeout(ms, oper)](./js-utils.timeout.md) | Reject after a set amount of time if the original promise has not yet resolved. |
+|  [trim(val, max, tail)](./js-utils.trim.md) |  |
 |  [waitForChild(child)](./js-utils.waitforchild.md) |  |
 |  [writePid(path)](./js-utils.writepid.md) |  |
+|  [writeValue(stream, value)](./js-utils.writevalue.md) |  |
 
 ## Interfaces
 
 |  Interface | Description |
 |  --- | --- |
+|  [ArrayMapperOptions](./js-utils.arraymapperoptions.md) |  |
+|  [ChildOptions](./js-utils.childoptions.md) |  |
+|  [ChildResult](./js-utils.childresult.md) |  |
 |  [Dict](./js-utils.dict.md) |  |
 |  [ExternalModule](./js-utils.externalmodule.md) |  |
 
@@ -68,6 +82,7 @@
 
 |  Type Alias | Description |
 |  --- | --- |
+|  [ChildSpawner](./js-utils.childspawner.md) |  |
 |  [MapLike](./js-utils.maplike.md) | A <code>Map</code> or dictionary object with string keys and <code>TVal</code> values. |
 |  [ModuleCtor](./js-utils.modulector.md) |  |
 |  [Nil](./js-utils.nil.md) | Unset value. |
