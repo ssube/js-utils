@@ -56,6 +56,10 @@ export {
   writePid,
 } from './utils/PidFile';
 export {
+  getConstructor,
+  getMethods,
+} from './utils/Reflect';
+export {
   SIGNAL_RELOAD,
   SIGNAL_RESET,
   SIGNAL_STOP,
