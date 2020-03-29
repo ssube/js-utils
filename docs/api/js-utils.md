@@ -10,12 +10,19 @@
 |  --- | --- |
 |  [ArrayMapper](./js-utils.arraymapper.md) |  |
 |  [AsyncTracker](./js-utils.asynctracker.md) | Async resource tracker using node's internal hooks.<!-- -->This probably won't work in a browser. It does not hold references to the resource, to avoid leaks. Adapted from https://gist.github.com/boneskull/7fe75b63d613fa940db7ec990a5f5843\#file-async-dump-js |
+|  [Checklist](./js-utils.checklist.md) |  |
 |  [ChildProcessError](./js-utils.childprocesserror.md) |  |
 |  [InvalidArgumentError](./js-utils.invalidargumenterror.md) |  |
 |  [MissingKeyError](./js-utils.missingkeyerror.md) |  |
 |  [NotFoundError](./js-utils.notfounderror.md) |  |
 |  [NotImplementedError](./js-utils.notimplementederror.md) |  |
 |  [TimeoutError](./js-utils.timeouterror.md) |  |
+
+## Enumerations
+
+|  Enumeration | Description |
+|  --- | --- |
+|  [ChecklistMode](./js-utils.checklistmode.md) |  |
 
 ## Functions
 
@@ -65,6 +72,7 @@
 |  Interface | Description |
 |  --- | --- |
 |  [ArrayMapperOptions](./js-utils.arraymapperoptions.md) |  |
+|  [ChecklistOptions](./js-utils.checklistoptions.md) |  |
 |  [ChildOptions](./js-utils.childoptions.md) |  |
 |  [ChildResult](./js-utils.childresult.md) |  |
 |  [Dict](./js-utils.dict.md) |  |

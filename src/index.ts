@@ -7,11 +7,11 @@ export { TimeoutError } from './error/TimeoutError';
 
 export {
   AsyncTracker,
-} from './test/AsyncTracker';
+} from './AsyncTracker';
 export {
   getTestLogger,
   spyLogger,
-} from './test/Logger';
+} from './Logger';
 
 export {
   Nil,

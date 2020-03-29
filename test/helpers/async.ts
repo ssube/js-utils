@@ -1,4 +1,4 @@
-import { AsyncTracker } from '../../src/test/AsyncTracker';
+import { AsyncTracker } from '../../src/AsyncTracker';
 import { isNil } from '../../src/utils';
 import { isDebug } from '../../src/utils/Env';
 
