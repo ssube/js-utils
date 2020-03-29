@@ -2,6 +2,14 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.3](https://github.com/ssube/js-utils/compare/v0.1.2...v0.1.3) (2020-03-29)
+
+
+### Features
+
+* add checklist ([9c9a35c](https://github.com/ssube/js-utils/commit/9c9a35c8294c01f52965a206d1bb254215cba503))
+* expose reflect functions ([e530a99](https://github.com/ssube/js-utils/commit/e530a99c31366fd2223e4f35444c37506e3bc95e))
+
 ### [0.1.2](https://github.com/ssube/js-utils/compare/v0.1.1...v0.1.2) (2020-03-29)
 
 
