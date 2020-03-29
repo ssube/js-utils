@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.4](https://github.com/ssube/js-utils/compare/v0.1.3...v0.1.4) (2020-03-29)
+
+
+### Features
+
+* export async tracker, checklist ([e68d7f9](https://github.com/ssube/js-utils/commit/e68d7f97d2d3e1d942d764c42620b0adb7ab5b1c))
+
 ### [0.1.3](https://github.com/ssube/js-utils/compare/v0.1.2...v0.1.3) (2020-03-29)
 
 
