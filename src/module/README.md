@@ -1,3 +1,0 @@
-# Module
-
-Dependency injection modules.

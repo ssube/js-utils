@@ -1,9 +1,7 @@
-import JSON_DATA from './resource/json.json';
-import YAML_DATA from './resource/yaml.yml';
 import { VERSION_INFO } from './version';
 
 export async function main(argv: Array<string>): Promise<number> {
   /* eslint-disable-next-line no-console */
-  console.log('Hello World!', VERSION_INFO, JSON_DATA, YAML_DATA, argv);
+  console.log('Hello World!', VERSION_INFO, argv);
   return 1;
 }

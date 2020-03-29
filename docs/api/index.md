@@ -8,5 +8,5 @@
 
 |  Package | Description |
 |  --- | --- |
-|  [@apextoaster/rollup-template](./rollup-template.md) |  |
+|  [@apextoaster/js-utils](./js-utils.md) |  |
 

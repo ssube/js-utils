@@ -154,7 +154,6 @@
             "error",
             "any",
             "Number",
-            "String",
             "Boolean",
             "Undefined"
         ],
