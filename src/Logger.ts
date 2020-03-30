@@ -1,12 +1,11 @@
 import { ConsoleLogger, Logger, NullLogger } from 'noicejs';
-
-const ENV_DEBUG = 'DEBUG';
+import { isDebug } from './utils/Env';
 
 export function getTestLogger(verbose = false): Logger {
-  if (verbose || process.env[ENV_DEBUG] === 'TRUE') {
-    return new ConsoleLogger();
+  if (verbose || isDebug()) {
+    return ConsoleLogger.global;
   } else {
-    return new NullLogger();
+    return NullLogger.global;
   }
 }
 
