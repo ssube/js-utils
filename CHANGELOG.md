@@ -2,6 +2,17 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.5](https://github.com/ssube/js-utils/compare/v0.1.4...v0.1.5) (2020-03-31)
+
+
+### Bug Fixes
+
+* **docs:** describe exports and mark with release status ([e4958ee](https://github.com/ssube/js-utils/commit/e4958ee6f06c54bcb73c089c1000e708fb81983a))
+* **logger:** use global instance of console/null logger for tests ([c55e154](https://github.com/ssube/js-utils/commit/c55e154570150947c401be860e3b4e09f10f7fbe))
+* **test:** begin covering child process utils ([f690cdc](https://github.com/ssube/js-utils/commit/f690cdcac2ca84de53592265b434bc0658da5c03))
+* **test:** cover async, buffer, map, and reflect utils ([852045f](https://github.com/ssube/js-utils/commit/852045f7b1fd70afa19217eaf24f976c3e3baa4a))
+* **test:** cover pid file, signal helpers, improve coverage for others ([76e2ba4](https://github.com/ssube/js-utils/commit/76e2ba46ddb5da21c15f04a4d4cb5b0ce80dc6c1))
+
 ### [0.1.4](https://github.com/ssube/js-utils/compare/v0.1.3...v0.1.4) (2020-03-29)
 
 
