@@ -1,6 +1,6 @@
 import { AsyncHook, createHook } from 'async_hooks';
 
-import { isNil } from './utils';
+import { isNil, Optional } from './utils';
 import { isDebug } from './utils/Env';
 
 export interface TrackedResource {
@@ -9,6 +9,8 @@ export interface TrackedResource {
   type: string;
 }
 
+export type StackFilter = (stack: string) => string;
+
 /**
  * Async resource tracker using  node's internal hooks.
  *
@@ -16,15 +18,7 @@ export interface TrackedResource {
  * Adapted from https://gist.github.com/boneskull/7fe75b63d613fa940db7ec990a5f5843#file-async-dump-js
  */
 export class AsyncTracker {
-  public static getStack(): string {
-    const err = new Error();
-    if (isNil(err.stack)) {
-      return 'no stack trace available';
-    } else {
-      return err.stack; // TODO: filterStack(err.stack);
-    }
-  }
-
+  public filter: Optional<StackFilter>;
   private readonly hook: AsyncHook;
   private readonly resources: Map<number, TrackedResource>;
 
@@ -35,7 +29,7 @@ export class AsyncTracker {
         this.resources.delete(id);
       },
       init: (id: number, type: string, triggerAsyncId: number) => {
-        const source = AsyncTracker.getStack();
+        const source = this.getStack();
         // @TODO: exclude async hooks, including this one
         this.resources.set(id, {
           source,
@@ -47,6 +41,19 @@ export class AsyncTracker {
         this.resources.delete(id);
       },
     });
+  }
+
+  public getStack(): string {
+    const err = new Error();
+    if (isNil(err.stack)) {
+      return 'no stack trace available';
+    }
+
+    if (isNil(this.filter)) {
+      return err.stack;
+    }
+
+    return this.filter(err.stack);
   }
 
   public clear() {

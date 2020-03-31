@@ -4,6 +4,8 @@
 
 ## isNil() function
 
+Check if a value is nil.
+
 <b>Signature:</b>
 
 ```typescript

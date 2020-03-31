@@ -6,6 +6,8 @@
 
 Return the first value that is not nil.
 
+TODO: rename to mustDefault
+
 <b>Signature:</b>
 
 ```typescript

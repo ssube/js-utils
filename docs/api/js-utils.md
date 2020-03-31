@@ -44,13 +44,13 @@
 |  [getOrDefault(map, key, defaultValue)](./js-utils.getordefault.md) |  |
 |  [getTestLogger(verbose)](./js-utils.gettestlogger.md) |  |
 |  [isDebug()](./js-utils.isdebug.md) |  |
-|  [isNil(val)](./js-utils.isnil.md) |  |
+|  [isNil(val)](./js-utils.isnil.md) | Check if a value is nil. |
 |  [leftPad(val, min, fill)](./js-utils.leftpad.md) |  |
 |  [makeDict(map)](./js-utils.makedict.md) | Turns a map or dict into a dict |
 |  [makeMap(val)](./js-utils.makemap.md) | Clone a map or map-like object into a new map. |
 |  [mergeList(parts)](./js-utils.mergelist.md) | Merge arguments, which may or may not be arrays, into one return that is definitely an array. |
 |  [mergeMap(target, source)](./js-utils.mergemap.md) |  |
-|  [mustCoalesce(values)](./js-utils.mustcoalesce.md) | Return the first value that is not nil. |
+|  [mustCoalesce(values)](./js-utils.mustcoalesce.md) | Return the first value that is not nil.<!-- -->TODO: rename to mustDefault |
 |  [mustExist(val)](./js-utils.mustexist.md) | Assert that a variable is not nil and return the value. |
 |  [mustFind(list, predicate)](./js-utils.mustfind.md) | Find a value matching the given predicate or throw. |
 |  [mustGet(map, key)](./js-utils.mustget.md) | Get an element from a Map and guard against nil values. |

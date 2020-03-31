@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
 import { NotFoundError } from '../../src/error/NotFoundError';
-import { countOf, filterNil, mustFind } from '../../src/utils';
+import { countOf, filterNil, mustFind, defaultWhen, mustCoalesce } from '../../src/utils';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
 describeLeaks('utils', async () => {
@@ -41,5 +41,25 @@ describeLeaks('utils', async () => {
         mustFind([1, 2, 3], (val) => val === 4);
       }).to.throw(NotFoundError);
     });
+  });
+
+  describeLeaks('default when', async () => {
+    itLeaks('should return the first item when the condition is true', async () => {
+      expect(defaultWhen(true, 1, 2)).to.equal(1);
+    });
+
+    itLeaks('should return the second item otherwise', async () => {
+      expect(defaultWhen(false, 1, 2)).to.equal(2);
+    });
+  });
+
+  describeLeaks('must coalesce helper', async () => {
+    /* eslint-disable no-null/no-null */
+    itLeaks('should return the first existent value', async () => {
+      expect(mustCoalesce(null, null, 3, null)).to.equal(3);
+      expect(mustCoalesce(null, null, undefined, 'string')).to.equal('string');
+      expect(mustCoalesce(null, undefined, [], null)).to.deep.equal([]);
+    });
+    /* eslint-enable no-null/no-null */
   });
 });

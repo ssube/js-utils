@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-static getStack(): string;
+getStack(): string;
 ```
 <b>Returns:</b>
 

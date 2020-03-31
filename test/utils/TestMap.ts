@@ -13,6 +13,7 @@ import {
   setOrPush,
   mergeMap,
   pushMergeMap,
+  normalizeMap,
 } from '../../src/utils/Map';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
@@ -205,5 +206,29 @@ describeLeaks('map utils', async () => {
         [mapKey]: mapValue,
       })).to.deep.equal(singleItem);
     });
+  });
+
+  describe('normalize map helper', () => {
+    it('should convert values into arrays of strings', () => {
+      const banVal = [Symbol()];
+      const initial = new Map<string, unknown>([
+        ['bar', 'bin'],
+        ['ban', banVal],
+        ['toad', {
+          toString() {
+            return 'too';
+          },
+        }],
+      ]);
+
+      const normalized = normalizeMap(initial);
+
+      expect(normalized.bar).to.deep.equal(['bin']);
+      expect(normalized.ban).to.equal(banVal);
+      expect(normalized.toad).to.deep.equal(['too']);
+    });
+
+    /* ['foo', 1] */
+    xit('should convert numbers into string values');
   });
 });

@@ -6,26 +6,49 @@ import { NotFoundError } from '../error/NotFoundError';
 /* eslint-disable-next-line @typescript-eslint/ban-types */
 export type Nil = null | undefined;
 
+export type SortAfter = 1;
+export type SortBefore = -1;
+export type SortEqual = 0;
+export type SortOrder = SortAfter | SortBefore | SortEqual;
+
 /**
  * Value that may be nil.
  */
 export type Optional<T> = T | Nil;
 
 /**
- * Comparison (filter) predicate for a single value.
+ * Comparison predicate for arity 0 - assert?
+ */
+export type PredicateC0 = () => boolean;
+
+/**
+ * Comparison predicate for arity 1 - filter.
  */
 export type PredicateC1<TVal> = (val: TVal, idx: number, list: Array<TVal>) => boolean;
 
 /**
- * Comparison (sort) predicate for two values.
+ * Comparison predicate for arity 2 - sort.
  */
-export type PredicateC2<TVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => number;
+export type PredicateC2<TVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => SortOrder;
 
 /**
- * Reduction predicate for two values.
+ * Transform predicate for arity 0 - constructor.
+ */
+export type PredicateR0<TVal> = () => TVal;
+
+/**
+ * Transform predicate for arity 1 - map.
+ */
+export type PredicateR1<TVal> = (val: TVal, idx: number, list: Array<TVal>) => TVal;
+
+/**
+ * Transform predicate for arity 2 - reduce.
  */
 export type PredicateR2<TVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => TVal;
 
+/**
+ * Check if a value is nil.
+ */
 /* eslint-disable-next-line @typescript-eslint/ban-types */
 export function isNil<T>(val: Optional<T>): val is Nil {
   /* eslint-disable-next-line no-null/no-null */
@@ -113,6 +136,8 @@ export function mustExist<T>(val: Optional<T>): T {
 
 /**
  * Return the first value that is not nil.
+ *
+ * TODO: rename to mustDefault
  */
 export function mustCoalesce<T>(...values: Array<Optional<T>>): T {
   return mustFind(values, doesExist);

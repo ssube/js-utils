@@ -1,4 +1,5 @@
 import { TimeoutError } from '../error/TimeoutError';
+import { PredicateC0 } from '.';
 
 /**
  * Resolve after a set amount of time.
@@ -24,7 +25,7 @@ export function timeout<T>(ms: number, oper: Promise<T>): Promise<T> {
   return Promise.race([limit, oper]);
 }
 
-export async function waitFor(cb: () => boolean, step: number, count: number): Promise<void> {
+export async function waitFor(cb: PredicateC0, step: number, count: number): Promise<void> {
   let accum = 0;
   while (accum < count) {
     await defer(step);
