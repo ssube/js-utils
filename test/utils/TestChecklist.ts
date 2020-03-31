@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { Checklist, ChecklistMode } from '../../src/utils/Checklist';
+import { Checklist, ChecklistMode } from '../../src/Checklist';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
 const EXISTING_ITEM = 'foo';

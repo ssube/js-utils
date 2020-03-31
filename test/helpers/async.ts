@@ -1,11 +1,10 @@
 import { AsyncTracker } from '../../src/AsyncTracker';
 import { isNil } from '../../src/utils';
-import { isDebug } from '../../src/utils/Env';
+import { isDebug } from '../../src/Env';
 
 // this will pull Mocha internals out of the stacks
 /* eslint-disable-next-line @typescript-eslint/no-var-requires */
 const { stackTraceFilter } = require('mocha/lib/utils');
-const filterStack = stackTraceFilter();
 
 type AsyncMochaTest = (this: Mocha.Context | void) => Promise<void>;
 type AsyncMochaSuite = (this: Mocha.Suite) => Promise<void>;
@@ -16,6 +15,7 @@ type AsyncMochaSuite = (this: Mocha.Suite) => Promise<void>;
 export function describeLeaks(description: string, cb: AsyncMochaSuite): Mocha.Suite {
   return describe(description, function trackSuite(this: Mocha.Suite) {
     const tracker = new AsyncTracker();
+    tracker.filter = stackTraceFilter;
 
     beforeEach(() => {
       tracker.enable();

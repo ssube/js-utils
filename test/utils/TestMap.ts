@@ -14,7 +14,7 @@ import {
   mergeMap,
   pushMergeMap,
   normalizeMap,
-} from '../../src/utils/Map';
+} from '../../src/Map';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
 const DEFAULT_VALUE = 'default';

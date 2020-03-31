@@ -4,6 +4,8 @@
 
 ## ArrayMapperOptions.rest property
 
+Key for any remaining, unmatched elements.
+
 <b>Signature:</b>
 
 ```typescript

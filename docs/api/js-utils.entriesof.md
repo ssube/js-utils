@@ -4,6 +4,8 @@
 
 ## entriesOf() function
 
+Get entries of a map-like.
+
 <b>Signature:</b>
 
 ```typescript

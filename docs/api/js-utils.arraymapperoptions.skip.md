@@ -4,6 +4,8 @@
 
 ## ArrayMapperOptions.skip property
 
+Number of initial elements to skip.
+
 <b>Signature:</b>
 
 ```typescript

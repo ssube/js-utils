@@ -1,11 +1,24 @@
 import { setOrPush } from './Map';
 
 export interface ArrayMapperOptions {
+  /**
+   * Key for any remaining, unmatched elements.
+   */
   rest: string;
+  /**
+   * Number of initial elements to skip.
+   */
   skip: number;
+  /**
+   * List of element keys.
+   */
   take: Array<string>;
 }
 
+/**
+ * Map an array of items into a map of arrays using the specified keys, able to `skip` initial items and gather
+ * remaining items into a `rest` key.
+ */
 export class ArrayMapper {
   public readonly rest: string;
   public readonly skip: number;

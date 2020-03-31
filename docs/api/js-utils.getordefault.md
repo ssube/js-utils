@@ -4,6 +4,8 @@
 
 ## getOrDefault() function
 
+Get a map key or default value when the key does not exist or is nil.
+
 <b>Signature:</b>
 
 ```typescript

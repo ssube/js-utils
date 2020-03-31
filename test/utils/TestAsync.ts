@@ -1,8 +1,8 @@
 import { expect } from 'chai';
 
-import { defer, timeout } from '../../src/utils/Async';
+import { defer, timeout } from '../../src/Async';
+import { TimeoutError } from '../../src/error/TimeoutError';
 import { describeLeaks, itLeaks } from '../helpers/async';
-import { TimeoutError } from '../../src';
 
 describeLeaks('async utils', async () => {
   describeLeaks('defer', async () => {

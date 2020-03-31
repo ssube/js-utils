@@ -4,6 +4,8 @@
 
 ## ArrayMapper class
 
+Map an array of items into a map of arrays using the specified keys, able to `skip` initial items and gather remaining items into a `rest` key.
+
 <b>Signature:</b>
 
 ```typescript

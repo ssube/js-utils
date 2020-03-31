@@ -1,5 +1,5 @@
 import { ConsoleLogger, Logger, NullLogger } from 'noicejs';
-import { isDebug } from './utils/Env';
+import { isDebug } from './Env';
 
 export function getTestLogger(verbose = false): Logger {
   if (verbose || isDebug()) {

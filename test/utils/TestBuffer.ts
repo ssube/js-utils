@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { concat, encode } from '../../src/utils/Buffer';
+import { concat, encode } from '../../src/Buffer';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
 describeLeaks('buffer utils', async () => {

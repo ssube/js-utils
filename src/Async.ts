@@ -1,5 +1,5 @@
-import { TimeoutError } from '../error/TimeoutError';
-import { PredicateC0 } from '.';
+import { TimeoutError } from './error/TimeoutError';
+import { PredicateC0 } from './utils';
 
 /**
  * Resolve after a set amount of time.

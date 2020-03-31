@@ -4,6 +4,8 @@
 
 ## getHead() function
 
+Get the first element from the specified key within a map of lists.
+
 <b>Signature:</b>
 
 ```typescript

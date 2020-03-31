@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { ArrayMapper } from '../../src/utils/ArrayMapper';
+import { ArrayMapper } from '../../src/ArrayMapper';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
 describeLeaks('utils', async () => {

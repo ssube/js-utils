@@ -1,6 +1,6 @@
 import { isFunction } from 'lodash';
 
-import { doesExist, isNil } from '.';
+import { doesExist, isNil } from './utils';
 
 export function getConstructor(val: object) {
   return val.constructor;

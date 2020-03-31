@@ -4,6 +4,8 @@
 
 ## mergeMap() function
 
+Merge the `source` map into the `target` map, replacing keys that already exist.
+
 <b>Signature:</b>
 
 ```typescript

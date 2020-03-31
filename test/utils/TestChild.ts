@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
 import { mustExist, Optional } from '../../src/utils';
-import { ChildStreams, waitForChild } from '../../src/utils/Child';
+import { ChildStreams, waitForChild } from '../../src/Child';
 import { describeLeaks, itLeaks } from '../helpers/async';
 import { ChildProcessError } from '../../src';
 

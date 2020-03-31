@@ -4,6 +4,8 @@
 
 ## ArrayMapperOptions.take property
 
+List of element keys.
+
 <b>Signature:</b>
 
 ```typescript

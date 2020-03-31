@@ -4,6 +4,8 @@
 
 ## pairsToMap() function
 
+Turns a list of name-value pairs into a map.
+
 <b>Signature:</b>
 
 ```typescript

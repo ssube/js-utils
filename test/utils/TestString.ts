@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { leftPad, trim } from '../../src/utils/String';
+import { leftPad, trim } from '../../src/String';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
 const TEST_SHORT = 'hello';

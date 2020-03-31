@@ -1,5 +1,5 @@
 import { expect } from 'chai';
-import { getMethods, getConstructor, constructorName } from '../../src/utils/Reflect';
+import { getMethods, getConstructor, constructorName } from '../../src/Reflect';
 
 class Test {
   public foo() { /* noop */ }

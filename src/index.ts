@@ -9,11 +9,6 @@ export {
   AsyncTracker,
 } from './AsyncTracker';
 export {
-  getTestLogger,
-  spyLogger,
-} from './Logger';
-
-export {
   Nil,
   Optional,
   countOf,
@@ -29,29 +24,33 @@ export {
 export {
   ArrayMapper,
   ArrayMapperOptions,
-} from './utils/ArrayMapper';
+} from './ArrayMapper';
 export {
   defer,
   timeout,
-} from './utils/Async';
+} from './Async';
 export {
   concat,
   encode,
-} from './utils/Buffer';
+} from './Buffer';
 export {
   Checklist,
   ChecklistMode,
   ChecklistOptions,
-} from './utils/Checklist';
+} from './Checklist';
 export {
   ChildOptions,
   ChildResult,
   ChildSpawner,
   waitForChild,
   writeValue,
-} from './utils/Child';
-export { ExternalModule, ModuleCtor } from './utils/ExternalModule';
-export { isDebug } from './utils/Env';
+} from './Child';
+export { ExternalModule, ModuleCtor } from './ExternalModule';
+export { isDebug } from './Env';
+export {
+  getTestLogger,
+  spyLogger,
+} from './Logger';
 export {
   Dict,
   MapLike,
@@ -67,23 +66,23 @@ export {
   pairsToMap,
   pushMergeMap,
   setOrPush,
-} from './utils/Map';
+} from './Map';
 export {
   removePid,
   writePid,
-} from './utils/PidFile';
+} from './PidFile';
 export {
   constructorName,
   getConstructor,
   getMethods,
-} from './utils/Reflect';
+} from './Reflect';
 export {
   SIGNAL_RELOAD,
   SIGNAL_RESET,
   SIGNAL_STOP,
   signal,
-} from './utils/Signal';
+} from './Signal';
 export {
   leftPad,
   trim,
-} from './utils/String';
+} from './String';

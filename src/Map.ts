@@ -1,7 +1,7 @@
 import { isMap, isObject, isString } from 'lodash';
 
-import { doesExist, isNil, mergeList, mustExist, Optional } from '.';
-import { NotFoundError } from '../error/NotFoundError';
+import { doesExist, isNil, mergeList, mustExist, Optional } from './utils';
+import { NotFoundError } from './error/NotFoundError';
 
 export interface Dict<TVal> {
   [key: string]: TVal;
@@ -20,6 +20,9 @@ export function mustGet<TKey, TVal>(map: Map<TKey, TVal>, key: TKey): TVal {
   return mustExist(val);
 }
 
+/**
+ * Get a map key or default value when the key does not exist or is nil.
+ */
 export function getOrDefault<TKey, TVal>(map: Map<TKey, TVal>, key: TKey, defaultValue: TVal): TVal {
   if (map.has(key)) {
     const data = map.get(key);
@@ -31,6 +34,9 @@ export function getOrDefault<TKey, TVal>(map: Map<TKey, TVal>, key: TKey, defaul
   return defaultValue;
 }
 
+/**
+ * Get the first element from the specified key within a map of lists.
+ */
 export function getHead<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey): TVal {
   const value = map.get(key);
   if (isNil(value) || value.length === 0) {
@@ -39,6 +45,10 @@ export function getHead<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey): TVa
   return value[0];
 }
 
+/**
+ * Get the first element from the specified key, within a map of lists, or a default value when
+ * the key does not exist or is nil.
+ */
 export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, Array<Optional<TVal>>>, key: TKey, defaultValue: TVal): TVal {
   if (!map.has(key)) {
     return defaultValue;
@@ -76,6 +86,9 @@ export function setOrPush<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey, va
   }
 }
 
+/**
+ * Merge the `source` map into the `target` map, replacing keys that already exist.
+ */
 export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, TVal> | Array<[TKey, TVal]>) {
   for (const [k, v] of source) {
     target.set(k, v);
@@ -84,6 +97,9 @@ export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, 
   return target;
 }
 
+/**
+ * Merge the provided maps into a new map, merging keys that already exist by pushing new items.
+ */
 export function pushMergeMap<TKey, TVal>(...args: Array<Map<TKey, TVal | Array<TVal>>>): Map<TKey, Array<TVal>> {
   const out = new Map();
   for (const arg of args) {
@@ -136,6 +152,9 @@ export interface NameValuePair<TVal> {
   value: TVal;
 }
 
+/**
+ * Turns a list of name-value pairs into a map.
+ */
 export function pairsToMap<TVal>(pairs: Array<NameValuePair<TVal>>): Map<string, TVal> {
   const map = new Map();
   for (const p of pairs) {
@@ -172,6 +191,9 @@ export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
   return data;
 }
 
+/**
+ * Get entries of a map-like.
+ */
 export function entriesOf<TVal>(map: Optional<MapLike<TVal>>): Array<[string, TVal]> {
   if (map instanceof Map) {
     return Array.from(map.entries());

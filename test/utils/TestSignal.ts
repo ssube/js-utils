@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
-import { timeout } from '../../src/utils/Async';
-import { signal, SIGNAL_RESET } from '../../src/utils/Signal';
+import { timeout } from '../../src/Async';
+import { signal, SIGNAL_RESET } from '../../src/Signal';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
 const MAX_SIGNAL_TIME = 500;

@@ -2,8 +2,8 @@ import { ChildProcessWithoutNullStreams, spawn, ChildProcess } from 'child_proce
 import { BaseError } from 'noicejs';
 import { Writable } from 'stream';
 
-import { doesExist, Optional } from '.';
-import { ChildProcessError } from '../error/ChildProcessError';
+import { doesExist, Optional } from './utils';
+import { ChildProcessError } from './error/ChildProcessError';
 import { encode } from './Buffer';
 import { NameValuePair } from './Map';
 

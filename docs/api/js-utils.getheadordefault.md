@@ -4,6 +4,8 @@
 
 ## getHeadOrDefault() function
 
+Get the first element from the specified key, within a map of lists, or a default value when the key does not exist or is nil.
+
 <b>Signature:</b>
 
 ```typescript
