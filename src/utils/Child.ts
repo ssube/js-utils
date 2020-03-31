@@ -1,4 +1,4 @@
-import { ChildProcessWithoutNullStreams, spawn } from 'child_process';
+import { ChildProcessWithoutNullStreams, spawn, ChildProcess } from 'child_process';
 import { BaseError } from 'noicejs';
 import { Writable } from 'stream';
 
@@ -7,12 +7,15 @@ import { ChildProcessError } from '../error/ChildProcessError';
 import { encode } from './Buffer';
 import { NameValuePair } from './Map';
 
-export interface ChildOptions {
-  args: Array<string>;
-  command: string;
+export interface ChildProcessOptions {
   cwd: string;
   env: Array<NameValuePair<string>>;
   timeout: number;
+}
+
+export interface ChildOptions extends ChildProcessOptions {
+  args: Array<string>;
+  command: string;
 }
 
 export interface ChildResult {
@@ -21,14 +24,20 @@ export interface ChildResult {
   stdout: string;
 }
 
-export type ChildSpawner = typeof spawn;
+export type ChildStreams = ChildProcessWithoutNullStreams;
+
+export type ChildSpawner = (
+  command: string,
+  args: Array<string>,
+  options: Partial<ChildProcessOptions>
+) => ChildStreams;
 
 const CHILD_ENCODING = 'utf-8';
 const CHILD_EVENT = 'child process emitted error event';
 const CHILD_STATUS = 'child process exited with error status';
 const CHILD_OUTPUT = 'child process emitted error output';
 
-export function waitForChild(child: ChildProcessWithoutNullStreams): Promise<ChildResult> {
+export function waitForChild(child: ChildStreams): Promise<ChildResult> {
   return new Promise((res, rej) => {
     const stderr: Array<Buffer> = [];
     const stdout: Array<Buffer> = [];

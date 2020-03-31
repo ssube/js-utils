@@ -7,7 +7,7 @@
 <b>Signature:</b>
 
 ```typescript
-export interface ChildOptions 
+export interface ChildOptions extends ChildProcessOptions 
 ```
 
 ## Properties
@@ -16,7 +16,4 @@ export interface ChildOptions
 |  --- | --- | --- |
 |  [args](./js-utils.childoptions.args.md) | <code>Array&lt;string&gt;</code> |  |
 |  [command](./js-utils.childoptions.command.md) | <code>string</code> |  |
-|  [cwd](./js-utils.childoptions.cwd.md) | <code>string</code> |  |
-|  [env](./js-utils.childoptions.env.md) | <code>Array&lt;NameValuePair&lt;string&gt;&gt;</code> |  |
-|  [timeout](./js-utils.childoptions.timeout.md) | <code>number</code> |  |
 

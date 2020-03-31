@@ -7,5 +7,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type ChildSpawner = typeof spawn;
+export declare type ChildSpawner = (command: string, args: Array<string>, options: Partial<ChildProcessOptions>) => ChildStreams;
 ```

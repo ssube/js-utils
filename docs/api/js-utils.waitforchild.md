@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function waitForChild(child: ChildProcessWithoutNullStreams): Promise<ChildResult>;
+export declare function waitForChild(child: ChildStreams): Promise<ChildResult>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  child | <code>ChildProcessWithoutNullStreams</code> |  |
+|  child | <code>ChildStreams</code> |  |
 
 <b>Returns:</b>
 
