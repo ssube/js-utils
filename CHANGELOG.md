@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/ssube/js-utils/compare/v0.1.6...v0.1.7) (2020-03-31)
+
+
+### Features
+
+* **list:** add utils from salty-dog ([3f675aa](https://github.com/ssube/js-utils/commit/3f675aaaa348101522e17415f8ed392ed64816c9))
+
+
+### Bug Fixes
+
+* **docs:** write a basic readme ([9c5b750](https://github.com/ssube/js-utils/commit/9c5b750c15eebf5997cc5fd537c86eee460ca9c8))
+
 ### [0.1.6](https://github.com/ssube/js-utils/compare/v0.1.5...v0.1.6) (2020-03-31)
 
 ### [0.1.5](https://github.com/ssube/js-utils/compare/v0.1.4...v0.1.5) (2020-03-31)
