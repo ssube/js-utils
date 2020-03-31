@@ -23,7 +23,7 @@
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "1.0.1",
     "@microsoft/api-documenter": "7.7.16",
-    "@microsoft/api-extractor": "7.7.10",
+    "@microsoft/api-extractor": "7.7.12",
     "@types/chai": "4.2.11",
     "@types/chai-as-promised": "7.1.2",
     "@types/lodash": "4.14.149",
@@ -40,7 +40,7 @@
     "eslint-plugin-chai": "0.0.1",
     "eslint-plugin-chai-expect": "2.1.0",
     "eslint-plugin-chai-expect-keywords": "2.0.1",
-    "eslint-plugin-import": "2.20.1",
+    "eslint-plugin-import": "2.20.2",
     "eslint-plugin-mocha": "6.3.0",
     "eslint-plugin-no-null": "1.0.2",
     "eslint-plugin-sonarjs": "0.5.0",
