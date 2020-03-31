@@ -1,7 +1,8 @@
 import { isMap, isObject, isString } from 'lodash';
 
-import { doesExist, isNil, mergeList, mustExist, Optional } from './utils';
 import { NotFoundError } from './error/NotFoundError';
+import { mergeList } from './List';
+import { doesExist, isNil, mustExist, Optional } from './Maybe';
 
 export interface Dict<TVal> {
   [key: string]: TVal;

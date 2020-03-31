@@ -1,5 +1,5 @@
 import { AsyncTracker } from '../../src/AsyncTracker';
-import { isNil } from '../../src/utils';
+import { isNil } from '../../src/Maybe';
 import { isDebug } from '../../src/Env';
 
 // this will pull Mocha internals out of the stacks

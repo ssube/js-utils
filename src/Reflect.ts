@@ -1,6 +1,6 @@
 import { isFunction } from 'lodash';
 
-import { doesExist, isNil } from './utils';
+import { doesExist, isNil } from './Maybe';
 
 /**
  * Get the constructor from an instance.

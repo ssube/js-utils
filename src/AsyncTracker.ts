@@ -1,7 +1,7 @@
 import { AsyncHook, createHook } from 'async_hooks';
 
-import { isNil, Optional } from './utils';
 import { isDebug } from './Env';
+import { isNil, Optional } from './Maybe';
 
 export interface TrackedResource {
   source: string;

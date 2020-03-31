@@ -9,6 +9,9 @@ export {
   AsyncTracker,
 } from './AsyncTracker';
 export {
+  mergeList,
+} from './List';
+export {
   Nil,
   Optional,
   countOf,
@@ -16,11 +19,10 @@ export {
   doesExist,
   filterNil,
   isNil,
-  mergeList,
   mustCoalesce,
   mustExist,
   mustFind,
-} from './utils';
+} from './Maybe';
 export {
   ArrayMapper,
   ArrayMapperOptions,

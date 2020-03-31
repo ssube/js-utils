@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
 import { NotFoundError } from '../../src/error/NotFoundError';
-import { countOf, filterNil, mustFind, defaultWhen, mustCoalesce } from '../../src/utils';
+import { countOf, defaultWhen, filterNil, mustCoalesce, mustFind } from '../../src/Maybe';
 import { describeLeaks, itLeaks } from '../helpers/async';
 
 describeLeaks('utils', async () => {

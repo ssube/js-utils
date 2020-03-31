@@ -1,11 +1,11 @@
-import { ChildProcessWithoutNullStreams, spawn, ChildProcess } from 'child_process';
+import { ChildProcessWithoutNullStreams, spawn } from 'child_process';
 import { BaseError } from 'noicejs';
 import { Writable } from 'stream';
 
-import { doesExist, Optional } from './utils';
-import { ChildProcessError } from './error/ChildProcessError';
 import { encode } from './Buffer';
+import { ChildProcessError } from './error/ChildProcessError';
 import { NameValuePair } from './Map';
+import { doesExist, Optional } from './Maybe';
 
 export interface ChildProcessOptions {
   cwd: string;
@@ -25,12 +25,7 @@ export interface ChildResult {
 }
 
 export type ChildStreams = ChildProcessWithoutNullStreams;
-
-export type ChildSpawner = (
-  command: string,
-  args: Array<string>,
-  options: Partial<ChildProcessOptions>
-) => ChildStreams;
+export type ChildSpawner = typeof spawn;
 
 const CHILD_ENCODING = 'utf-8';
 const CHILD_EVENT = 'child process emitted error event';

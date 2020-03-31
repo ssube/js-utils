@@ -1,7 +1,7 @@
 import { open, unlink, write } from 'fs';
 import { pid } from 'process';
 
-import { doesExist, Optional } from './utils';
+import { doesExist, Optional } from './Maybe';
 
 type OptionalErrno = Optional<NodeJS.ErrnoException>;
 
