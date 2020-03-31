@@ -35,6 +35,7 @@
 |  [defer(ms, val)](./js-utils.defer.md) | Resolve after a set amount of time. |
 |  [doesExist(val)](./js-utils.doesexist.md) | Check if a variable is not nil. |
 |  [encode(chunks, encoding)](./js-utils.encode.md) | Concatenate then encode a list of buffers. |
+|  [ensureArray(val)](./js-utils.ensurearray.md) |  |
 |  [entriesOf(map)](./js-utils.entriesof.md) | Get entries of a map-like. |
 |  [filterNil(list)](./js-utils.filternil.md) | Remove any null or undefined items from the list. |
 |  [getConstructor(val)](./js-utils.getconstructor.md) | Get the constructor from an instance. |
@@ -43,6 +44,8 @@
 |  [getMethods(value)](./js-utils.getmethods.md) | Get the methods from an instance and its prototypes. |
 |  [getOrDefault(map, key, defaultValue)](./js-utils.getordefault.md) | Get a map key or default value when the key does not exist or is nil. |
 |  [getTestLogger(verbose)](./js-utils.gettestlogger.md) | Get a test logger. Returns a null logger unless <code>verbose</code> is true or run under debug mode. |
+|  [hasItems(val)](./js-utils.hasitems.md) | Test if a value is an array with some items (length &gt; 0).<!-- -->This is not a general replacement for <code>.length &gt; 0</code>, since it is also a typeguard: <code>if (hasItems(val)) else { val }</code> will complain that <code>val</code> is <code>never</code> in the <code>else</code> branch, since it was proven not to be an array by this function, even if <code>val</code> is simply empty. |
+|  [hasItems(val)](./js-utils.hasitems_1.md) |  |
 |  [isDebug()](./js-utils.isdebug.md) | Test if DEBUG mode is set.<!-- -->TODO: check variable value as well |
 |  [isNil(val)](./js-utils.isnil.md) | Check if a value is nil. |
 |  [leftPad(val, min, fill)](./js-utils.leftpad.md) |  |

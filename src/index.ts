@@ -9,21 +9,6 @@ export {
   AsyncTracker,
 } from './AsyncTracker';
 export {
-  mergeList,
-} from './List';
-export {
-  Nil,
-  Optional,
-  countOf,
-  defaultWhen,
-  doesExist,
-  filterNil,
-  isNil,
-  mustCoalesce,
-  mustExist,
-  mustFind,
-} from './Maybe';
-export {
   ArrayMapper,
   ArrayMapperOptions,
 } from './ArrayMapper';
@@ -50,6 +35,11 @@ export {
 export { ExternalModule, ModuleCtor } from './ExternalModule';
 export { isDebug } from './Env';
 export {
+  ensureArray,
+  hasItems,
+  mergeList,
+} from './List';
+export {
   getTestLogger,
   spyLogger,
 } from './Logger';
@@ -69,6 +59,18 @@ export {
   pushMergeMap,
   setOrPush,
 } from './Map';
+export {
+  Nil,
+  Optional,
+  countOf,
+  defaultWhen,
+  doesExist,
+  filterNil,
+  isNil,
+  mustCoalesce,
+  mustExist,
+  mustFind,
+} from './Maybe';
 export {
   removePid,
   writePid,

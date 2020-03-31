@@ -3,6 +3,7 @@ import { expect } from 'chai';
 import { NotFoundError } from '../../src/error/NotFoundError';
 import { countOf, defaultWhen, filterNil, mustCoalesce, mustFind } from '../../src/Maybe';
 import { describeLeaks, itLeaks } from '../helpers/async';
+import { hasItems, ensureArray } from '../../src';
 
 describeLeaks('utils', async () => {
   describeLeaks('count list', async () => {
@@ -61,5 +62,41 @@ describeLeaks('utils', async () => {
       expect(mustCoalesce(null, undefined, [], null)).to.deep.equal([]);
     });
     /* eslint-enable no-null/no-null */
+  });
+
+  describeLeaks('has items helper', async () => {
+    itLeaks('should return false for non-array values', async () => {
+      /* eslint-disable @typescript-eslint/no-explicit-any */
+      expect(hasItems({} as any)).to.equal(false);
+      expect(hasItems(4 as any)).to.equal(false);
+      /* eslint-enable @typescript-eslint/no-explicit-any */
+    });
+
+    itLeaks('should return false for empty arrays', async () => {
+      expect(hasItems([])).to.equal(false);
+    });
+
+    itLeaks('should return true for arrays with elements', async () => {
+      expect(hasItems([
+        true,
+        false,
+      ])).to.equal(true);
+    });
+  });
+
+  describeLeaks('ensure array helper', async () => {
+    itLeaks('should convert nil values to arrays', async () => {
+      /* eslint-disable-next-line no-null/no-null */
+      expect(ensureArray(null)).to.deep.equal([]);
+      expect(ensureArray(undefined)).to.deep.equal([]);
+    });
+
+    itLeaks('should copy arrays', async () => {
+      const data: Array<number> = [];
+      const copy = ensureArray(data);
+
+      expect(copy).not.to.equal(data);
+      expect(copy).to.deep.equal(data);
+    });
   });
 });
