@@ -4,6 +4,8 @@
 
 ## getMethods() function
 
+Get the methods from an instance and its prototypes.
+
 <b>Signature:</b>
 
 ```typescript

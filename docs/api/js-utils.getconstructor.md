@@ -4,6 +4,8 @@
 
 ## getConstructor() function
 
+Get the constructor from an instance.
+
 <b>Signature:</b>
 
 ```typescript

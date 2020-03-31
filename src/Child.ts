@@ -37,6 +37,11 @@ const CHILD_EVENT = 'child process emitted error event';
 const CHILD_STATUS = 'child process exited with error status';
 const CHILD_OUTPUT = 'child process emitted error output';
 
+/**
+ * Wait for a child process to exit, collecting output, errors, and exit status.
+ *
+ * @public
+ */
 export function waitForChild(child: ChildStreams): Promise<ChildResult> {
   return new Promise((res, rej) => {
     const stderr: Array<Buffer> = [];

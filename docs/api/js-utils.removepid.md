@@ -4,6 +4,8 @@
 
 ## removePid() function
 
+Remove the file at the given `path`<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript

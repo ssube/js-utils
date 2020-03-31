@@ -4,6 +4,8 @@
 
 ## TimeoutError class
 
+Error indicating that a promise timed out.
+
 <b>Signature:</b>
 
 ```typescript

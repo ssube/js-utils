@@ -4,6 +4,8 @@
 
 ## NotFoundError class
 
+Error indicating that some value was not found.
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## encode() function
 
+Concatenate then encode a list of buffers.
+
 <b>Signature:</b>
 
 ```typescript

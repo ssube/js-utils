@@ -4,6 +4,8 @@
 
 ## Checklist.data property
 
+TODO: switch to Set
+
 <b>Signature:</b>
 
 ```typescript

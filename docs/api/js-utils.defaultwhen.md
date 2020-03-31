@@ -4,6 +4,8 @@
 
 ## defaultWhen() function
 
+Return the first element when `condition` is true and the second element when `condition` is false.
+
 <b>Signature:</b>
 
 ```typescript

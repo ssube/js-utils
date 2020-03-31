@@ -4,6 +4,8 @@
 
 ## NotImplementedError class
 
+Error indicating that a function has not been implemented yet.
+
 <b>Signature:</b>
 
 ```typescript

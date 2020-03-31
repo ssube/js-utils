@@ -4,6 +4,8 @@
 
 ## ChildProcessError class
 
+Error indicating that a child process exited with an error status.
+
 <b>Signature:</b>
 
 ```typescript

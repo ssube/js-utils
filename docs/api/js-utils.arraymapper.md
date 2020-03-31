@@ -30,5 +30,5 @@ export declare class ArrayMapper
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [map(input)](./js-utils.arraymapper.map.md) |  |  |
+|  [map(input)](./js-utils.arraymapper.map.md) |  | Transform the input list into a map, extracting elements using the mapper's options. |
 

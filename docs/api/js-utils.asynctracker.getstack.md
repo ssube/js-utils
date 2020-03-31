@@ -4,6 +4,8 @@
 
 ## AsyncTracker.getStack() method
 
+Get a filtered version of the current call stack. This creates a new error to generate the stack trace and will be quite slow.
+
 <b>Signature:</b>
 
 ```typescript

@@ -16,6 +16,8 @@ export type StackFilter = (stack: string) => string;
  *
  * This probably won't work in a browser. It does not hold references to the resource, to avoid leaks.
  * Adapted from https://gist.github.com/boneskull/7fe75b63d613fa940db7ec990a5f5843#file-async-dump-js
+ *
+ * @public
  */
 export class AsyncTracker {
   public filter: Optional<StackFilter>;
@@ -43,6 +45,10 @@ export class AsyncTracker {
     });
   }
 
+  /**
+   * Get a filtered version of the current call stack. This creates a new error to generate the
+   * stack trace and will be quite slow.
+   */
   public getStack(): string {
     const err = new Error();
     if (isNil(err.stack)) {
@@ -64,6 +70,10 @@ export class AsyncTracker {
     this.hook.disable();
   }
 
+  /**
+   * Print a listing of all tracked resources. When debug mode is enabled (DEBUG=TRUE), include
+   * stack traces.
+   */
   /* eslint-disable no-console, no-invalid-this */
   public dump() {
     console.error(`tracking ${this.resources.size} async resources`);

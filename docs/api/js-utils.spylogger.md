@@ -4,6 +4,8 @@
 
 ## spyLogger() function
 
+Create a spy logger using the provided methods, which returns itself as a child.
+
 <b>Signature:</b>
 
 ```typescript

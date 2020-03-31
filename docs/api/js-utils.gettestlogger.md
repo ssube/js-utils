@@ -4,6 +4,8 @@
 
 ## getTestLogger() function
 
+Get a test logger. Returns a null logger unless `verbose` is true or run under debug mode.
+
 <b>Signature:</b>
 
 ```typescript

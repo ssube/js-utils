@@ -33,7 +33,7 @@ export declare class AsyncTracker
 |  --- | --- | --- |
 |  [clear()](./js-utils.asynctracker.clear.md) |  |  |
 |  [disable()](./js-utils.asynctracker.disable.md) |  |  |
-|  [dump()](./js-utils.asynctracker.dump.md) |  |  |
+|  [dump()](./js-utils.asynctracker.dump.md) |  | Print a listing of all tracked resources. When debug mode is enabled (DEBUG=TRUE), include stack traces. |
 |  [enable()](./js-utils.asynctracker.enable.md) |  |  |
-|  [getStack()](./js-utils.asynctracker.getstack.md) |  |  |
+|  [getStack()](./js-utils.asynctracker.getstack.md) |  | Get a filtered version of the current call stack. This creates a new error to generate the stack trace and will be quite slow. |
 

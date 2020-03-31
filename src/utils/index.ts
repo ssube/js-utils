@@ -2,6 +2,8 @@ import { NotFoundError } from '../error/NotFoundError';
 
 /**
  * Unset value.
+ *
+ * @public
  */
 /* eslint-disable-next-line @typescript-eslint/ban-types */
 export type Nil = null | undefined;
@@ -13,41 +15,57 @@ export type SortOrder = SortAfter | SortBefore | SortEqual;
 
 /**
  * Value that may be nil.
+ *
+ * @public
  */
 export type Optional<T> = T | Nil;
 
 /**
  * Comparison predicate for arity 0 - assert?
+ *
+ * @beta
  */
 export type PredicateC0 = () => boolean;
 
 /**
  * Comparison predicate for arity 1 - filter.
+ *
+ * @beta
  */
 export type PredicateC1<TVal> = (val: TVal, idx: number, list: Array<TVal>) => boolean;
 
 /**
  * Comparison predicate for arity 2 - sort.
+ *
+ * @beta
  */
 export type PredicateC2<TVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => SortOrder;
 
 /**
  * Transform predicate for arity 0 - constructor.
+ *
+ * @beta
  */
 export type PredicateR0<TVal> = () => TVal;
 
 /**
  * Transform predicate for arity 1 - map.
+ *
+ * @beta
  */
 export type PredicateR1<TVal> = (val: TVal, idx: number, list: Array<TVal>) => TVal;
 
 /**
  * Transform predicate for arity 2 - reduce.
+ *
+ * @beta
  */
 export type PredicateR2<TVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => TVal;
 
 /**
  * Check if a value is nil.
+ *
+ * @public
  */
 /* eslint-disable-next-line @typescript-eslint/ban-types */
 export function isNil<T>(val: Optional<T>): val is Nil {
@@ -60,6 +78,8 @@ export function isNil<T>(val: Optional<T>): val is Nil {
  *
  * Arrays return their length, single values return 1, and nil values return 0.
  * This counts the number of elements that setOrPush would add.
+ *
+ * @public
  */
 export function countOf(val: unknown): number {
   if (Array.isArray(val)) {
@@ -73,6 +93,11 @@ export function countOf(val: unknown): number {
   return 0;
 }
 
+/**
+ * Return the first element when `condition` is true and the second element when `condition` is false.
+ *
+ * @public
+ */
 export function defaultWhen<TVal>(condition: boolean, ...items: Array<TVal>): TVal {
   if (condition) {
     return items[0];
@@ -83,6 +108,8 @@ export function defaultWhen<TVal>(condition: boolean, ...items: Array<TVal>): TV
 
 /**
  * Remove any null or undefined items from the list.
+ *
+ * @public
  */
 export function filterNil<TItem>(list: ArrayLike<Optional<TItem>>): Array<TItem> {
   return Array.from(list).filter(doesExist);
@@ -90,6 +117,8 @@ export function filterNil<TItem>(list: ArrayLike<Optional<TItem>>): Array<TItem>
 
 /**
  * Merge arguments, which may or may not be arrays, into one return that is definitely an array.
+ *
+ * @public
  */
 export function mergeList<TItem>(...parts: Array<TItem | Array<TItem>>): Array<TItem> {
   const out = [];
@@ -107,6 +136,8 @@ export function mergeList<TItem>(...parts: Array<TItem | Array<TItem>>): Array<T
 
 /**
  * Find a value matching the given predicate or throw.
+ *
+ * @public
  */
 export function mustFind<TVal>(list: Array<Optional<TVal>>, predicate: PredicateC1<TVal>): TVal {
   const val = filterNil(list).find(predicate);
@@ -115,6 +146,8 @@ export function mustFind<TVal>(list: Array<Optional<TVal>>, predicate: Predicate
 
 /**
  * Check if a variable is not nil.
+ *
+ * @public
  */
 export function doesExist<T>(val: Optional<T>): val is T {
   return !isNil(val);
@@ -125,6 +158,8 @@ export function doesExist<T>(val: Optional<T>): val is T {
  *
  * @throws NotFoundError
  * @returns val
+ *
+ * @public
  */
 export function mustExist<T>(val: Optional<T>): T {
   if (isNil(val)) {
@@ -137,7 +172,8 @@ export function mustExist<T>(val: Optional<T>): T {
 /**
  * Return the first value that is not nil.
  *
- * TODO: rename to mustDefault
+ * @public
+ * @todo: rename to mustDefault
  */
 export function mustCoalesce<T>(...values: Array<Optional<T>>): T {
   return mustFind(values, doesExist);

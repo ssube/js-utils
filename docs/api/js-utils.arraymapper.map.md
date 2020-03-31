@@ -4,6 +4,8 @@
 
 ## ArrayMapper.map() method
 
+Transform the input list into a map, extracting elements using the mapper's options.
+
 <b>Signature:</b>
 
 ```typescript

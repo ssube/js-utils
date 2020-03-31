@@ -4,6 +4,8 @@
 
 ## AsyncTracker.dump() method
 
+Print a listing of all tracked resources. When debug mode is enabled (DEBUG=TRUE), include stack traces.
+
 <b>Signature:</b>
 
 ```typescript

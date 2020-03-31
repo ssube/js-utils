@@ -4,6 +4,10 @@
 
 ## isDebug() function
 
+Test if DEBUG mode is set.
+
+TODO: check variable value as well
+
 <b>Signature:</b>
 
 ```typescript

@@ -2,10 +2,20 @@ import { isFunction } from 'lodash';
 
 import { doesExist, isNil } from './utils';
 
+/**
+ * Get the constructor from an instance.
+ *
+ * @public
+ */
 export function getConstructor(val: object) {
   return val.constructor;
 }
 
+/**
+ * Get the methods from an instance and its prototypes.
+ *
+ * @public
+ */
 export function getMethods<TValue extends object>(value: TValue): Set<Function> {
   const methods = new Set<Function>();
 
@@ -31,6 +41,11 @@ export function getMethods<TValue extends object>(value: TValue): Set<Function> 
   return methods;
 }
 
+/**
+ * Get the constructor name from an instance.
+ *
+ * @public
+ */
 export function constructorName(val: object) {
   return getConstructor(Reflect.getPrototypeOf(val)).name;
 }

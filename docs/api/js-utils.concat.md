@@ -4,6 +4,8 @@
 
 ## concat() function
 
+Concatenate a list of buffers.
+
 <b>Signature:</b>
 
 ```typescript

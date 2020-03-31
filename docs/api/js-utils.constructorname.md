@@ -4,6 +4,8 @@
 
 ## constructorName() function
 
+Get the constructor name from an instance.
+
 <b>Signature:</b>
 
 ```typescript

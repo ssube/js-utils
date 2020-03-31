@@ -1,6 +1,9 @@
 import { ConsoleLogger, Logger, NullLogger } from 'noicejs';
 import { isDebug } from './Env';
 
+/**
+ * Get a test logger. Returns a null logger unless `verbose` is true or run under debug mode.
+ */
 export function getTestLogger(verbose = false): Logger {
   if (verbose || isDebug()) {
     return ConsoleLogger.global;
@@ -9,6 +12,9 @@ export function getTestLogger(verbose = false): Logger {
   }
 }
 
+/**
+ * Create a spy logger using the provided methods, which returns itself as a child.
+ */
 export function spyLogger(spies: Partial<Logger>): Logger {
   const logger = {
     ...spies,

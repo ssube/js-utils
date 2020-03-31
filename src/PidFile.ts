@@ -5,6 +5,11 @@ import { doesExist, Optional } from './utils';
 
 type OptionalErrno = Optional<NodeJS.ErrnoException>;
 
+/**
+ * Write the current process ID to a file at the given `path`.
+ *
+ * @public
+ */
 export async function writePid(path: string): Promise<void> {
   return new Promise((res, rej) => {
     open(path, 'wx', (openErr: OptionalErrno, fd: number) => {
@@ -23,6 +28,9 @@ export async function writePid(path: string): Promise<void> {
   });
 }
 
+/**
+ * Remove the file at the given `path`.
+ */
 export async function removePid(path: string): Promise<void> {
   return new Promise((res, rej) => {
     unlink(path, (err: OptionalErrno) => {

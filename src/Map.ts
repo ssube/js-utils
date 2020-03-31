@@ -9,11 +9,15 @@ export interface Dict<TVal> {
 
 /**
  * A `Map` or dictionary object with string keys and `TVal` values.
+ *
+ * @public
  */
 export type MapLike<TVal> = Map<string, TVal> | Dict<TVal>;
 
 /**
  * Get an element from a Map and guard against nil values.
+ *
+ * @public
  */
 export function mustGet<TKey, TVal>(map: Map<TKey, TVal>, key: TKey): TVal {
   const val = map.get(key);
@@ -22,6 +26,8 @@ export function mustGet<TKey, TVal>(map: Map<TKey, TVal>, key: TKey): TVal {
 
 /**
  * Get a map key or default value when the key does not exist or is nil.
+ *
+ * @public
  */
 export function getOrDefault<TKey, TVal>(map: Map<TKey, TVal>, key: TKey, defaultValue: TVal): TVal {
   if (map.has(key)) {
@@ -36,6 +42,8 @@ export function getOrDefault<TKey, TVal>(map: Map<TKey, TVal>, key: TKey, defaul
 
 /**
  * Get the first element from the specified key within a map of lists.
+ *
+ * @public
  */
 export function getHead<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey): TVal {
   const value = map.get(key);
@@ -48,6 +56,8 @@ export function getHead<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey): TVa
 /**
  * Get the first element from the specified key, within a map of lists, or a default value when
  * the key does not exist or is nil.
+ *
+ * @public
  */
 export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, Array<Optional<TVal>>>, key: TKey, defaultValue: TVal): TVal {
   if (!map.has(key)) {
@@ -72,6 +82,8 @@ export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, Array<Optional<TVal>
  * @param map The destination map and source of existing values.
  * @param key The key to get and set.
  * @param val The value to add.
+ *
+ * @public
  */
 export function setOrPush<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey, val: TVal | Array<TVal>) {
   const prev = map.get(key);
@@ -88,6 +100,8 @@ export function setOrPush<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey, va
 
 /**
  * Merge the `source` map into the `target` map, replacing keys that already exist.
+ *
+ * @public
  */
 export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, TVal> | Array<[TKey, TVal]>) {
   for (const [k, v] of source) {
@@ -99,6 +113,8 @@ export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, 
 
 /**
  * Merge the provided maps into a new map, merging keys that already exist by pushing new items.
+ *
+ * @public
  */
 export function pushMergeMap<TKey, TVal>(...args: Array<Map<TKey, TVal | Array<TVal>>>): Map<TKey, Array<TVal>> {
   const out = new Map();
@@ -112,6 +128,8 @@ export function pushMergeMap<TKey, TVal>(...args: Array<Map<TKey, TVal | Array<T
 
 /**
  * Clone a map or map-like object into a new map.
+ *
+ * @public
  */
 export function makeMap<TVal>(val: Optional<MapLike<TVal>>): Map<string, TVal> {
   // nil: empty map
@@ -130,6 +148,8 @@ export function makeMap<TVal>(val: Optional<MapLike<TVal>>): Map<string, TVal> {
 
 /**
  * Turns a map or dict into a dict
+ *
+ * @public
  */
 export function makeDict<TVal>(map: Optional<MapLike<TVal>>): Dict<TVal> {
   if (isNil(map)) {
@@ -154,6 +174,8 @@ export interface NameValuePair<TVal> {
 
 /**
  * Turns a list of name-value pairs into a map.
+ *
+ * @public
  */
 export function pairsToMap<TVal>(pairs: Array<NameValuePair<TVal>>): Map<string, TVal> {
   const map = new Map();
@@ -176,6 +198,11 @@ export function dictValuesToArrays<TVal>(map: MapLike<TVal>): Dict<Array<TVal>> 
   return data;
 }
 
+/**
+ * Normalize a map-like of values into a dict of lists of strings.
+ *
+ * @beta
+ */
 export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
   const data: Dict<Array<string>> = {};
   for (const [key, value] of makeMap(map)) {
@@ -193,6 +220,8 @@ export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
 
 /**
  * Get entries of a map-like.
+ *
+ * @public
  */
 export function entriesOf<TVal>(map: Optional<MapLike<TVal>>): Array<[string, TVal]> {
   if (map instanceof Map) {

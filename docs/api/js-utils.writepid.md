@@ -4,6 +4,8 @@
 
 ## writePid() function
 
+Write the current process ID to a file at the given `path`<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript

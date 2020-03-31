@@ -4,10 +4,12 @@
 
 ## MissingKeyError class
 
+Error indicating that a required key did not exist in a map-like.
+
 <b>Signature:</b>
 
 ```typescript
-export declare class MissingKeyError extends BaseError 
+export declare class MissingKeyError extends NotFoundError 
 ```
 
 ## Constructors

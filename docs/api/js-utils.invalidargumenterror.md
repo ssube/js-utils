@@ -4,6 +4,8 @@
 
 ## InvalidArgumentError class
 
+Error indicating that an invalid argument was passed to a function call.
+
 <b>Signature:</b>
 
 ```typescript

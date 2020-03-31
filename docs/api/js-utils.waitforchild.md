@@ -4,6 +4,8 @@
 
 ## waitForChild() function
 
+Wait for a child process to exit, collecting output, errors, and exit status.
+
 <b>Signature:</b>
 
 ```typescript

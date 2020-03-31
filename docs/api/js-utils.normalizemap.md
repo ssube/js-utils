@@ -4,6 +4,11 @@
 
 ## normalizeMap() function
 
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+> 
+
+Normalize a map-like of values into a dict of lists of strings.
+
 <b>Signature:</b>
 
 ```typescript
