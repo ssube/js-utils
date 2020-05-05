@@ -64,7 +64,7 @@
     "sinon-chai": "3.5.0",
     "source-map-support": "0.5.18",
     "standard-version": "7.1.0",
-    "tslint": "6.1.1",
+    "tslint": "6.1.2",
     "tslint-clean-code": "0.2.10",
     "tslint-consistent-codestyle": "1.16.0",
     "tslint-etc": "1.10.1",
