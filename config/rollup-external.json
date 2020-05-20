@@ -2,6 +2,7 @@
 	"names": [
 		"async_hooks",
 		"chai",
+		"mock-fs",
 		"sinon"
 	]
 }
