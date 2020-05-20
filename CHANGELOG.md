@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.8](https://github.com/ssube/js-utils/compare/v0.1.7...v0.1.8) (2020-05-20)
+
+
+### Bug Fixes
+
+* remove mock-fs from vendor bundle ([bfbfaca](https://github.com/ssube/js-utils/commit/bfbfaca59d7d15140634fe80ee72b969c5a1f9a3))
+
 ### [0.1.7](https://github.com/ssube/js-utils/compare/v0.1.6...v0.1.7) (2020-03-31)
 
 
