@@ -3,7 +3,6 @@ import commonjs from 'rollup-plugin-commonjs';
 import { eslint } from 'rollup-plugin-eslint';
 import json from 'rollup-plugin-json';
 import multiEntry from 'rollup-plugin-multi-entry';
-import builtins from 'rollup-plugin-node-builtins';
 import globals from 'rollup-plugin-node-globals';
 import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
@@ -73,7 +72,9 @@ const bundle = {
 		dir: targetPath,
 		chunkFileNames: '[name].js',
 		entryFileNames: 'entry-[name].js',
+		exports: 'named',
 		format: 'module',
+		minifyInternalExports: false,
 		sourcemap: true,
 	},
 	plugins: [
