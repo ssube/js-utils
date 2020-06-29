@@ -16,9 +16,9 @@ export declare function entriesOf<TVal>(map: Optional<MapLike<TVal>>): Array<[st
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | <code>Optional&lt;MapLike&lt;TVal&gt;&gt;</code> |  |
+|  map | [Optional](./js-utils.optional.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`Array<[string, TVal]>`
+Array&lt;\[string, TVal\]&gt;
 

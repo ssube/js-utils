@@ -11,6 +11,7 @@ Error indicating that an invalid argument was passed to a function call.
 ```typescript
 export declare class InvalidArgumentError extends BaseError 
 ```
+<b>Extends:</b> BaseError
 
 ## Constructors
 

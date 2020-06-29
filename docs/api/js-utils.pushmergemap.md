@@ -16,9 +16,9 @@ export declare function pushMergeMap<TKey, TVal>(...args: Array<Map<TKey, TVal |
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  args | <code>Array&lt;Map&lt;TKey, TVal &#124; Array&lt;TVal&gt;&gt;&gt;</code> |  |
+|  args | Array&lt;Map&lt;TKey, TVal \| Array&lt;TVal&gt;&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`Map<TKey, Array<TVal>>`
+Map&lt;TKey, Array&lt;TVal&gt;&gt;
 

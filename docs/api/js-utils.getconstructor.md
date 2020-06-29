@@ -16,9 +16,9 @@ export declare function getConstructor(val: object): Function;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>object</code> |  |
+|  val | object |  |
 
 <b>Returns:</b>
 
-`Function`
+Function
 

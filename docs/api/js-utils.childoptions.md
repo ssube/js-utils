@@ -9,11 +9,12 @@
 ```typescript
 export interface ChildOptions extends ChildProcessOptions 
 ```
+<b>Extends:</b> ChildProcessOptions
 
 ## Properties
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [args](./js-utils.childoptions.args.md) | <code>Array&lt;string&gt;</code> |  |
-|  [command](./js-utils.childoptions.command.md) | <code>string</code> |  |
+|  [args](./js-utils.childoptions.args.md) | Array&lt;string&gt; |  |
+|  [command](./js-utils.childoptions.command.md) | string |  |
 

@@ -14,9 +14,9 @@ export declare function signal(...signals: Array<NodeJS.Signals>): Promise<NodeJ
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  signals | <code>Array&lt;NodeJS.Signals&gt;</code> |  |
+|  signals | Array&lt;NodeJS.Signals&gt; |  |
 
 <b>Returns:</b>
 
-`Promise<NodeJS.Signals>`
+Promise&lt;NodeJS.Signals&gt;
 

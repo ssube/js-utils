@@ -11,6 +11,7 @@ Error indicating that a function has not been implemented yet.
 ```typescript
 export declare class NotImplementedError extends BaseError 
 ```
+<b>Extends:</b> BaseError
 
 ## Constructors
 

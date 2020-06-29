@@ -16,9 +16,9 @@ export declare function makeDict<TVal>(map: Optional<MapLike<TVal>>): Dict<TVal>
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | <code>Optional&lt;MapLike&lt;TVal&gt;&gt;</code> |  |
+|  map | [Optional](./js-utils.optional.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`Dict<TVal>`
+[Dict](./js-utils.dict.md)<!-- -->&lt;TVal&gt;
 

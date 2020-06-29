@@ -16,9 +16,9 @@ map(input: Array<string>): Map<string, Array<string>>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  input | <code>Array&lt;string&gt;</code> |  |
+|  input | Array&lt;string&gt; |  |
 
 <b>Returns:</b>
 
-`Map<string, Array<string>>`
+Map&lt;string, Array&lt;string&gt;&gt;
 

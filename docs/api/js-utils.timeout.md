@@ -16,10 +16,10 @@ export declare function timeout<T>(ms: number, oper: Promise<T>): Promise<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  ms | <code>number</code> |  |
-|  oper | <code>Promise&lt;T&gt;</code> |  |
+|  ms | number |  |
+|  oper | Promise&lt;T&gt; |  |
 
 <b>Returns:</b>
 
-`Promise<T>`
+Promise&lt;T&gt;
 

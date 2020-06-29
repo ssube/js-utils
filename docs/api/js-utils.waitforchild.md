@@ -16,9 +16,9 @@ export declare function waitForChild(child: ChildStreams): Promise<ChildResult>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  child | <code>ChildStreams</code> |  |
+|  child | ChildStreams |  |
 
 <b>Returns:</b>
 
-`Promise<ChildResult>`
+Promise&lt;[ChildResult](./js-utils.childresult.md)<!-- -->&gt;
 

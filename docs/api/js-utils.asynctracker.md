@@ -24,8 +24,8 @@ export declare class AsyncTracker
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [filter](./js-utils.asynctracker.filter.md) |  | <code>Optional&lt;StackFilter&gt;</code> |  |
-|  [size](./js-utils.asynctracker.size.md) |  | <code>number</code> |  |
+|  [filter](./js-utils.asynctracker.filter.md) |  | [Optional](./js-utils.optional.md)<!-- -->&lt;StackFilter&gt; |  |
+|  [size](./js-utils.asynctracker.size.md) |  | number |  |
 
 ## Methods
 

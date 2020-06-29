@@ -11,6 +11,7 @@ Check whether items are included or not (blacklist or whitelist, depending on `m
 ```typescript
 export declare class Checklist<T> implements ChecklistOptions<T> 
 ```
+<b>Implements:</b> [ChecklistOptions](./js-utils.checklistoptions.md)<!-- -->&lt;T&gt;
 
 ## Constructors
 
@@ -22,8 +23,8 @@ export declare class Checklist<T> implements ChecklistOptions<T>
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [data](./js-utils.checklist.data.md) |  | <code>Array&lt;T&gt;</code> | TODO: switch to Set |
-|  [mode](./js-utils.checklist.mode.md) |  | <code>ChecklistMode</code> |  |
+|  [data](./js-utils.checklist.data.md) |  | Array&lt;T&gt; | TODO: switch to Set |
+|  [mode](./js-utils.checklist.mode.md) |  | [ChecklistMode](./js-utils.checklistmode.md) |  |
 
 ## Methods
 

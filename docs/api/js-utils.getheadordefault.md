@@ -16,11 +16,11 @@ export declare function getHeadOrDefault<TKey, TVal>(map: Map<TKey, Array<Option
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | <code>Map&lt;TKey, Array&lt;Optional&lt;TVal&gt;&gt;&gt;</code> |  |
-|  key | <code>TKey</code> |  |
-|  defaultValue | <code>TVal</code> |  |
+|  map | Map&lt;TKey, Array&lt;[Optional](./js-utils.optional.md)<!-- -->&lt;TVal&gt;&gt;&gt; |  |
+|  key | TKey |  |
+|  defaultValue | TVal |  |
 
 <b>Returns:</b>
 
-`TVal`
+TVal
 

@@ -18,9 +18,9 @@ export declare function mustCoalesce<T>(...values: Array<Optional<T>>): T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  values | <code>Array&lt;Optional&lt;T&gt;&gt;</code> |  |
+|  values | Array&lt;[Optional](./js-utils.optional.md)<!-- -->&lt;T&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`T`
+T
 

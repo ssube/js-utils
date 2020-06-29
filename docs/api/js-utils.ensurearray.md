@@ -14,9 +14,9 @@ export declare function ensureArray<T>(val: Optional<Array<T>>): Array<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>Optional&lt;Array&lt;T&gt;&gt;</code> |  |
+|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;Array&lt;T&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`Array<T>`
+Array&lt;T&gt;
 

@@ -16,5 +16,5 @@ constructor(options: ChecklistOptions<T>);
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  options | <code>ChecklistOptions&lt;T&gt;</code> |  |
+|  options | [ChecklistOptions](./js-utils.checklistoptions.md)<!-- -->&lt;T&gt; |  |
 

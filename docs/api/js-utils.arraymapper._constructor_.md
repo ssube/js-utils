@@ -16,5 +16,5 @@ constructor(options: ArrayMapperOptions);
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  options | <code>ArrayMapperOptions</code> |  |
+|  options | [ArrayMapperOptions](./js-utils.arraymapperoptions.md) |  |
 

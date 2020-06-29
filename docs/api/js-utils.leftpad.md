@@ -14,11 +14,11 @@ export declare function leftPad(val: string, min?: number, fill?: string): strin
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>string</code> |  |
-|  min | <code>number</code> |  |
-|  fill | <code>string</code> |  |
+|  val | string |  |
+|  min | number |  |
+|  fill | string |  |
 
 <b>Returns:</b>
 
-`string`
+string
 

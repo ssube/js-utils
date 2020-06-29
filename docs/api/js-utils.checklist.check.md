@@ -14,9 +14,9 @@ check(value: T): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  value | <code>T</code> |  |
+|  value | T |  |
 
 <b>Returns:</b>
 
-`boolean`
+boolean
 

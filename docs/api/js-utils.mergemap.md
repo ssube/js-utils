@@ -16,10 +16,10 @@ export declare function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Ma
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  target | <code>Map&lt;TKey, TVal&gt;</code> |  |
-|  source | <code>Map&lt;TKey, TVal&gt; &#124; Array&lt;[TKey, TVal]&gt;</code> |  |
+|  target | Map&lt;TKey, TVal&gt; |  |
+|  source | Map&lt;TKey, TVal&gt; \| Array&lt;\[TKey, TVal\]&gt; |  |
 
 <b>Returns:</b>
 
-`Map<TKey, TVal>`
+Map&lt;TKey, TVal&gt;
 

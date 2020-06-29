@@ -11,6 +11,7 @@ Error indicating that a child process exited with an error status.
 ```typescript
 export declare class ChildProcessError extends BaseError 
 ```
+<b>Extends:</b> BaseError
 
 ## Constructors
 

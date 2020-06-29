@@ -16,9 +16,9 @@ export declare function mergeList<TItem>(...parts: Array<TItem | Array<TItem>>):
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  parts | <code>Array&lt;TItem &#124; Array&lt;TItem&gt;&gt;</code> |  |
+|  parts | Array&lt;TItem \| Array&lt;TItem&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`Array<TItem>`
+Array&lt;TItem&gt;
 

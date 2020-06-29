@@ -16,9 +16,9 @@ export declare function filterNil<TItem>(list: ArrayLike<Optional<TItem>>): Arra
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  list | <code>ArrayLike&lt;Optional&lt;TItem&gt;&gt;</code> |  |
+|  list | ArrayLike&lt;[Optional](./js-utils.optional.md)<!-- -->&lt;TItem&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`Array<TItem>`
+Array&lt;TItem&gt;
 

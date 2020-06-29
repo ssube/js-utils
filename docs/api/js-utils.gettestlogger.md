@@ -16,9 +16,9 @@ export declare function getTestLogger(verbose?: boolean): Logger;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  verbose | <code>boolean</code> |  |
+|  verbose | boolean |  |
 
 <b>Returns:</b>
 
-`Logger`
+Logger
 

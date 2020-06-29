@@ -11,6 +11,7 @@ Error indicating that a required key did not exist in a map-like.
 ```typescript
 export declare class MissingKeyError extends NotFoundError 
 ```
+<b>Extends:</b> [NotFoundError](./js-utils.notfounderror.md)
 
 ## Constructors
 

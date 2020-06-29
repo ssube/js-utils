@@ -16,10 +16,10 @@ export declare function encode(chunks: Array<Buffer>, encoding: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  chunks | <code>Array&lt;Buffer&gt;</code> |  |
-|  encoding | <code>string</code> |  |
+|  chunks | Array&lt;Buffer&gt; |  |
+|  encoding | string |  |
 
 <b>Returns:</b>
 
-`string`
+string
 

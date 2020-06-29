@@ -19,9 +19,9 @@ export declare function normalizeMap(map: MapLike<unknown>): Dict<Array<string>>
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | <code>MapLike&lt;unknown&gt;</code> |  |
+|  map | [MapLike](./js-utils.maplike.md)<!-- -->&lt;unknown&gt; |  |
 
 <b>Returns:</b>
 
-`Dict<Array<string>>`
+[Dict](./js-utils.dict.md)<!-- -->&lt;Array&lt;string&gt;&gt;
 

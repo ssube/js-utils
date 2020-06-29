@@ -16,9 +16,9 @@ export declare function doesExist<T>(val: Optional<T>): val is T;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>Optional&lt;T&gt;</code> |  |
+|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;T&gt; |  |
 
 <b>Returns:</b>
 
-`val is T`
+val is T
 

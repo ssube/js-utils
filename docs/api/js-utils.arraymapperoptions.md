@@ -14,7 +14,7 @@ export interface ArrayMapperOptions
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [rest](./js-utils.arraymapperoptions.rest.md) | <code>string</code> | Key for any remaining, unmatched elements. |
-|  [skip](./js-utils.arraymapperoptions.skip.md) | <code>number</code> | Number of initial elements to skip. |
-|  [take](./js-utils.arraymapperoptions.take.md) | <code>Array&lt;string&gt;</code> | List of element keys. |
+|  [rest](./js-utils.arraymapperoptions.rest.md) | string | Key for any remaining, unmatched elements. |
+|  [skip](./js-utils.arraymapperoptions.skip.md) | number | Number of initial elements to skip. |
+|  [take](./js-utils.arraymapperoptions.take.md) | Array&lt;string&gt; | List of element keys. |
 

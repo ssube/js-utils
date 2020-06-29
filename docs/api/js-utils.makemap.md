@@ -16,9 +16,9 @@ export declare function makeMap<TVal>(val: Optional<MapLike<TVal>>): Map<string,
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>Optional&lt;MapLike&lt;TVal&gt;&gt;</code> |  |
+|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`Map<string, TVal>`
+Map&lt;string, TVal&gt;
 

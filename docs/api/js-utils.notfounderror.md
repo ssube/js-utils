@@ -11,6 +11,7 @@ Error indicating that some value was not found.
 ```typescript
 export declare class NotFoundError extends BaseError 
 ```
+<b>Extends:</b> BaseError
 
 ## Constructors
 

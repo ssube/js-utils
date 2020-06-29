@@ -16,10 +16,10 @@ export declare function getHead<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TK
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | <code>Map&lt;TKey, Array&lt;TVal&gt;&gt;</code> |  |
-|  key | <code>TKey</code> |  |
+|  map | Map&lt;TKey, Array&lt;TVal&gt;&gt; |  |
+|  key | TKey |  |
 
 <b>Returns:</b>
 
-`TVal`
+TVal
 

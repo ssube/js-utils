@@ -16,9 +16,9 @@ export declare function concat(chunks: Array<Buffer>): Buffer;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  chunks | <code>Array&lt;Buffer&gt;</code> |  |
+|  chunks | Array&lt;Buffer&gt; |  |
 
 <b>Returns:</b>
 
-`Buffer`
+Buffer
 

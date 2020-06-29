@@ -22,9 +22,9 @@ export declare class ArrayMapper
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [rest](./js-utils.arraymapper.rest.md) |  | <code>string</code> |  |
-|  [skip](./js-utils.arraymapper.skip.md) |  | <code>number</code> |  |
-|  [take](./js-utils.arraymapper.take.md) |  | <code>Array&lt;string&gt;</code> |  |
+|  [rest](./js-utils.arraymapper.rest.md) |  | string |  |
+|  [skip](./js-utils.arraymapper.skip.md) |  | number |  |
+|  [take](./js-utils.arraymapper.take.md) |  | Array&lt;string&gt; |  |
 
 ## Methods
 

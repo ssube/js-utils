@@ -16,9 +16,9 @@ export declare function getMethods<TValue extends object>(value: TValue): Set<Fu
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  value | <code>TValue</code> |  |
+|  value | TValue |  |
 
 <b>Returns:</b>
 
-`Set<Function>`
+Set&lt;Function&gt;
 

@@ -11,6 +11,7 @@ Error indicating that a promise timed out.
 ```typescript
 export declare class TimeoutError extends BaseError 
 ```
+<b>Extends:</b> BaseError
 
 ## Constructors
 

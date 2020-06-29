@@ -16,10 +16,10 @@ export declare function defer<T = undefined>(ms: number, val?: T): Promise<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  ms | <code>number</code> |  |
-|  val | <code>T</code> |  |
+|  ms | number |  |
+|  val | T |  |
 
 <b>Returns:</b>
 
-`Promise<T>`
+Promise&lt;T&gt;
 

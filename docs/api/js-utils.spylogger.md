@@ -16,9 +16,9 @@ export declare function spyLogger(spies: Partial<Logger>): Logger;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  spies | <code>Partial&lt;Logger&gt;</code> |  |
+|  spies | Partial&lt;Logger&gt; |  |
 
 <b>Returns:</b>
 
-`Logger`
+Logger
 

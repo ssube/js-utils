@@ -16,10 +16,10 @@ export declare function defaultWhen<TVal>(condition: boolean, ...items: Array<TV
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  condition | <code>boolean</code> |  |
-|  items | <code>Array&lt;TVal&gt;</code> |  |
+|  condition | boolean |  |
+|  items | Array&lt;TVal&gt; |  |
 
 <b>Returns:</b>
 
-`TVal`
+TVal
 

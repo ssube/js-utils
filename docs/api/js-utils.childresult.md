@@ -14,7 +14,7 @@ export interface ChildResult
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [status](./js-utils.childresult.status.md) | <code>number</code> |  |
-|  [stderr](./js-utils.childresult.stderr.md) | <code>string</code> |  |
-|  [stdout](./js-utils.childresult.stdout.md) | <code>string</code> |  |
+|  [status](./js-utils.childresult.status.md) | number |  |
+|  [stderr](./js-utils.childresult.stderr.md) | string |  |
+|  [stdout](./js-utils.childresult.stdout.md) | string |  |
 

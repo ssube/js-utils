@@ -14,6 +14,6 @@ export interface ChecklistOptions<T>
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [data](./js-utils.checklistoptions.data.md) | <code>Array&lt;T&gt;</code> |  |
-|  [mode](./js-utils.checklistoptions.mode.md) | <code>ChecklistMode</code> |  |
+|  [data](./js-utils.checklistoptions.data.md) | Array&lt;T&gt; |  |
+|  [mode](./js-utils.checklistoptions.mode.md) | [ChecklistMode](./js-utils.checklistmode.md) |  |
 

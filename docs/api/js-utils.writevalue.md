@@ -14,10 +14,10 @@ export declare function writeValue(stream: Writable, value: string): Promise<boo
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  stream | <code>Writable</code> |  |
-|  value | <code>string</code> |  |
+|  stream | Writable |  |
+|  value | string |  |
 
 <b>Returns:</b>
 
-`Promise<boolean>`
+Promise&lt;boolean&gt;
 

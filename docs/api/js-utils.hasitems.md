@@ -18,9 +18,9 @@ export declare function hasItems<T>(val: Optional<Array<T>>): val is Array<T>;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>Optional&lt;Array&lt;T&gt;&gt;</code> |  |
+|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;Array&lt;T&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`val is Array<T>`
+val is Array&lt;T&gt;
 

@@ -14,9 +14,9 @@ export declare function hasItems<T>(val: Optional<ReadonlyArray<T>>): val is Rea
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>Optional&lt;ReadonlyArray&lt;T&gt;&gt;</code> |  |
+|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;ReadonlyArray&lt;T&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`val is ReadonlyArray<T>`
+val is ReadonlyArray&lt;T&gt;
 

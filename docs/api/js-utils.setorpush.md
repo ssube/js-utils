@@ -16,11 +16,11 @@ export declare function setOrPush<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: 
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | <code>Map&lt;TKey, Array&lt;TVal&gt;&gt;</code> | The destination map and source of existing values. |
-|  key | <code>TKey</code> | The key to get and set. |
-|  val | <code>TVal &#124; Array&lt;TVal&gt;</code> | The value to add. |
+|  map | Map&lt;TKey, Array&lt;TVal&gt;&gt; | The destination map and source of existing values. |
+|  key | TKey | The key to get and set. |
+|  val | TVal \| Array&lt;TVal&gt; | The value to add. |
 
 <b>Returns:</b>
 
-`void`
+void
 

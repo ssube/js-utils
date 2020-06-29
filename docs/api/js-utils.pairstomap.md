@@ -16,9 +16,9 @@ export declare function pairsToMap<TVal>(pairs: Array<NameValuePair<TVal>>): Map
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  pairs | <code>Array&lt;NameValuePair&lt;TVal&gt;&gt;</code> |  |
+|  pairs | Array&lt;NameValuePair&lt;TVal&gt;&gt; |  |
 
 <b>Returns:</b>
 
-`Map<string, TVal>`
+Map&lt;string, TVal&gt;
 

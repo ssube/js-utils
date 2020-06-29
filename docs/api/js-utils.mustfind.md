@@ -16,10 +16,10 @@ export declare function mustFind<TVal>(list: Array<Optional<TVal>>, predicate: P
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  list | <code>Array&lt;Optional&lt;TVal&gt;&gt;</code> |  |
-|  predicate | <code>PredicateC1&lt;TVal&gt;</code> |  |
+|  list | Array&lt;[Optional](./js-utils.optional.md)<!-- -->&lt;TVal&gt;&gt; |  |
+|  predicate | PredicateC1&lt;TVal&gt; |  |
 
 <b>Returns:</b>
 
-`TVal`
+TVal
 

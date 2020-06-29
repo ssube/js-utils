@@ -16,9 +16,9 @@ export declare function constructorName(val: object): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>object</code> |  |
+|  val | object |  |
 
 <b>Returns:</b>
 
-`string`
+string
 

@@ -16,10 +16,10 @@ export declare function mustGet<TKey, TVal>(map: Map<TKey, TVal>, key: TKey): TV
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | <code>Map&lt;TKey, TVal&gt;</code> |  |
-|  key | <code>TKey</code> |  |
+|  map | Map&lt;TKey, TVal&gt; |  |
+|  key | TKey |  |
 
 <b>Returns:</b>
 
-`TVal`
+TVal
 

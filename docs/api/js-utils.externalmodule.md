@@ -14,7 +14,7 @@ export interface ExternalModule
 
 |  Property | Type | Description |
 |  --- | --- | --- |
-|  [data](./js-utils.externalmodule.data.md) | <code>unknown</code> |  |
-|  [export](./js-utils.externalmodule.export.md) | <code>string</code> |  |
-|  [require](./js-utils.externalmodule.require.md) | <code>string</code> |  |
+|  [data](./js-utils.externalmodule.data.md) | unknown |  |
+|  [export](./js-utils.externalmodule.export.md) | string |  |
+|  [require](./js-utils.externalmodule.require.md) | string |  |
 

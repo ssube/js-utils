@@ -18,9 +18,9 @@ export declare function countOf(val: unknown): number;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>unknown</code> |  |
+|  val | unknown |  |
 
 <b>Returns:</b>
 
-`number`
+number
 

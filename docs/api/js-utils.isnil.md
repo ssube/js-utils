@@ -16,9 +16,9 @@ export declare function isNil<T>(val: Optional<T>): val is Nil;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>Optional&lt;T&gt;</code> |  |
+|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;T&gt; |  |
 
 <b>Returns:</b>
 
-`val is Nil`
+val is [Nil](./js-utils.nil.md)
 

@@ -14,11 +14,11 @@ export declare function trim(val: string, max: number, tail?: string): string;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | <code>string</code> |  |
-|  max | <code>number</code> |  |
-|  tail | <code>string</code> |  |
+|  val | string |  |
+|  max | number |  |
+|  tail | string |  |
 
 <b>Returns:</b>
 
-`string`
+string
 
