@@ -2,6 +2,35 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0-0](https://github.com/ssube/js-utils/compare/v0.1.8...v0.2.0-0) (2020-06-30)
+
+
+### ⚠ BREAKING CHANGES
+
+* this removes the test helpers, which were not well
+tested and required the `async_hooks` module, and the PID file
+helpers, which introduced a requirement on `fs` that could not be
+easily polyfilled. This should make the library easier to use in
+browsers and bundlers.
+* **build:** removes the umd module in favor of a smaller, standard
+ES module. Consumers will need native support for ES modules (recent
+evergreen browsers) or a bundler with the same (rollup, webpack, etc).
+
+### Features
+
+* **build:** bundle as ES module ([040fecc](https://github.com/ssube/js-utils/commit/040fecc6e3b6ac6f9b0c679b6dd294486d8b5258))
+
+
+### Bug Fixes
+
+* better support for readonly arrays ([a4b8bf2](https://github.com/ssube/js-utils/commit/a4b8bf24b6f50b52c4271d053a3b164581909dee))
+* **build:** use full names for exported symbols ([a7cf22d](https://github.com/ssube/js-utils/commit/a7cf22de07311f7bc204f9cba79077d8ac7ca7b1))
+
+
+### remove
+
+* async test tracker and pid file utils ([e34641a](https://github.com/ssube/js-utils/commit/e34641a42d49599e4862ea7f19c7dd19e48c36b3))
+
 ### [0.1.8](https://github.com/ssube/js-utils/compare/v0.1.7...v0.1.8) (2020-05-20)
 
 
