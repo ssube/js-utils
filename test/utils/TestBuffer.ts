@@ -1,11 +1,10 @@
 import { expect } from 'chai';
 
 import { concat, encode } from '../../src/Buffer';
-import { describeLeaks, itLeaks } from '../helpers/async';
 
-describeLeaks('buffer utils', async () => {
-  describeLeaks('concat', async () => {
-    itLeaks('should append chunk buffers', async () => {
+describe('buffer utils', async () => {
+  describe('concat', async () => {
+    it('should append chunk buffers', async () => {
       expect(concat([
         Buffer.from('hello'),
         Buffer.from('world'),
@@ -13,18 +12,18 @@ describeLeaks('buffer utils', async () => {
     });
   });
 
-  describeLeaks('encode', async () => {
-    itLeaks('should encode chunk buffers', async () => {
+  describe('encode', async () => {
+    it('should encode chunk buffers', async () => {
       expect(encode([
         Buffer.from('hello world'),
       ], 'utf-8')).to.equal('hello world');
     });
 
-    itLeaks('should encode no buffers', async () => {
+    it('should encode no buffers', async () => {
       expect(encode([], 'utf-8')).to.equal('');
     });
 
-    itLeaks('should encode empty buffers', async () => {
+    it('should encode empty buffers', async () => {
       expect(encode([
         new Buffer(0),
       ], 'utf-8')).to.equal('');

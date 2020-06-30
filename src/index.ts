@@ -6,9 +6,6 @@ export { NotImplementedError } from './error/NotImplementedError';
 export { TimeoutError } from './error/TimeoutError';
 
 export {
-  AsyncTracker,
-} from './AsyncTracker';
-export {
   ArrayMapper,
   ArrayMapperOptions,
 } from './ArrayMapper';
@@ -71,10 +68,6 @@ export {
   mustExist,
   mustFind,
 } from './Maybe';
-export {
-  removePid,
-  writePid,
-} from './PidFile';
 export {
   constructorName,
   getConstructor,

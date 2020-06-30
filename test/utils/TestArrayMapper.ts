@@ -1,11 +1,10 @@
 import { expect } from 'chai';
 
 import { ArrayMapper } from '../../src/ArrayMapper';
-import { describeLeaks, itLeaks } from '../helpers/async';
 
-describeLeaks('utils', async () => {
-  describeLeaks('array mapper', async () => {
-    itLeaks('should take initial args', async () => {
+describe('utils', async () => {
+  describe('array mapper', async () => {
+    it('should take initial args', async () => {
       const mapper = new ArrayMapper({
         rest: 'others',
         skip: 0,
@@ -18,7 +17,7 @@ describeLeaks('utils', async () => {
       expect(results.get('others'), 'rest should be collected').to.deep.equal(['3', '4']);
     });
 
-    itLeaks('should always include rest arg', async () => {
+    it('should always include rest arg', async () => {
       const mapper = new ArrayMapper({
         rest: 'empty',
         skip: 0,
@@ -29,7 +28,7 @@ describeLeaks('utils', async () => {
       expect(results.get('empty'), 'rest key should be empty').to.have.lengthOf(0);
     });
 
-    itLeaks('should skit initial args', async () => {
+    it('should skit initial args', async () => {
       const mapper = new ArrayMapper({
         rest: 'empty',
         skip: 3,

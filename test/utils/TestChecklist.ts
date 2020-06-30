@@ -1,16 +1,15 @@
 import { expect } from 'chai';
 
 import { Checklist, ChecklistMode } from '../../src/Checklist';
-import { describeLeaks, itLeaks } from '../helpers/async';
 
 const EXISTING_ITEM = 'foo';
 const MISSING_ITEM = 'bin';
 const TEST_DATA = [EXISTING_ITEM, 'bar'];
 
 // tslint:disable:no-duplicate-functions
-describeLeaks('checklist', async () => {
-  describeLeaks('exclude mode', async () => {
-    itLeaks('should check for present values', async () => {
+describe('checklist', async () => {
+  describe('exclude mode', async () => {
+    it('should check for present values', async () => {
       const list = new Checklist({
         data: TEST_DATA,
         mode: ChecklistMode.EXCLUDE,
@@ -18,7 +17,7 @@ describeLeaks('checklist', async () => {
       expect(list.check(EXISTING_ITEM)).to.equal(false);
     });
 
-    itLeaks('should check for missing values', async () => {
+    it('should check for missing values', async () => {
       const list = new Checklist({
         data: TEST_DATA,
         mode: ChecklistMode.EXCLUDE,
@@ -27,8 +26,8 @@ describeLeaks('checklist', async () => {
     });
   });
 
-  describeLeaks('include mode', async () => {
-    itLeaks('should check for present values', async () => {
+  describe('include mode', async () => {
+    it('should check for present values', async () => {
       const list = new Checklist<string>({
         data: TEST_DATA,
         mode: ChecklistMode.INCLUDE,
@@ -36,7 +35,7 @@ describeLeaks('checklist', async () => {
       expect(list.check(EXISTING_ITEM)).to.equal(true);
     });
 
-    itLeaks('should check for missing values', async () => {
+    it('should check for missing values', async () => {
       const list = new Checklist<string>({
         data: TEST_DATA,
         mode: ChecklistMode.INCLUDE,

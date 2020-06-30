@@ -15,7 +15,6 @@ import {
   pushMergeMap,
   normalizeMap,
 } from '../../src/Map';
-import { describeLeaks, itLeaks } from '../helpers/async';
 
 const DEFAULT_VALUE = 'default';
 const mapKey = 'key';
@@ -29,22 +28,22 @@ const multiItem = new Map([
   /* eslint-enable */
 ]);
 
-describeLeaks('map utils', async () => {
-  describeLeaks('make dict', async () => {
-    itLeaks('should return an empty dict for nil values', async () => {
+describe('map utils', async () => {
+  describe('make dict', async () => {
+    it('should return an empty dict for nil values', async () => {
       /* eslint-disable-next-line no-null/no-null */
       expect(makeDict(null)).to.deep.equal({});
       expect(makeDict(undefined)).to.deep.equal({});
     });
 
-    itLeaks('should return an existing dict', async () => {
+    it('should return an existing dict', async () => {
       const input = {};
       expect(makeDict(input)).to.equal(input);
     });
   });
 
-  describeLeaks('make map', async () => {
-    itLeaks('should convert objects to maps', async () => {
+  describe('make map', async () => {
+    it('should convert objects to maps', async () => {
       const data = {
         bar: '2',
         foo: '1',
@@ -55,44 +54,44 @@ describeLeaks('map utils', async () => {
     });
   });
 
-  describeLeaks('must get helper', async () => {
-    itLeaks('should get existing keys', async () => {
+  describe('must get helper', async () => {
+    it('should get existing keys', async () => {
       expect(mustGet(singleItem, mapKey)).to.equal(mapValue);
     });
 
-    itLeaks('should throw on missing keys', async () => {
+    it('should throw on missing keys', async () => {
       expect(() => {
         mustGet(singleItem, 'nope');
       }).to.throw(NotFoundError);
     });
   });
 
-  describeLeaks('get head helper', async () => {
-    itLeaks('should get the first item from existing keys', async () => {
+  describe('get head helper', async () => {
+    it('should get the first item from existing keys', async () => {
       expect(getHead(multiItem, mapKey)).to.equal(mapValue);
     });
 
-    itLeaks('should throw on missing keys', async () => {
+    it('should throw on missing keys', async () => {
       expect(() => {
         getHead(multiItem, 'nope');
       }).to.throw(NotFoundError);
     });
   });
 
-  describeLeaks('get head or default helper', async () => {
-    itLeaks('should get the first item from existing keys', async () => {
+  describe('get head or default helper', async () => {
+    it('should get the first item from existing keys', async () => {
       expect(getHeadOrDefault(multiItem, mapKey, 'nope')).to.equal(mapValue);
     });
 
-    itLeaks('should get the default for missing keys', async () => {
+    it('should get the default for missing keys', async () => {
       expect(getHeadOrDefault(multiItem, 'nope', mapValue)).to.equal(mapValue);
     });
 
-    itLeaks('should return the default value for nil values', async () => {
+    it('should return the default value for nil values', async () => {
       expect(getHeadOrDefault(multiItem, 'nilValue', mapValue)).to.equal(mapValue);
     });
 
-    itLeaks('should return the default value for nil keys', async () => {
+    it('should return the default value for nil keys', async () => {
       expect(getHeadOrDefault(multiItem, 'nilKey', mapValue)).to.equal(mapValue);
     });
   });
