@@ -1,7 +1,7 @@
 import { isMap, isObject, isString } from 'lodash';
 
 import { NotFoundError } from './error/NotFoundError';
-import { mergeList } from './List';
+import { mergeList, toList } from './List';
 import { doesExist, isNil, mustExist, Optional } from './Maybe';
 
 export interface Dict<TVal> {
@@ -46,7 +46,7 @@ export function getOrDefault<TKey, TVal>(map: Map<TKey, TVal>, key: TKey, defaul
  *
  * @public
  */
-export function getHead<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey): TVal {
+export function getHead<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey): TVal {
   const value = map.get(key);
   if (isNil(value) || value.length === 0) {
     throw new NotFoundError();
@@ -60,7 +60,7 @@ export function getHead<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey): TVa
  *
  * @public
  */
-export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, Array<Optional<TVal>>>, key: TKey, defaultValue: TVal): TVal {
+export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, ReadonlyArray<Optional<TVal>>>, key: TKey, defaultValue: TVal): TVal {
   if (!map.has(key)) {
     return defaultValue;
   }
@@ -86,16 +86,12 @@ export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, Array<Optional<TVal>
  *
  * @public
  */
-export function setOrPush<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey, val: TVal | Array<TVal>) {
+export function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey, val: TVal | ReadonlyArray<TVal>) {
   const prev = map.get(key);
   if (doesExist(prev)) {
     map.set(key, mergeList(prev, val));
   } else {
-    if (Array.isArray(val)) {
-      map.set(key, val);
-    } else {
-      map.set(key, [val]);
-    }
+    map.set(key, toList(val));
   }
 }
 
@@ -104,7 +100,7 @@ export function setOrPush<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey, va
  *
  * @public
  */
-export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, TVal> | Array<[TKey, TVal]>) {
+export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, TVal> | ReadonlyArray<[TKey, TVal]>) {
   for (const [k, v] of source) {
     target.set(k, v);
   }
@@ -117,7 +113,9 @@ export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, 
  *
  * @public
  */
-export function pushMergeMap<TKey, TVal>(...args: Array<Map<TKey, TVal | Array<TVal>>>): Map<TKey, Array<TVal>> {
+export function pushMergeMap<TKey, TVal>(...args: Array<Map<TKey, TVal | Array<TVal>>>): Map<TKey, Array<TVal>>;
+export function pushMergeMap<TKey, TVal>(...args: ReadonlyArray<Map<TKey, TVal | ReadonlyArray<TVal>>>): Map<TKey, ReadonlyArray<TVal>>;
+export function pushMergeMap<TKey, TVal>(...args: ReadonlyArray<Map<TKey, TVal | ReadonlyArray<TVal>>>): Map<TKey, ReadonlyArray<TVal>> {
   const out = new Map();
   for (const arg of args) {
     for (const [key, val] of arg) {
@@ -178,7 +176,7 @@ export interface NameValuePair<TVal> {
  *
  * @public
  */
-export function pairsToMap<TVal>(pairs: Array<NameValuePair<TVal>>): Map<string, TVal> {
+export function pairsToMap<TVal>(pairs: ReadonlyArray<NameValuePair<TVal>>): Map<string, TVal> {
   const map = new Map();
   for (const p of pairs) {
     map.set(p.name, p.value);

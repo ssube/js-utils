@@ -9,14 +9,14 @@ Get the first element from the specified key within a map of lists.
 <b>Signature:</b>
 
 ```typescript
-export declare function getHead<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey): TVal;
+export declare function getHead<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey): TVal;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | Map&lt;TKey, Array&lt;TVal&gt;&gt; |  |
+|  map | Map&lt;TKey, ReadonlyArray&lt;TVal&gt;&gt; |  |
 |  key | TKey |  |
 
 <b>Returns:</b>

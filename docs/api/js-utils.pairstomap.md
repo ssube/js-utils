@@ -9,14 +9,14 @@ Turns a list of name-value pairs into a map.
 <b>Signature:</b>
 
 ```typescript
-export declare function pairsToMap<TVal>(pairs: Array<NameValuePair<TVal>>): Map<string, TVal>;
+export declare function pairsToMap<TVal>(pairs: ReadonlyArray<NameValuePair<TVal>>): Map<string, TVal>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  pairs | Array&lt;NameValuePair&lt;TVal&gt;&gt; |  |
+|  pairs | ReadonlyArray&lt;NameValuePair&lt;TVal&gt;&gt; |  |
 
 <b>Returns:</b>
 

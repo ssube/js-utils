@@ -9,16 +9,16 @@ Set a map key to a new array or push to the existing value.
 <b>Signature:</b>
 
 ```typescript
-export declare function setOrPush<TKey, TVal>(map: Map<TKey, Array<TVal>>, key: TKey, val: TVal | Array<TVal>): void;
+export declare function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey, val: TVal | ReadonlyArray<TVal>): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | Map&lt;TKey, Array&lt;TVal&gt;&gt; | The destination map and source of existing values. |
+|  map | Map&lt;TKey, ReadonlyArray&lt;TVal&gt;&gt; | The destination map and source of existing values. |
 |  key | TKey | The key to get and set. |
-|  val | TVal \| Array&lt;TVal&gt; | The value to add. |
+|  val | TVal \| ReadonlyArray&lt;TVal&gt; | The value to add. |
 
 <b>Returns:</b>
 

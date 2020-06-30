@@ -9,7 +9,7 @@ Merge the `source` map into the `target` map, replacing keys that already exist.
 <b>Signature:</b>
 
 ```typescript
-export declare function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, TVal> | Array<[TKey, TVal]>): Map<TKey, TVal>;
+export declare function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, TVal> | ReadonlyArray<[TKey, TVal]>): Map<TKey, TVal>;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ export declare function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Ma
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  target | Map&lt;TKey, TVal&gt; |  |
-|  source | Map&lt;TKey, TVal&gt; \| Array&lt;\[TKey, TVal\]&gt; |  |
+|  source | Map&lt;TKey, TVal&gt; \| ReadonlyArray&lt;\[TKey, TVal\]&gt; |  |
 
 <b>Returns:</b>
 

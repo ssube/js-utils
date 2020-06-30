@@ -9,7 +9,6 @@
 |  Class | Description |
 |  --- | --- |
 |  [ArrayMapper](./js-utils.arraymapper.md) | Map an array of items into a map of arrays using the specified keys, able to <code>skip</code> initial items and gather remaining items into a <code>rest</code> key. |
-|  [AsyncTracker](./js-utils.asynctracker.md) | Async resource tracker using node's internal hooks.<!-- -->This probably won't work in a browser. It does not hold references to the resource, to avoid leaks. Adapted from https://gist.github.com/boneskull/7fe75b63d613fa940db7ec990a5f5843\#file-async-dump-js |
 |  [Checklist](./js-utils.checklist.md) | Check whether items are included or not (blacklist or whitelist, depending on <code>mode</code>). |
 |  [ChildProcessError](./js-utils.childprocesserror.md) | Error indicating that a child process exited with an error status. |
 |  [InvalidArgumentError](./js-utils.invalidargumenterror.md) | Error indicating that an invalid argument was passed to a function call. |
@@ -36,6 +35,7 @@
 |  [doesExist(val)](./js-utils.doesexist.md) | Check if a variable is not nil. |
 |  [encode(chunks, encoding)](./js-utils.encode.md) | Concatenate then encode a list of buffers. |
 |  [ensureArray(val)](./js-utils.ensurearray.md) |  |
+|  [ensureArray(val)](./js-utils.ensurearray_1.md) |  |
 |  [entriesOf(map)](./js-utils.entriesof.md) | Get entries of a map-like. |
 |  [filterNil(list)](./js-utils.filternil.md) | Remove any null or undefined items from the list. |
 |  [getConstructor(val)](./js-utils.getconstructor.md) | Get the constructor from an instance. |
@@ -52,6 +52,7 @@
 |  [makeDict(map)](./js-utils.makedict.md) | Turns a map or dict into a dict |
 |  [makeMap(val)](./js-utils.makemap.md) | Clone a map or map-like object into a new map. |
 |  [mergeList(parts)](./js-utils.mergelist.md) | Merge arguments, which may or may not be arrays, into one return that is definitely an array. |
+|  [mergeList(parts)](./js-utils.mergelist_1.md) |  |
 |  [mergeMap(target, source)](./js-utils.mergemap.md) | Merge the <code>source</code> map into the <code>target</code> map, replacing keys that already exist. |
 |  [mustCoalesce(values)](./js-utils.mustcoalesce.md) | Return the first value that is not nil.<!-- -->@<!-- -->todo: rename to mustDefault |
 |  [mustExist(val)](./js-utils.mustexist.md) | Assert that a variable is not nil and return the value. |
@@ -60,14 +61,13 @@
 |  [normalizeMap(map)](./js-utils.normalizemap.md) | <b><i>(BETA)</i></b> Normalize a map-like of values into a dict of lists of strings. |
 |  [pairsToMap(pairs)](./js-utils.pairstomap.md) | Turns a list of name-value pairs into a map. |
 |  [pushMergeMap(args)](./js-utils.pushmergemap.md) | Merge the provided maps into a new map, merging keys that already exist by pushing new items. |
-|  [removePid(path)](./js-utils.removepid.md) | Remove the file at the given <code>path</code>. |
+|  [pushMergeMap(args)](./js-utils.pushmergemap_1.md) |  |
 |  [setOrPush(map, key, val)](./js-utils.setorpush.md) | Set a map key to a new array or push to the existing value. |
 |  [signal(signals)](./js-utils.signal.md) |  |
 |  [spyLogger(spies)](./js-utils.spylogger.md) | Create a spy logger using the provided methods, which returns itself as a child. |
 |  [timeout(ms, oper)](./js-utils.timeout.md) | Reject after a set amount of time if the original promise has not yet resolved. |
 |  [trim(val, max, tail)](./js-utils.trim.md) |  |
 |  [waitForChild(child)](./js-utils.waitforchild.md) | Wait for a child process to exit, collecting output, errors, and exit status. |
-|  [writePid(path)](./js-utils.writepid.md) | Write the current process ID to a file at the given <code>path</code>. |
 |  [writeValue(stream, value)](./js-utils.writevalue.md) |  |
 
 ## Interfaces

@@ -9,14 +9,14 @@ Get the first element from the specified key, within a map of lists, or a defaul
 <b>Signature:</b>
 
 ```typescript
-export declare function getHeadOrDefault<TKey, TVal>(map: Map<TKey, Array<Optional<TVal>>>, key: TKey, defaultValue: TVal): TVal;
+export declare function getHeadOrDefault<TKey, TVal>(map: Map<TKey, ReadonlyArray<Optional<TVal>>>, key: TKey, defaultValue: TVal): TVal;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | Map&lt;TKey, Array&lt;[Optional](./js-utils.optional.md)<!-- -->&lt;TVal&gt;&gt;&gt; |  |
+|  map | Map&lt;TKey, ReadonlyArray&lt;[Optional](./js-utils.optional.md)<!-- -->&lt;TVal&gt;&gt;&gt; |  |
 |  key | TKey |  |
 |  defaultValue | TVal |  |
 

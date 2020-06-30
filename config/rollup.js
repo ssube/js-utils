@@ -42,9 +42,9 @@ const bundle = {
 			return 'vendor';
 		}
 
-		/* if (id.includes(`chai`) || id.includes(`sinon`)) {
+		if (id.includes(`chai`) || id.includes(`sinon`) || id.includes('source-map')) {
 			return 'test';
-		} */
+		}
 
 		if (id.includes(`${sep}node_modules${sep}`)) {
 			return 'vendor';
@@ -58,12 +58,16 @@ const bundle = {
 			return 'main';
 		}
 
-		if (flag_debug) {
-			console.log('file does not belong to any chunk:', id);
+		if (id.includes(process.env['HOME'])) {
+			return 'linked';
 		}
 
 		if (id.length === 30 && id.match(/^[a-f0-9]+$/)) {
 			return 'vendor';
+		}
+
+		if (flag_debug) {
+			console.log('file does not belong to any chunk:', id);
 		}
 
 		return 'nochunk';
