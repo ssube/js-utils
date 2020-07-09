@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0-4](https://github.com/ssube/js-utils/compare/v0.2.0-3...v0.2.0-4) (2020-07-09)
+
+
+### Bug Fixes
+
+* clean up polyfill plugins, externalize those modules ([74fe04a](https://github.com/ssube/js-utils/commit/74fe04a9c261cea8d68e0f7bf618e46bda3f9e8a))
+
 ## [0.2.0-3](https://github.com/ssube/js-utils/compare/v0.2.0-0...v0.2.0-3) (2020-07-09)
 
 
