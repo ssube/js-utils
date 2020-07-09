@@ -2,6 +2,7 @@
 	"names": [
 		"chai",
 		"fs",
+		"lodash",
 		"mock-fs",
 		"sinon"
 	]
