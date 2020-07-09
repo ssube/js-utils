@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.2.0-3](https://github.com/ssube/js-utils/compare/v0.2.0-0...v0.2.0-3) (2020-07-09)
+
+
+### Bug Fixes
+
+* **build:** externalize lodash ([bf0f337](https://github.com/ssube/js-utils/commit/bf0f3370de293ff50c2c83e938ba1778b583780e))
+
 ## [0.2.0-0](https://github.com/ssube/js-utils/compare/v0.1.8...v0.2.0-0) (2020-06-30)
 
 
