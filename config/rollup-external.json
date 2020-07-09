@@ -4,6 +4,10 @@
 		"fs",
 		"lodash",
 		"mock-fs",
-		"sinon"
+		"module",
+		"process",
+		"sinon",
+		"source-map",
+		"source-map-support"
 	]
 }
