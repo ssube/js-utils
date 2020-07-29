@@ -9,14 +9,14 @@ Get the constructor from an instance.
 <b>Signature:</b>
 
 ```typescript
-export declare function getConstructor(val: object): Function;
+export declare function getConstructor(val: Reflectable): Function;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | object |  |
+|  val | Reflectable |  |
 
 <b>Returns:</b>
 

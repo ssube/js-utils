@@ -3,7 +3,7 @@ export const SIGNAL_RESET: NodeJS.Signals = 'SIGINT';
 export const SIGNAL_STOP: NodeJS.Signals = 'SIGTERM';
 
 export function signal(...signals: Array<NodeJS.Signals>): Promise<NodeJS.Signals> {
-  return new Promise((res, _) => {
+  return new Promise((res, rej) => {
     function handler(fired: NodeJS.Signals) {
       for (const s of signals) {
         process.removeListener(s, handler);
