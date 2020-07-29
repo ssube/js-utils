@@ -2,12 +2,17 @@ import { isFunction } from 'lodash';
 
 import { doesExist, isNil } from './Maybe';
 
+/* eslint-disable-next-line @typescript-eslint/ban-types */
+type Reflectable = object;
+
+type Method<TClass> = (this: TClass, ...args: Array<unknown>) => unknown;
+
 /**
  * Get the constructor from an instance.
  *
  * @public
  */
-export function getConstructor(val: object) {
+export function getConstructor(val: Reflectable) {
   return val.constructor;
 }
 
@@ -16,8 +21,8 @@ export function getConstructor(val: object) {
  *
  * @public
  */
-export function getMethods<TValue extends object>(value: TValue): Set<Function> {
-  const methods = new Set<Function>();
+export function getMethods<TValue extends Reflectable>(value: TValue): Set<Method<TValue>> {
+  const methods = new Set<Method<TValue>>();
 
   for (const name of Object.getOwnPropertyNames(value)) {
     const desc = Object.getOwnPropertyDescriptor(value, name);
@@ -46,6 +51,6 @@ export function getMethods<TValue extends object>(value: TValue): Set<Function> 
  *
  * @public
  */
-export function constructorName(val: object) {
+export function constructorName(val: Reflectable) {
   return getConstructor(Reflect.getPrototypeOf(val)).name;
 }

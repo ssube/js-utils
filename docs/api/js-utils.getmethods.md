@@ -9,7 +9,7 @@ Get the methods from an instance and its prototypes.
 <b>Signature:</b>
 
 ```typescript
-export declare function getMethods<TValue extends object>(value: TValue): Set<Function>;
+export declare function getMethods<TValue extends Reflectable>(value: TValue): Set<Method<TValue>>;
 ```
 
 ## Parameters
@@ -20,5 +20,5 @@ export declare function getMethods<TValue extends object>(value: TValue): Set<Fu
 
 <b>Returns:</b>
 
-Set&lt;Function&gt;
+Set&lt;Method&lt;TValue&gt;&gt;
 
