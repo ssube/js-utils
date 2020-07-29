@@ -9,7 +9,7 @@ Reject after a set amount of time if the original promise has not yet resolved.
 <b>Signature:</b>
 
 ```typescript
-export declare function timeout<T>(ms: number, oper: Promise<T>): Promise<T>;
+export declare function timeout<T>(ms: number, oper: Promise<T>): Promise<Optional<T>>;
 ```
 
 ## Parameters
@@ -21,5 +21,5 @@ export declare function timeout<T>(ms: number, oper: Promise<T>): Promise<T>;
 
 <b>Returns:</b>
 
-Promise&lt;T&gt;
+Promise&lt;[Optional](./js-utils.optional.md)<!-- -->&lt;T&gt;&gt;
 
