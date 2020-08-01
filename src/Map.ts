@@ -1,5 +1,3 @@
-import { isObject } from 'lodash';
-
 import { NotFoundError } from './error/NotFoundError';
 import { mergeList, toList } from './List';
 import { doesExist, isNil, mustExist, Optional } from './Maybe';
@@ -209,7 +207,9 @@ export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
       data[key] = value;
     } else if (typeof value === 'string') {
       data[key] = [value];
-    } else if (isObject(value)) {
+    } else if (typeof value === 'number') {
+      data[key] = [value.toString()];
+    } else if (typeof value === 'object' && doesExist(value)) {
       data[key] = [value.toString()];
     }
   }

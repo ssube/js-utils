@@ -8,12 +8,12 @@ import {
   getOrDefault,
   makeDict,
   makeMap,
-  mustGet,
-  pairsToMap,
-  setOrPush,
   mergeMap,
-  pushMergeMap,
+  mustGet,
   normalizeMap,
+  pairsToMap,
+  pushMergeMap,
+  setOrPush,
 } from '../../src/Map';
 
 const DEFAULT_VALUE = 'default';
@@ -227,7 +227,26 @@ describe('map utils', async () => {
       expect(normalized.toad).to.deep.equal(['too']);
     });
 
-    /* ['foo', 1] */
-    xit('should convert numbers into string values');
+    it('should convert number arguments into string values', () => {
+      const INPUT_VALUE = 123;
+      const input = new Map([
+        ['foo', INPUT_VALUE],
+      ]);
+      const normalized = normalizeMap(input);
+
+      expect(normalized.foo).to.deep.equal([INPUT_VALUE.toString()]);
+    });
+
+    it('should convert object arguments into string values', () => {
+      const OUTPUT_VALUE = 'bar';
+      const input = new Map([
+        ['foo', {
+          toString: () => OUTPUT_VALUE,
+        }],
+      ]);
+      const normalized = normalizeMap(input);
+
+      expect(normalized.foo).to.deep.equal([OUTPUT_VALUE]);
+    });
   });
 });
