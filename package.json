@@ -1,6 +1,6 @@
 {
   "name": "@apextoaster/js-utils",
-  "version": "0.2.0",
+  "version": "0.2.1-0",
   "description": "utility functions",
   "main": "out/main.js",
   "types": "out/index.d.ts",

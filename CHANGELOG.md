@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.2.1-0](https://github.com/ssube/js-utils/compare/v0.2.0...v0.2.1-0) (2020-08-01)
+
+
+### Features
+
+* **list:** add filter many helper ([077d05f](https://github.com/ssube/js-utils/commit/077d05f7c4be31f884e798448d2b805566b7d2d1))
+* **map:** normalize helper handles numeric values ([b452bf7](https://github.com/ssube/js-utils/commit/b452bf7caae65d6147b43d5037de8436ac536bbb))
+
+
+### Bug Fixes
+
+* **build:** add explicit dep on eslint ([cae0432](https://github.com/ssube/js-utils/commit/cae0432e6ec1d53e2b62308621880932a9e05ed1))
+* **config:** update lint to naming-convention rule ([8db6b43](https://github.com/ssube/js-utils/commit/8db6b436c7963615b21d948500af8aa5837806e3))
+
 ## [0.2.0](https://github.com/ssube/js-utils/compare/v0.2.0-4...v0.2.0) (2020-07-09)
 
 ## [0.2.0-4](https://github.com/ssube/js-utils/compare/v0.2.0-3...v0.2.0-4) (2020-07-09)
