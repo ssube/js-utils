@@ -63,3 +63,22 @@ export function isList<TVal>(list: TVal | ReadonlyArray<TVal>): list is Readonly
 export function isList<TVal>(list: TVal | ReadonlyArray<TVal>): list is ReadonlyArray<TVal> {
   return Array.isArray(list);
 }
+
+export function isEmpty(val: Optional<Array<unknown> | ReadonlyArray<unknown>>): boolean {
+  return !Array.isArray(val) || val.length === 0;
+}
+
+export function filterMany<T1>(cb: (a: T1) => boolean, l1: Array<T1>): Array<T1>;
+export function filterMany<T1, T2>(cb: (a: T1, b: T2) => boolean, l1: Array<T1>, l2: Array<T2>): [Array<T1>, Array<T2>];
+export function filterMany<T1, T2, T3>(cb: (a: T1, b: T2) => boolean, l1: Array<T1>, l2: Array<T2>, l3: Array<T3>): [Array<T1>, Array<T2>, Array<T3>];
+export function filterMany<T1, T2, T3, T4>(cb: (a: T1, b: T2) => boolean, l1: Array<T1>, l2: Array<T2>, l3: Array<T3>, l4: Array<T4>): [Array<T1>, Array<T2>, Array<T3>, Array<T4>];
+export function filterMany(cb: (...d: Array<unknown>) => boolean, ...l: Array<Array<unknown>>): Array<Array<unknown>> {
+  const results = [];
+  for (let i = 0; i < l[0].length; ++i) {
+    const slice = l.map((li) => li[i]);
+    if (cb(...slice)) {
+      results.push(slice);
+    }
+  }
+  return results;
+}
