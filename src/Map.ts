@@ -1,4 +1,4 @@
-import { isMap, isObject, isString } from 'lodash';
+import { isObject } from 'lodash';
 
 import { NotFoundError } from './error/NotFoundError';
 import { mergeList, toList } from './List';
@@ -137,7 +137,7 @@ export function makeMap<TVal>(val: Optional<MapLike<TVal>>): Map<string, TVal> {
   }
 
   // already a map: make a copy
-  if (isMap(val)) {
+  if (val instanceof Map) {
     return new Map(val.entries());
   }
 
@@ -155,7 +155,7 @@ export function makeDict<TVal>(map: Optional<MapLike<TVal>>): Dict<TVal> {
     return {};
   }
 
-  if (isMap(map)) {
+  if (map instanceof Map) {
     const result: Dict<TVal> = {};
     for (const [key, val] of map) {
       result[key] = val;
@@ -207,7 +207,7 @@ export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
   for (const [key, value] of makeMap(map)) {
     if (Array.isArray(value)) {
       data[key] = value;
-    } else if (isString(value)) {
+    } else if (typeof value === 'string') {
       data[key] = [value];
     } else if (isObject(value)) {
       data[key] = [value.toString()];

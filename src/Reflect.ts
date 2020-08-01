@@ -1,5 +1,3 @@
-import { isFunction } from 'lodash';
-
 import { doesExist, isNil } from './Maybe';
 
 /* eslint-disable-next-line @typescript-eslint/ban-types */
@@ -31,7 +29,7 @@ export function getMethods<TValue extends Reflectable>(value: TValue): Set<Metho
     }
 
     const method = desc.value;
-    if (isFunction(method)) {
+    if (typeof method === 'function') {
       methods.add(method);
     }
   }
