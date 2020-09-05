@@ -1,3 +1,5 @@
+export type AllowedBufferEncoding = 'ascii' | 'utf-8';
+
 /**
  * Concatenate a list of buffers.
  *
@@ -13,7 +15,7 @@ export function concat(chunks: Array<Buffer>): Buffer {
  *
  * @public
  */
-export function encode(chunks: Array<Buffer>, encoding: string): string {
+export function encode(chunks: Array<Buffer>, encoding: AllowedBufferEncoding): string {
   if (chunks.length === 0) {
     return '';
   }

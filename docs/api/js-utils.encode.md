@@ -9,7 +9,7 @@ Concatenate then encode a list of buffers.
 <b>Signature:</b>
 
 ```typescript
-export declare function encode(chunks: Array<Buffer>, encoding: string): string;
+export declare function encode(chunks: Array<Buffer>, encoding: AllowedBufferEncoding): string;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ export declare function encode(chunks: Array<Buffer>, encoding: string): string;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  chunks | Array&lt;Buffer&gt; |  |
-|  encoding | string |  |
+|  encoding | AllowedBufferEncoding |  |
 
 <b>Returns:</b>
 
