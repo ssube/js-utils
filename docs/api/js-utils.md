@@ -31,7 +31,7 @@
 |  [constructorName(val)](./js-utils.constructorname.md) | Get the constructor name from an instance. |
 |  [countOf(val)](./js-utils.countof.md) | Calculate the "length" of an array or value.<!-- -->Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add. |
 |  [defaultWhen(condition, items)](./js-utils.defaultwhen.md) | Return the first element when <code>condition</code> is true and the second element when <code>condition</code> is false. |
-|  [defer(ms, val)](./js-utils.defer.md) | Resolve after a set amount of time. |
+|  [defer(ms)](./js-utils.defer.md) | Resolve after a set amount of time. |
 |  [doesExist(val)](./js-utils.doesexist.md) | Check if a variable is not nil. |
 |  [encode(chunks, encoding)](./js-utils.encode.md) | Concatenate then encode a list of buffers. |
 |  [ensureArray(val)](./js-utils.ensurearray.md) |  |

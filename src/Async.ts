@@ -5,7 +5,15 @@ import { PredicateC0 } from './Predicate';
  * Resolve after a set amount of time.
  * @public
  */
-export function defer<T = undefined>(ms: number, val?: T): Promise<T> {
+export function defer(ms: number): Promise<void> {
+  return new Promise((res, rej) => {
+    setTimeout(() => {
+      res();
+    }, ms);
+  });
+}
+
+export function deferValue<T>(ms: number, val: T): Promise<T> {
   return new Promise((res, rej) => {
     setTimeout(() => {
       res(val);

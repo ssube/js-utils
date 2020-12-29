@@ -9,7 +9,7 @@ Resolve after a set amount of time.
 <b>Signature:</b>
 
 ```typescript
-export declare function defer<T = undefined>(ms: number, val?: T): Promise<T>;
+export declare function defer(ms: number): Promise<void>;
 ```
 
 ## Parameters
@@ -17,9 +17,8 @@ export declare function defer<T = undefined>(ms: number, val?: T): Promise<T>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  ms | number |  |
-|  val | T |  |
 
 <b>Returns:</b>
 
-Promise&lt;T&gt;
+Promise&lt;void&gt;
 
