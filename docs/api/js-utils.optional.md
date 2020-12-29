@@ -11,3 +11,5 @@ Value that may be nil.
 ```typescript
 export declare type Optional<T> = T | Nil;
 ```
+<b>References:</b> [Nil](./js-utils.nil.md)
+

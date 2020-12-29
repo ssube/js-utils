@@ -11,3 +11,5 @@ A `Map` or dictionary object with string keys and `TVal` values.
 ```typescript
 export declare type MapLike<TVal> = Map<string, TVal> | Dict<TVal>;
 ```
+<b>References:</b> [Dict](./js-utils.dict.md)
+
