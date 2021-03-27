@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import { InvalidArgumentError } from '../../src';
 import { getMethods, getConstructor, constructorName } from '../../src/Reflect';
 
 class Test {
@@ -29,5 +30,13 @@ describe('reflect utils', () => {
       const instance = new Test();
       expect(constructorName(instance)).to.equal(Test.name);
     });
+
+    it('should throw when value has no prototype', () => {
+      /* eslint-disable-next-line no-null/no-null */
+      const protoless = Object.create(null, {});
+      expect(() => constructorName(protoless)).to.throw(InvalidArgumentError);
+    });
+
+    xit('should handle nil values');
   });
 });

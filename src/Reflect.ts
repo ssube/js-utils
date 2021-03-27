@@ -1,3 +1,4 @@
+import { InvalidArgumentError } from './error/InvalidArgumentError';
 import { doesExist, isNil } from './Maybe';
 
 /* eslint-disable-next-line @typescript-eslint/ban-types */
@@ -50,5 +51,10 @@ export function getMethods<TValue extends Reflectable>(value: TValue): Set<Metho
  * @public
  */
 export function constructorName(val: Reflectable) {
-  return getConstructor(Reflect.getPrototypeOf(val)).name;
+  const proto = Reflect.getPrototypeOf(val);
+  if (isNil(proto)) {
+    throw new InvalidArgumentError('value has no prototype');
+  } else {
+    return getConstructor(proto).name;
+  }
 }
