@@ -6,7 +6,6 @@ import multiEntry from 'rollup-plugin-multi-entry';
 import resolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
 import typescript from 'rollup-plugin-typescript2';
-import visualizer from 'rollup-plugin-visualizer';
 import yaml from 'rollup-plugin-yaml';
 
 const flag_debug = process.env['DEBUG'] === 'TRUE';
@@ -120,10 +119,6 @@ const bundle = {
 		typescript({
 			cacheRoot: join(targetPath, 'cache', 'rts2'),
 			rollupCommonJSResolveHack: true,
-		}),
-		visualizer({
-			filename: join(rootPath, 'out', 'bundle-graph.html'),
-			sourcemap: true,
 		}),
 	],
 };
