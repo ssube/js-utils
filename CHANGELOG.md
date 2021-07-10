@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0-1](https://github.com/ssube/js-utils/compare/v0.4.0-0...v0.4.0-1) (2021-07-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* the 0.4.x release family will support Node 16+
+and drop support for previous versions.
+
+### Features
+
+* upgrade noicejs to 4.0 ([8d7ec07](https://github.com/ssube/js-utils/commit/8d7ec07a2109ff5358599609349502d3b098136d))
+
 ## [0.4.0-0](https://github.com/ssube/js-utils/compare/v0.3.0...v0.4.0-0) (2021-07-10)
 
 
