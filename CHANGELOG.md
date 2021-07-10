@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0-0](https://github.com/ssube/js-utils/compare/v0.3.0...v0.4.0-0) (2021-07-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **maybe:** while the Optional type has been deprecated, some Array
+and Maybe-related functions have been renamed to be more consistent.
+
+### Features
+
+* **maybe:** deprecate Optional and Nil types in favor of Maybe and None ([02b9a68](https://github.com/ssube/js-utils/commit/02b9a688e7aeca93ef9b20d4e19cdd08a0c63435))
+
 ## [0.3.0](https://github.com/ssube/js-utils/compare/v0.2.1...v0.3.0) (2021-07-10)
 
 
