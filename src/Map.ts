@@ -59,7 +59,7 @@ export function getHead<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TK
  * @public
  */
 export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, ReadonlyArray<Maybe<TVal>>>, key: TKey, defaultValue: TVal): TVal {
-  if (!map.has(key)) {
+  if (map.has(key) === false) {
     return defaultValue;
   }
 
@@ -84,13 +84,14 @@ export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, ReadonlyArray<Maybe<
  *
  * @public
  */
-export function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey, val: TVal | ReadonlyArray<TVal>) {
+export function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey, val: TVal | ReadonlyArray<TVal>): Map<TKey, ReadonlyArray<TVal>> {
   const prev = map.get(key);
   if (doesExist(prev)) {
     map.set(key, mergeArrays(prev, val));
   } else {
     map.set(key, toArray(val));
   }
+  return map;
 }
 
 /**
@@ -98,7 +99,7 @@ export function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: 
  *
  * @public
  */
-export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, TVal> | ReadonlyArray<[TKey, TVal]>) {
+export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, TVal> | ReadonlyArray<[TKey, TVal]>): Map<TKey, TVal> {
   for (const [k, v] of source) {
     target.set(k, v);
   }
@@ -203,10 +204,13 @@ export function dictValuesToArrays<TVal>(map: MapLike<TVal>): Dict<Array<TVal>> 
 export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
   const data: Dict<Array<string>> = {};
   for (const [key, value] of makeMap(map)) {
+    // eslint-disable-next-line no-restricted-syntax
     if (Array.isArray(value)) {
       data[key] = value;
+    // eslint-disable-next-line no-restricted-syntax
     } else if (typeof value === 'string') {
       data[key] = [value];
+    // eslint-disable-next-line no-restricted-syntax
     } else if (typeof value === 'number') {
       data[key] = [value.toString()];
     } else if (typeof value === 'object' && doesExist(value)) {

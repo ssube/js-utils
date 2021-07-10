@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 import { expect } from 'chai';
 
 import { leftPad, trim } from '../../src/String';

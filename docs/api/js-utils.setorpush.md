@@ -9,7 +9,7 @@ Set a map key to a new array or push to the existing value.
 <b>Signature:</b>
 
 ```typescript
-export declare function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey, val: TVal | ReadonlyArray<TVal>): void;
+export declare function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey, val: TVal | ReadonlyArray<TVal>): Map<TKey, ReadonlyArray<TVal>>;
 ```
 
 ## Parameters
@@ -22,5 +22,5 @@ export declare function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>
 
 <b>Returns:</b>
 
-void
+Map&lt;TKey, ReadonlyArray&lt;TVal&gt;&gt;
 

@@ -22,7 +22,7 @@ export function isNone<T>(val: Maybe<T>): val is None {
 }
 
 export function isSome<T>(val: Maybe<T>): val is T {
-  return !isNone(val);
+  return isNone(val) === false;
 }
 
 /**
@@ -31,7 +31,7 @@ export function isSome<T>(val: Maybe<T>): val is T {
  * @public
  */
 export function doesExist<T>(val: Maybe<T>): val is T {
-  return !isNone(val);
+  return isNone(val) === false;
 }
 
 /**

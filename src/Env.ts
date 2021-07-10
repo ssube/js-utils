@@ -5,6 +5,6 @@ const ENV_DEBUG = 'DEBUG';
  *
  * TODO: check variable value as well
  */
-export function isDebug() {
+export function isDebug(): boolean {
   return Reflect.has(process.env, ENV_DEBUG);
 }

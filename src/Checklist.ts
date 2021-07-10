@@ -29,7 +29,7 @@ export class Checklist<T> implements ChecklistOptions<T> {
     }
 
     if (this.mode === ChecklistMode.EXCLUDE) {
-      return !this.data.includes(value);
+      return (this.data.includes(value) === false);
     }
 
     return false;

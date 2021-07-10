@@ -1,3 +1,4 @@
+/* eslint-disable no-magic-numbers */
 import { expect } from 'chai';
 
 import { NotFoundError } from '../../src/error/NotFoundError';
@@ -22,10 +23,10 @@ const mapValue = 'value';
 const singleItem = new Map([[mapKey, mapValue]]);
 const multiItem = new Map([
   [mapKey, [mapValue]],
-  /* eslint-disable */
+  // eslint-disable-next-line no-null/no-null,@typescript-eslint/no-explicit-any
   ['nilKey', null as any],
+  // eslint-disable-next-line no-null/no-null
   ['nilValue', [null]],
-  /* eslint-enable */
 ]);
 
 describe('map utils', async () => {

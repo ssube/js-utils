@@ -11,7 +11,8 @@ type Method<TClass> = (this: TClass, ...args: Array<unknown>) => unknown;
  *
  * @public
  */
-export function getConstructor(val: Reflectable) {
+// eslint-disable-next-line @typescript-eslint/ban-types
+export function getConstructor(val: Reflectable): Function {
   return val.constructor;
 }
 
@@ -36,6 +37,7 @@ export function getMethods<TValue extends Reflectable>(value: TValue): Set<Metho
   }
 
   const proto = Reflect.getPrototypeOf(value);
+  // eslint-disable-next-line no-restricted-syntax
   if (proto !== value && doesExist(proto)) {
     for (const m of getMethods(proto)) {
       methods.add(m);
@@ -50,7 +52,7 @@ export function getMethods<TValue extends Reflectable>(value: TValue): Set<Metho
  *
  * @public
  */
-export function constructorName(val: Reflectable) {
+export function constructorName(val: Reflectable): string {
   const proto = Reflect.getPrototypeOf(val);
   if (isNone(proto)) {
     throw new InvalidArgumentError('value has no prototype');

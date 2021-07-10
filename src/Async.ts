@@ -6,7 +6,7 @@ import { PredicateC0 } from './Predicate';
  * @public
  */
 export function defer(ms: number): Promise<void> {
-  return new Promise((res, rej) => {
+  return new Promise((res, _rej) => {
     setTimeout(() => {
       res();
     }, ms);
@@ -14,7 +14,7 @@ export function defer(ms: number): Promise<void> {
 }
 
 export function deferValue<T>(ms: number, val: T): Promise<T> {
-  return new Promise((res, rej) => {
+  return new Promise((res, _rej) => {
     setTimeout(() => {
       res(val);
     }, ms);
@@ -26,7 +26,7 @@ export function deferValue<T>(ms: number, val: T): Promise<T> {
  * @public
  */
 export function timeout<T>(ms: number, oper: Promise<T>): Promise<T> {
-  const limit = new Promise<T>((res, rej) => {
+  const limit = new Promise<T>((_res, rej) => {
     setTimeout(() => {
       rej(new TimeoutError());
     }, ms);

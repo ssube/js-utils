@@ -52,7 +52,7 @@ export class ArrayMapper {
       }
     });
 
-    if (!result.has(this.rest)) {
+    if (result.has(this.rest) === false) {
       result.set(this.rest, []);
     }
 

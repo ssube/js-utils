@@ -1,5 +1,6 @@
+export const DEFAULT_TRIM = 8;
 
-export function leftPad(val: string, min = 8, fill = '0'): string {
+export function leftPad(val: string, min = DEFAULT_TRIM, fill = '0'): string {
   if (val.length < min) {
     const len = min - val.length;
     const pre = Array(len).fill(fill).join('').slice(0, len);
