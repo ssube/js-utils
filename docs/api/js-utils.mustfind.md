@@ -9,14 +9,14 @@ Find a value matching the given predicate or throw.
 <b>Signature:</b>
 
 ```typescript
-export declare function mustFind<TVal>(list: Array<Optional<TVal>>, predicate: PredicateC1<TVal>): TVal;
+export declare function mustFind<TVal>(list: Array<Maybe<TVal>>, predicate: PredicateC1<TVal>): TVal;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  list | Array&lt;[Optional](./js-utils.optional.md)<!-- -->&lt;TVal&gt;&gt; |  |
+|  list | Array&lt;[Maybe](./js-utils.maybe.md)<!-- -->&lt;TVal&gt;&gt; |  |
 |  predicate | PredicateC1&lt;TVal&gt; |  |
 
 <b>Returns:</b>

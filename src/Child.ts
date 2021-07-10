@@ -5,7 +5,7 @@ import { Writable } from 'stream';
 import { encode } from './Buffer';
 import { ChildProcessError } from './error/ChildProcessError';
 import { NameValuePair } from './Map';
-import { doesExist, Optional } from './Maybe';
+import { doesExist, Maybe } from './Maybe';
 
 export interface ChildProcessOptions {
   cwd: string;
@@ -80,7 +80,7 @@ export function waitForChild(child: ChildStreams): Promise<ChildResult> {
 
 export function writeValue(stream: Writable, value: string): Promise<boolean> {
   return new Promise<boolean>((res, rej) => {
-    stream.write(value, (err: Optional<Error>) => {
+    stream.write(value, (err: Maybe<Error>) => {
       if (doesExist(err)) {
         rej(err);
       } else {

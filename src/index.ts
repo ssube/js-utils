@@ -34,8 +34,9 @@ export { isDebug } from './Env';
 export {
   ensureArray,
   hasItems,
-  mergeList,
-} from './List';
+  lengthOf,
+  mergeArrays,
+} from './Array';
 export {
   getTestLogger,
   spyLogger,
@@ -57,17 +58,23 @@ export {
   setOrPush,
 } from './Map';
 export {
-  Nil,
-  Optional,
-  countOf,
+  Maybe,
+  None,
   defaultWhen,
   doesExist,
-  filterNil,
-  isNil,
+  isNone,
+  isSome,
   mustCoalesce,
+  mustDefault,
   mustExist,
   mustFind,
+  removeNone,
 } from './Maybe';
+export {
+  Nil,
+  Optional,
+  isNil,
+} from './Optional';
 export {
   constructorName,
   getConstructor,

@@ -2,13 +2,13 @@ import { expect } from 'chai';
 
 import { ChildProcessError } from '../../src';
 import { ChildStreams, waitForChild } from '../../src/Child';
-import { mustExist, Optional } from '../../src/Maybe';
+import { Maybe, mustExist } from '../../src/Maybe';
 
 type Closer = (status: number) => Promise<void>;
 
-function createChild(): ChildStreams & { closer: Optional<Closer> } {
+function createChild(): ChildStreams & { closer: Maybe<Closer> } {
   return {
-    closer /* Optional<Closer> */ : undefined,
+    closer /* Maybe<Closer> */ : undefined,
     on(event: string, fn: Closer) {
       if (event === 'close') {
         this.closer = fn;

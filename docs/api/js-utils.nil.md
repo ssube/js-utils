@@ -4,10 +4,16 @@
 
 ## Nil type
 
-Unset value.
+> Warning: This API is now obsolete.
+> 
+> 
+
+Old name for None.
 
 <b>Signature:</b>
 
 ```typescript
-export declare type Nil = null | undefined;
+export declare type Nil = None;
 ```
+<b>References:</b> [None](./js-utils.none.md)
+

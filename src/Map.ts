@@ -1,6 +1,6 @@
+import { mergeArrays, toArray } from './Array';
 import { NotFoundError } from './error/NotFoundError';
-import { mergeList, toList } from './List';
-import { doesExist, isNil, mustExist, Optional } from './Maybe';
+import { doesExist, isNone, Maybe, mustExist } from './Maybe';
 
 export interface Dict<TVal> {
   [key: string]: TVal;
@@ -46,7 +46,7 @@ export function getOrDefault<TKey, TVal>(map: Map<TKey, TVal>, key: TKey, defaul
  */
 export function getHead<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey): TVal {
   const value = map.get(key);
-  if (isNil(value) || value.length === 0) {
+  if (isNone(value) || value.length === 0) {
     throw new NotFoundError();
   }
   return value[0];
@@ -58,18 +58,18 @@ export function getHead<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TK
  *
  * @public
  */
-export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, ReadonlyArray<Optional<TVal>>>, key: TKey, defaultValue: TVal): TVal {
+export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, ReadonlyArray<Maybe<TVal>>>, key: TKey, defaultValue: TVal): TVal {
   if (!map.has(key)) {
     return defaultValue;
   }
 
   const data = map.get(key);
-  if (isNil(data)) {
+  if (isNone(data)) {
     return defaultValue;
   }
 
   const [head] = data;
-  if (isNil(head)) {
+  if (isNone(head)) {
     return defaultValue;
   }
 
@@ -87,9 +87,9 @@ export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, ReadonlyArray<Option
 export function setOrPush<TKey, TVal>(map: Map<TKey, ReadonlyArray<TVal>>, key: TKey, val: TVal | ReadonlyArray<TVal>) {
   const prev = map.get(key);
   if (doesExist(prev)) {
-    map.set(key, mergeList(prev, val));
+    map.set(key, mergeArrays(prev, val));
   } else {
-    map.set(key, toList(val));
+    map.set(key, toArray(val));
   }
 }
 
@@ -128,9 +128,9 @@ export function pushMergeMap<TKey, TVal>(...args: ReadonlyArray<Map<TKey, TVal |
  *
  * @public
  */
-export function makeMap<TVal>(val: Optional<MapLike<TVal>>): Map<string, TVal> {
-  // nil: empty map
-  if (isNil(val)) {
+export function makeMap<TVal>(val: Maybe<MapLike<TVal>>): Map<string, TVal> {
+  // none: empty map
+  if (isNone(val)) {
     return new Map();
   }
 
@@ -148,8 +148,8 @@ export function makeMap<TVal>(val: Optional<MapLike<TVal>>): Map<string, TVal> {
  *
  * @public
  */
-export function makeDict<TVal>(map: Optional<MapLike<TVal>>): Dict<TVal> {
-  if (isNil(map)) {
+export function makeDict<TVal>(map: Maybe<MapLike<TVal>>): Dict<TVal> {
+  if (isNone(map)) {
     return {};
   }
 
@@ -222,7 +222,7 @@ export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
  *
  * @public
  */
-export function entriesOf<TVal>(map: Optional<MapLike<TVal>>): Array<[string, TVal]> {
+export function entriesOf<TVal>(map: Maybe<MapLike<TVal>>): Array<[string, TVal]> {
   if (map instanceof Map) {
     return Array.from(map.entries());
   }

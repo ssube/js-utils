@@ -9,14 +9,14 @@ Get entries of a map-like.
 <b>Signature:</b>
 
 ```typescript
-export declare function entriesOf<TVal>(map: Optional<MapLike<TVal>>): Array<[string, TVal]>;
+export declare function entriesOf<TVal>(map: Maybe<MapLike<TVal>>): Array<[string, TVal]>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | [Optional](./js-utils.optional.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
+|  map | [Maybe](./js-utils.maybe.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
 
 <b>Returns:</b>
 

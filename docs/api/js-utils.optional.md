@@ -4,12 +4,16 @@
 
 ## Optional type
 
-Value that may be nil.
+> Warning: This API is now obsolete.
+> 
+> 
+
+Old name for Maybe.
 
 <b>Signature:</b>
 
 ```typescript
-export declare type Optional<T> = T | Nil;
+export declare type Optional<T> = Maybe<T>;
 ```
-<b>References:</b> [Nil](./js-utils.nil.md)
+<b>References:</b> [Maybe](./js-utils.maybe.md)
 

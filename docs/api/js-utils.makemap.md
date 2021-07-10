@@ -9,14 +9,14 @@ Clone a map or map-like object into a new map.
 <b>Signature:</b>
 
 ```typescript
-export declare function makeMap<TVal>(val: Optional<MapLike<TVal>>): Map<string, TVal>;
+export declare function makeMap<TVal>(val: Maybe<MapLike<TVal>>): Map<string, TVal>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
+|  val | [Maybe](./js-utils.maybe.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
 
 <b>Returns:</b>
 

@@ -1,5 +1,5 @@
 import { InvalidArgumentError } from './error/InvalidArgumentError';
-import { doesExist, isNil } from './Maybe';
+import { doesExist, isNone } from './Maybe';
 
 /* eslint-disable-next-line @typescript-eslint/ban-types */
 type Reflectable = object;
@@ -25,7 +25,7 @@ export function getMethods<TValue extends Reflectable>(value: TValue): Set<Metho
 
   for (const name of Object.getOwnPropertyNames(value)) {
     const desc = Object.getOwnPropertyDescriptor(value, name);
-    if (isNil(desc)) {
+    if (isNone(desc)) {
       continue;
     }
 
@@ -52,7 +52,7 @@ export function getMethods<TValue extends Reflectable>(value: TValue): Set<Metho
  */
 export function constructorName(val: Reflectable) {
   const proto = Reflect.getPrototypeOf(val);
-  if (isNil(proto)) {
+  if (isNone(proto)) {
     throw new InvalidArgumentError('value has no prototype');
   } else {
     return getConstructor(proto).name;

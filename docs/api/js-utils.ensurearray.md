@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function ensureArray<T>(val: Optional<Array<T>>): Array<T>;
+export declare function ensureArray<T>(val: Maybe<Array<T>>): Array<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;Array&lt;T&gt;&gt; |  |
+|  val | [Maybe](./js-utils.maybe.md)<!-- -->&lt;Array&lt;T&gt;&gt; |  |
 
 <b>Returns:</b>
 

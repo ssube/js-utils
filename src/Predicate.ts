@@ -4,7 +4,7 @@ export type SortEqual = 0;
 export type SortOrder = SortAfter | SortBefore | SortEqual;
 
 /**
- * Comparison predicate for arity 0 - assert?
+ * Comparison predicate for arity 0 - constant.
  *
  * @beta
  */
@@ -25,7 +25,7 @@ export type PredicateC1<TVal> = (val: TVal, idx: number, list: Array<TVal>) => b
 export type PredicateC2<TVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => SortOrder;
 
 /**
- * Transform predicate for arity 0 - constructor.
+ * Transform predicate for arity 0 - factory.
  *
  * @beta
  */

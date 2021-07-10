@@ -11,14 +11,14 @@ This is not a general replacement for `.length > 0`<!-- -->, since it is also a 
 <b>Signature:</b>
 
 ```typescript
-export declare function hasItems<T>(val: Optional<Array<T>>): val is Array<T>;
+export declare function hasItems<T>(val: Maybe<Array<T>>): val is Array<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;Array&lt;T&gt;&gt; |  |
+|  val | [Maybe](./js-utils.maybe.md)<!-- -->&lt;Array&lt;T&gt;&gt; |  |
 
 <b>Returns:</b>
 

@@ -29,15 +29,13 @@
 |  --- | --- |
 |  [concat(chunks)](./js-utils.concat.md) | Concatenate a list of buffers. |
 |  [constructorName(val)](./js-utils.constructorname.md) | Get the constructor name from an instance. |
-|  [countOf(val)](./js-utils.countof.md) | Calculate the "length" of an array or value.<!-- -->Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add. |
 |  [defaultWhen(condition, items)](./js-utils.defaultwhen.md) | Return the first element when <code>condition</code> is true and the second element when <code>condition</code> is false. |
 |  [defer(ms)](./js-utils.defer.md) | Resolve after a set amount of time. |
-|  [doesExist(val)](./js-utils.doesexist.md) | Check if a variable is not nil. |
+|  [doesExist(val)](./js-utils.doesexist.md) | Check if a variable is some <code>T</code>. |
 |  [encode(chunks, encoding)](./js-utils.encode.md) | Concatenate then encode a list of buffers. |
 |  [ensureArray(val)](./js-utils.ensurearray.md) |  |
 |  [ensureArray(val)](./js-utils.ensurearray_1.md) |  |
 |  [entriesOf(map)](./js-utils.entriesof.md) | Get entries of a map-like. |
-|  [filterNil(list)](./js-utils.filternil.md) | Remove any null or undefined items from the list. |
 |  [getConstructor(val)](./js-utils.getconstructor.md) | Get the constructor from an instance. |
 |  [getHead(map, key)](./js-utils.gethead.md) | Get the first element from the specified key within a map of lists. |
 |  [getHeadOrDefault(map, key, defaultValue)](./js-utils.getheadordefault.md) | Get the first element from the specified key, within a map of lists, or a default value when the key does not exist or is nil. |
@@ -48,20 +46,25 @@
 |  [hasItems(val)](./js-utils.hasitems_1.md) |  |
 |  [isDebug()](./js-utils.isdebug.md) | Test if DEBUG mode is set.<!-- -->TODO: check variable value as well |
 |  [isNil(val)](./js-utils.isnil.md) | Check if a value is nil. |
+|  [isNone(val)](./js-utils.isnone.md) |  |
+|  [isSome(val)](./js-utils.issome.md) |  |
 |  [leftPad(val, min, fill)](./js-utils.leftpad.md) |  |
+|  [lengthOf(val)](./js-utils.lengthof.md) | Calculate the length of an array or value.<!-- -->Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add. |
 |  [makeDict(map)](./js-utils.makedict.md) | Turns a map or dict into a dict |
 |  [makeMap(val)](./js-utils.makemap.md) | Clone a map or map-like object into a new map. |
-|  [mergeList(parts)](./js-utils.mergelist.md) | Merge arguments, which may or may not be arrays, into one return that is definitely an array. |
-|  [mergeList(parts)](./js-utils.mergelist_1.md) |  |
+|  [mergeArrays(parts)](./js-utils.mergearrays.md) | Merge arguments, which may or may not be arrays, into one return that is definitely an array. |
+|  [mergeArrays(parts)](./js-utils.mergearrays_1.md) |  |
 |  [mergeMap(target, source)](./js-utils.mergemap.md) | Merge the <code>source</code> map into the <code>target</code> map, replacing keys that already exist. |
-|  [mustCoalesce(values)](./js-utils.mustcoalesce.md) | Return the first value that is not nil.<!-- -->@<!-- -->todo: rename to mustDefault |
-|  [mustExist(val)](./js-utils.mustexist.md) | Assert that a variable is not nil and return the value. |
+|  [mustCoalesce(values)](./js-utils.mustcoalesce.md) | Return the first value that is not nil. |
+|  [mustDefault(values)](./js-utils.mustdefault.md) | Return the first value that is some <code>T</code>. Throw if they are all <code>None</code>. |
+|  [mustExist(val, err)](./js-utils.mustexist.md) | Assert that a variable is not <code>None</code> and return the value. Throw if it is <code>None</code>. |
 |  [mustFind(list, predicate)](./js-utils.mustfind.md) | Find a value matching the given predicate or throw. |
 |  [mustGet(map, key)](./js-utils.mustget.md) | Get an element from a Map and guard against nil values. |
 |  [normalizeMap(map)](./js-utils.normalizemap.md) | <b><i>(BETA)</i></b> Normalize a map-like of values into a dict of lists of strings. |
 |  [pairsToMap(pairs)](./js-utils.pairstomap.md) | Turns a list of name-value pairs into a map. |
 |  [pushMergeMap(args)](./js-utils.pushmergemap.md) | Merge the provided maps into a new map, merging keys that already exist by pushing new items. |
 |  [pushMergeMap(args)](./js-utils.pushmergemap_1.md) |  |
+|  [removeNone(list)](./js-utils.removenone.md) | Remove any null or undefined items from the list. |
 |  [setOrPush(map, key, val)](./js-utils.setorpush.md) | Set a map key to a new array or push to the existing value. |
 |  [signal(signals)](./js-utils.signal.md) |  |
 |  [spyLogger(spies)](./js-utils.spylogger.md) | Create a spy logger using the provided methods, which returns itself as a child. |
@@ -95,7 +98,9 @@
 |  --- | --- |
 |  [ChildSpawner](./js-utils.childspawner.md) |  |
 |  [MapLike](./js-utils.maplike.md) | A <code>Map</code> or dictionary object with string keys and <code>TVal</code> values. |
+|  [Maybe](./js-utils.maybe.md) | Value that may be nil. |
 |  [ModuleCtor](./js-utils.modulector.md) |  |
-|  [Nil](./js-utils.nil.md) | Unset value. |
-|  [Optional](./js-utils.optional.md) | Value that may be nil. |
+|  [Nil](./js-utils.nil.md) | Old name for None. |
+|  [None](./js-utils.none.md) | Unset value. |
+|  [Optional](./js-utils.optional.md) | Old name for Maybe. |
 

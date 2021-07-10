@@ -4,19 +4,20 @@
 
 ## mustExist() function
 
-Assert that a variable is not nil and return the value.
+Assert that a variable is not `None` and return the value. Throw if it is `None`<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-export declare function mustExist<T>(val: Optional<T>): T;
+export declare function mustExist<T>(val: Maybe<T>, err?: string): T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;T&gt; |  |
+|  val | [Maybe](./js-utils.maybe.md)<!-- -->&lt;T&gt; |  |
+|  err | string |  |
 
 <b>Returns:</b>
 

@@ -7,14 +7,14 @@
 <b>Signature:</b>
 
 ```typescript
-export declare function ensureArray<T>(val: Optional<ReadonlyArray<T>>): ReadonlyArray<T>;
+export declare function ensureArray<T>(val: Maybe<ReadonlyArray<T>>): ReadonlyArray<T>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;ReadonlyArray&lt;T&gt;&gt; |  |
+|  val | [Maybe](./js-utils.maybe.md)<!-- -->&lt;ReadonlyArray&lt;T&gt;&gt; |  |
 
 <b>Returns:</b>
 

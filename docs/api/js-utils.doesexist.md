@@ -4,19 +4,19 @@
 
 ## doesExist() function
 
-Check if a variable is not nil.
+Check if a variable is some `T`<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-export declare function doesExist<T>(val: Optional<T>): val is T;
+export declare function doesExist<T>(val: Maybe<T>): val is T;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  val | [Optional](./js-utils.optional.md)<!-- -->&lt;T&gt; |  |
+|  val | [Maybe](./js-utils.maybe.md)<!-- -->&lt;T&gt; |  |
 
 <b>Returns:</b>
 

@@ -9,14 +9,14 @@ Turns a map or dict into a dict
 <b>Signature:</b>
 
 ```typescript
-export declare function makeDict<TVal>(map: Optional<MapLike<TVal>>): Dict<TVal>;
+export declare function makeDict<TVal>(map: Maybe<MapLike<TVal>>): Dict<TVal>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  map | [Optional](./js-utils.optional.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
+|  map | [Maybe](./js-utils.maybe.md)<!-- -->&lt;[MapLike](./js-utils.maplike.md)<!-- -->&lt;TVal&gt;&gt; |  |
 
 <b>Returns:</b>
 
