@@ -2,6 +2,26 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.3.0](https://github.com/ssube/js-utils/compare/v0.2.1...v0.3.0) (2021-07-10)
+
+
+### ⚠ BREAKING CHANGES
+
+* **async:** usage of `defer(number, T)` must be replaced with
+`deferValue(number, T)`. Uses of `defer(number)` do not need to change.
+
+### Features
+
+* **reflect:** handle missing prototypes ([99f18ae](https://github.com/ssube/js-utils/commit/99f18ae5d19ff167b8391eabcdec18a46eb1cba2))
+
+
+### Bug Fixes
+
+* reduce renovate noise, automerge test deps ([e35d71e](https://github.com/ssube/js-utils/commit/e35d71ed49dc785d9d2eb9295986608d2a1b239a))
+* **async:** split up defer with and without value, update typescript ([1847865](https://github.com/ssube/js-utils/commit/1847865c98dc005e767bd386a09a6288bc4d06b5))
+* **buffer:** restrict encodings ([85d7e56](https://github.com/ssube/js-utils/commit/85d7e56d14e3bde6b67423c6372cb344d2795210))
+* **build:** pull images from nexus ([5de2472](https://github.com/ssube/js-utils/commit/5de2472fa8b03ab784375055ce807e2663fd2349))
+
 ### [0.2.1](https://github.com/ssube/js-utils/compare/v0.2.1-0...v0.2.1) (2020-08-01)
 
 ### [0.2.1-0](https://github.com/ssube/js-utils/compare/v0.2.0...v0.2.1-0) (2020-08-01)
