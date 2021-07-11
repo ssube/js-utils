@@ -2,11 +2,5 @@
   "node_modules/chai/index.js": [
     "expect",
     "use"
-  ],
-  "node_modules/lodash/lodash.js": [
-    "isFunction",
-    "isMap",
-    "isObject",
-    "isString"
   ]
 }

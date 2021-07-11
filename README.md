@@ -59,7 +59,7 @@ And import:
 import { mustExist } from '@apextoaster/js-utils';
 ```
 
-The library is bundled and depends on lodash, linked in a vendor module.
+The library is bundled and has no dependencies.
 
 ## Features
 
