@@ -26,6 +26,7 @@ export type PredicateC2<TVal> = (pval: TVal, nval: TVal, idx: number, list: Arra
 
 /**
  * Transform predicate for arity 0 - factory.
+ * `() -> a`
  *
  * @beta
  */
@@ -33,14 +34,25 @@ export type PredicateR0<TVal> = () => TVal;
 
 /**
  * Transform predicate for arity 1 - map.
+ * `a -> b`
  *
  * @beta
  */
-export type PredicateR1<TVal> = (val: TVal, idx: number, list: Array<TVal>) => TVal;
+export type PredicateR1<RVal, TVal = RVal> = (val: TVal, idx: number, list: Array<TVal>) => RVal;
 
 /**
  * Transform predicate for arity 2 - reduce.
+ * `a -> a -> b`
  *
  * @beta
  */
-export type PredicateR2<TVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => TVal;
+export type PredicateR2<RVal, TVal = RVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => RVal;
+
+/**
+ * Add numbers.
+ *
+ * @implements PredicateR2<number, number>
+ */
+export function sum(a: number, b: number): number {
+  return a + b;
+}

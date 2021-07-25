@@ -1,6 +1,9 @@
 import { expect } from 'chai';
+import { array, uint8Array } from 'fast-check';
+import { over } from 'mocha-foam';
 
 import { concat, encode } from '../../src/Buffer';
+import { sum } from '../../src/Predicate';
 
 describe('buffer utils', async () => {
   describe('concat', async () => {
@@ -9,6 +12,14 @@ describe('buffer utils', async () => {
         Buffer.from('hello'),
         Buffer.from('world'),
       ])).to.deep.equal(Buffer.from('helloworld'));
+    });
+
+    over('many chunk buffers', array(uint8Array().map((it) => Buffer.from(it.buffer))), (it) => {
+      it('should be the sum of the chunk lengths', (chunks) => {
+        const result = concat(chunks);
+        const total = chunks.map((c) => c.length).reduce(sum, 0);
+        expect(result.length).to.equal(total);
+      });
     });
   });
 

@@ -24,14 +24,12 @@ export class Checklist<T> implements ChecklistOptions<T> {
   }
 
   public check(value: T): boolean {
-    if (this.mode === ChecklistMode.INCLUDE) {
-      return this.data.includes(value);
+    switch (this.mode) {
+      case ChecklistMode.INCLUDE:
+        return this.data.includes(value);
+      case ChecklistMode.EXCLUDE:
+      default:
+        return (this.data.includes(value) === false);
     }
-
-    if (this.mode === ChecklistMode.EXCLUDE) {
-      return (this.data.includes(value) === false);
-    }
-
-    return false;
   }
 }

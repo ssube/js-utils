@@ -185,7 +185,7 @@ export function pairsToMap<TVal>(pairs: ReadonlyArray<NameValuePair<TVal>>): Map
 
 export function dictValuesToArrays<TVal>(map: MapLike<TVal>): Dict<Array<TVal>> {
   const data: Dict<Array<TVal>> = {};
-  for (const [key, value] of makeMap(map)) {
+  for (const [key, value] of entriesOf(map)) {
     if (Array.isArray(value)) {
       data[key] = value;
     } else {
@@ -200,6 +200,7 @@ export function dictValuesToArrays<TVal>(map: MapLike<TVal>): Dict<Array<TVal>> 
  * Normalize a map-like of values into a dict of lists of strings.
  *
  * @beta
+ * @deprecated
  */
 export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
   const data: Dict<Array<string>> = {};

@@ -4,7 +4,9 @@
 
 ## mergeArrays() function
 
-Merge arguments, which may or may not be arrays, into one return that is definitely an array.
+> Warning: This API is now obsolete.
+> 
+> 
 
 <b>Signature:</b>
 

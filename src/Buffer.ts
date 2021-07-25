@@ -1,3 +1,5 @@
+import { sum } from './Predicate';
+
 export type AllowedBufferEncoding = 'ascii' | 'utf-8';
 
 /**
@@ -6,8 +8,8 @@ export type AllowedBufferEncoding = 'ascii' | 'utf-8';
  * @public
  */
 export function concat(chunks: Array<Buffer>): Buffer {
-  const sum = chunks.map((it) => it.length).reduce((p, c) => p + c, 0);
-  return Buffer.concat(chunks, sum);
+  const total = chunks.map((it) => it.length).reduce(sum, 0);
+  return Buffer.concat(chunks, total);
 }
 
 /**

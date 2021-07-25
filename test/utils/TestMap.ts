@@ -1,5 +1,7 @@
 /* eslint-disable no-magic-numbers */
 import { expect } from 'chai';
+import { array, dictionary, integer, nat, record, string, tuple } from 'fast-check';
+import { over } from 'mocha-foam';
 
 import { NotFoundError } from '../../src/error/NotFoundError';
 import {
@@ -65,6 +67,14 @@ describe('map utils', async () => {
         mustGet(singleItem, 'nope');
       }).to.throw(NotFoundError);
     });
+
+    over('map with truthy values', array(tuple(string(), nat()), { minLength: 1 }).map((t) => new Map(t)), (it) => {
+      it('should return a value', (val) => {
+        for (const [key, _value] of val) {
+          expect(() => mustGet(val, key)).not.to.throw(Error);
+        }
+      });
+    });
   });
 
   describe('get head helper', async () => {
@@ -111,6 +121,15 @@ describe('map utils', async () => {
     });
 
     xit('should return falsy values for existing keys');
+
+    over('map with truthy values', array(tuple(string(), nat()), { minLength: 1 }).map((t) => new Map(t)), (it) => {
+      it('should return a value other than missing', (val) => {
+        const missing = -1;
+        for (const [key, _value] of val) {
+          expect(getOrDefault(val, key, missing)).not.to.equal(missing);
+        }
+      });
+    });
   });
 
   describe('pairs to map helper', () => {
@@ -120,6 +139,17 @@ describe('map utils', async () => {
         value: 3,
       }]);
       expect(result.get('foo')).to.equal(3);
+    });
+
+    over('paired values', array(record({
+      name: string(),
+      value: integer(),
+    })), (it) => {
+      it('should include each unique key', (val) => {
+        const keys = new Set(val.map((pair) => pair.name));
+        const map = pairsToMap(val);
+        expect(map.size).to.equal(keys.size);
+      });
     });
   });
 
@@ -145,6 +175,15 @@ describe('map utils', async () => {
       /* eslint-disable-next-line no-null/no-null */
       expect(entriesOf(null)).to.deep.equal([]);
       expect(entriesOf(undefined)).to.deep.equal([]);
+    });
+
+    over('dict objects', dictionary(string(), integer()), (it) => {
+      it('should list the properties', (val) => {
+        const props = entriesOf(val);
+        for (const [key, value] of props) {
+          expect(val[key]).to.equal(value);
+        }
+      });
     });
   });
 

@@ -1,14 +1,18 @@
 /* eslint-disable no-magic-numbers */
 import { expect } from 'chai';
+import { array, falsy, integer } from 'fast-check';
+import { over } from 'mocha-foam';
 import { match, stub } from 'sinon';
 
-import { filterMany, hasItems, lengthOf, toArray } from '../../src/Array';
+import { isNone } from '../../src';
+import { ensureArray, filterZip, hasItems, isEmpty, lengthOf, mergeArray, toArray } from '../../src/Array';
+import { sum } from '../../src/Predicate';
 
 describe('list utils', async () => {
   describe('filter many helper', async () => {
     it('should call the predicate with an item from each list', async () => {
       const cb = stub().returns(true);
-      const results = filterMany(cb, [1], ['a']);
+      const results = filterZip(cb, [1], ['a']);
 
       expect(results.length).to.equal(1);
       expect(cb).to.have.callCount(1);
@@ -18,7 +22,7 @@ describe('list utils', async () => {
     it('should call the predicate for each slice', async () => {
       const data = [1, 2, 3, 4, 5];
       const cb = stub().returns(true);
-      const results = filterMany(cb, data);
+      const results = filterZip(cb, data);
 
       expect(results.length).to.equal(data.length);
       expect(cb).to.have.callCount(data.length);
@@ -27,7 +31,7 @@ describe('list utils', async () => {
     it('should keep slices that passed the predicate', async () => {
       const data = [1, 2, 3, 4, 5];
       const cb = stub().returns(false);
-      const results = filterMany(cb, data);
+      const results = filterZip(cb, data);
 
       expect(results.length).to.equal(0);
       expect(cb).to.have.callCount(data.length);
@@ -47,6 +51,19 @@ describe('list utils', async () => {
 
       expect(copy).not.to.equal(data);
       expect(copy).to.deep.equal(data);
+    });
+
+    over('filled arrays', array(integer()), (it) => {
+      it('should copy the array', (val) => {
+        const copy = toArray(val);
+        // these need to be two different expectations, because not and deep both carry over
+        expect(copy).not.to.equal(val);
+        expect(copy).to.deep.equal(val);
+      });
+
+      it('should be a synonym for ensure array', (val) => {
+        expect(ensureArray(val)).to.deep.equal(toArray(val));
+      });
     });
   });
 
@@ -86,6 +103,29 @@ describe('list utils', async () => {
         true,
         false,
       ])).to.equal(true);
+    });
+  });
+
+  describe('is empty helper', () => {
+    over('falsy values', falsy().filter(isNone), (it) => {
+      it('should be empty', (val) => {
+        expect(isEmpty(val)).to.equal(true);
+      });
+    });
+
+    over('filled arrays', array(integer(), {minLength: 1}), (it) => {
+      it('should have items', (val) => {
+        expect(isEmpty(val)).to.equal(false);
+      });
+    });
+  });
+
+  describe('merge array helper', () => {
+    over('some arrays', array(array(integer())), (it) => {
+      it('should be the total length', (val) => {
+        const total = val.map((a) => a.length).reduce(sum, 0);
+        expect(mergeArray(...val)).to.have.lengthOf(total);
+      });
     });
   });
 });

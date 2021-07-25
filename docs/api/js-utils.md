@@ -52,7 +52,7 @@
 |  [lengthOf(val)](./js-utils.lengthof.md) | Calculate the length of an array or value.<!-- -->Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add. |
 |  [makeDict(map)](./js-utils.makedict.md) | Turns a map or dict into a dict |
 |  [makeMap(val)](./js-utils.makemap.md) | Clone a map or map-like object into a new map. |
-|  [mergeArrays(parts)](./js-utils.mergearrays.md) | Merge arguments, which may or may not be arrays, into one return that is definitely an array. |
+|  [mergeArrays(parts)](./js-utils.mergearrays.md) |  |
 |  [mergeArrays(parts)](./js-utils.mergearrays_1.md) |  |
 |  [mergeMap(target, source)](./js-utils.mergemap.md) | Merge the <code>source</code> map into the <code>target</code> map, replacing keys that already exist. |
 |  [mustCoalesce(values)](./js-utils.mustcoalesce.md) | Return the first value that is not nil. |

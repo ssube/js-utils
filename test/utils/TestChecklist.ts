@@ -1,4 +1,6 @@
 import { expect } from 'chai';
+import { array, constant, integer, record } from 'fast-check';
+import { over } from 'mocha-foam';
 
 import { Checklist, ChecklistMode } from '../../src/Checklist';
 
@@ -41,6 +43,18 @@ describe('checklist', async () => {
         mode: ChecklistMode.INCLUDE,
       });
       expect(list.check(MISSING_ITEM)).to.equal(false);
+    });
+  });
+
+  over('arrays of numbers', record({
+    data: array(integer()),
+    mode: constant(ChecklistMode.EXCLUDE),
+  }), (it) => {
+    it('should exclude the data items', (options) => {
+      const list = new Checklist(options);
+      for (const val of options.data) {
+        expect(list.check(val)).to.equal(false);
+      }
     });
   });
 });
