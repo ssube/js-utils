@@ -47,7 +47,7 @@
     "esm": "3.2.25",
     "fast-check": "2.17.0",
     "mocha": "8.4.0",
-    "mocha-foam": "0.1.6",
+    "mocha-foam": "0.1.8",
     "mock-fs": "5.0.0",
     "noicejs": "4.0.0",
     "nyc": "15.1.0",

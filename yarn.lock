@@ -3060,10 +3060,10 @@ mkdirp@^0.5.1:
   dependencies:
     minimist "0.0.8"
 
-mocha-foam@0.1.6:
-  version "0.1.6"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/mocha-foam/-/mocha-foam-0.1.6.tgz#a5d6cea1076eba27c40afde601201fbb5df4f671"
-  integrity sha512-wPsqLuAmln7vnF64/DaJmqAQGUkaMFFCuIaGpJCs2Y7XwT5d01QpVYlQ4aCTdn32rStexmE5T65ri2MVFwl/nw==
+mocha-foam@0.1.8:
+  version "0.1.8"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/mocha-foam/-/mocha-foam-0.1.8.tgz#cede81d51d495876d26cbaf5b69b2cfd622f555b"
+  integrity sha512-IPf/psPJJEtop6qJUdU5KYQwOLGIZ2ibB+yPqmvOAXBrNpNvSA9S1xmRGEwQsaNLxFE4muXx4xu1dn7o3MLsdw==
 
 mocha@8.4.0:
   version "8.4.0"
