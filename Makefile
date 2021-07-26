@@ -109,9 +109,8 @@ test: ## run mocha unit tests
 test: test-cover
 
 test-check: ## run mocha unit tests with coverage reports
-	$(NODE_BIN)/nyc $(COVER_OPTS) \
+	$(NODE_BIN)/c8 $(COVER_OPTS) \
 		$(NODE_BIN)/mocha $(MOCHA_OPTS) \
-		--require esm \
 		$(TARGET_PATH)/test.js
 
 test-cover: ## run mocha unit tests with coverage reports
@@ -127,7 +126,7 @@ test-cover: test-check
 	sed '1s;^;TN:\n;' -i $(TARGET_PATH)/coverage/lcov.info
 
 test-watch:
-	$(NODE_BIN)/nyc $(COVER_OPTS) $(NODE_BIN)/mocha $(MOCHA_OPTS) --watch $(TARGET_PATH)/test-bundle.js
+	$(NODE_BIN)/c8 $(COVER_OPTS) $(NODE_BIN)/mocha $(MOCHA_OPTS) --watch $(TARGET_PATH)/test-bundle.js
 
 yarn-install: ## install dependencies from package and lock file
 	yarn

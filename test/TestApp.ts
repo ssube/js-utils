@@ -1,7 +1,9 @@
 import { expect } from 'chai';
-import { spy } from 'sinon';
+import sinon from 'sinon';
 
 import { main } from '../src/app';
+
+const { spy } = sinon;
 
 describe('app', async () => {
   it('should log a message', async () => {

@@ -2,11 +2,13 @@
 import { expect } from 'chai';
 import { array, falsy, integer } from 'fast-check';
 import { over } from 'mocha-foam';
-import { match, stub } from 'sinon';
+import sinon from 'sinon';
 
 import { isNone } from '../../src';
 import { ensureArray, filterZip, hasItems, isEmpty, lengthOf, mergeArray, toArray } from '../../src/Array';
 import { sum } from '../../src/Predicate';
+
+const { match, stub } = sinon;
 
 describe('list utils', async () => {
   describe('filter many helper', async () => {
