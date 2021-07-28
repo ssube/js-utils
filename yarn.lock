@@ -688,10 +688,10 @@ builtin-modules@^3.1.0:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/builtin-modules/-/builtin-modules-3.1.0.tgz#aad97c15131eb76b65b50ef208e7584cd76a7484"
   integrity sha512-k0KL0aWZuBt2lrxrcASWDfwOLMnodeQjodT/1SxEQAXsHANgo6ZC/VEaSEHCXt7aSTZ4/4H5LKa+tBXmW7Vtvw==
 
-c8@7.7.3:
-  version "7.7.3"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/c8/-/c8-7.7.3.tgz#5af8f83b55dace03b353375e7a2ba85e2c13b17f"
-  integrity sha512-ZyA7n3w8i4ETV25tVYMHwJxCSnaOf/LfA8vOcuZOPbonuQfD7tBT/gMWZy7eczRpCDuHcvMXwoqAemg6R0p3+A==
+c8@7.8.0:
+  version "7.8.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/c8/-/c8-7.8.0.tgz#8fcfe848587d9d5796f22e9b0546a387a66d1b3b"
+  integrity sha512-x2Bx+IIEd608B1LmjiNQ/kizRPkCWo5XzuV57J9afPjAHSnYXALwbCSOkQ7cSaNXBNblfqcvdycj+klmL+j6yA==
   dependencies:
     "@bcoe/v8-coverage" "^0.2.3"
     "@istanbuljs/schema" "^0.1.2"
