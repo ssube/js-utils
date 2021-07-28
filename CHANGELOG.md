@@ -2,6 +2,15 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.4.0](https://github.com/ssube/js-utils/compare/v0.4.0-1...v0.4.0) (2021-07-28)
+
+
+### Features
+
+* full es module build, fix up eslint and sinon imports ([788b5bb](https://github.com/ssube/js-utils/commit/788b5bb1650d394dcd61e67fc1df1411e29e55ea))
+* remove unused lodash dependency ([c2ca9df](https://github.com/ssube/js-utils/commit/c2ca9dfd041bb0d997299d26814079def8f9d1ad))
+* **build:** update eslint config, remove tslint plugins ([d55efc5](https://github.com/ssube/js-utils/commit/d55efc57a1344f78fb7425a4b26077cf0bf15a28))
+
 ## [0.4.0-1](https://github.com/ssube/js-utils/compare/v0.4.0-0...v0.4.0-1) (2021-07-10)
 
 
