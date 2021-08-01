@@ -31,11 +31,16 @@
 |  [constructorName(val)](./js-utils.constructorname.md) | Get the constructor name from an instance. |
 |  [defaultWhen(condition, items)](./js-utils.defaultwhen.md) | Return the first element when <code>condition</code> is true and the second element when <code>condition</code> is false. |
 |  [defer(ms)](./js-utils.defer.md) | Resolve after a set amount of time. |
+|  [deferValue(ms, val)](./js-utils.defervalue.md) |  |
 |  [doesExist(val)](./js-utils.doesexist.md) | Check if a variable is some <code>T</code>. |
 |  [encode(chunks, encoding)](./js-utils.encode.md) | Concatenate then encode a list of buffers. |
 |  [ensureArray(val)](./js-utils.ensurearray.md) |  |
 |  [ensureArray(val)](./js-utils.ensurearray_1.md) |  |
 |  [entriesOf(map)](./js-utils.entriesof.md) | Get entries of a map-like. |
+|  [filterZip(cb, l1)](./js-utils.filterzip.md) |  |
+|  [filterZip(cb, l1, l2)](./js-utils.filterzip_1.md) |  |
+|  [filterZip(cb, l1, l2, l3)](./js-utils.filterzip_2.md) |  |
+|  [filterZip(cb, l1, l2, l3, l4)](./js-utils.filterzip_3.md) |  |
 |  [getConstructor(val)](./js-utils.getconstructor.md) | Get the constructor from an instance. |
 |  [getHead(map, key)](./js-utils.gethead.md) | Get the first element from the specified key within a map of lists. |
 |  [getHeadOrDefault(map, key, defaultValue)](./js-utils.getheadordefault.md) | Get the first element from the specified key, within a map of lists, or a default value when the key does not exist or is nil. |
@@ -44,7 +49,10 @@
 |  [getTestLogger(verbose)](./js-utils.gettestlogger.md) | Get a test logger. Returns a null logger unless <code>verbose</code> is true or run under debug mode. |
 |  [hasItems(val)](./js-utils.hasitems.md) | Test if a value is an array with some items (length &gt; 0).<!-- -->This is not a general replacement for <code>.length &gt; 0</code>, since it is also a typeguard: <code>if (hasItems(val)) else { val }</code> will complain that <code>val</code> is <code>never</code> in the <code>else</code> branch, since it was proven not to be an array by this function, even if <code>val</code> is simply empty. |
 |  [hasItems(val)](./js-utils.hasitems_1.md) |  |
+|  [isArray(list)](./js-utils.isarray.md) | Wrapper for <code>Array.isArray</code> with better readonly type handling. |
+|  [isArray(list)](./js-utils.isarray_1.md) |  |
 |  [isDebug()](./js-utils.isdebug.md) | Test if DEBUG mode is set.<!-- -->TODO: check variable value as well |
+|  [isEmpty(val)](./js-utils.isempty.md) |  |
 |  [isNil(val)](./js-utils.isnil.md) | Check if a value is nil. |
 |  [isNone(val)](./js-utils.isnone.md) |  |
 |  [isSome(val)](./js-utils.issome.md) |  |
@@ -52,6 +60,8 @@
 |  [lengthOf(val)](./js-utils.lengthof.md) | Calculate the length of an array or value.<!-- -->Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add. |
 |  [makeDict(map)](./js-utils.makedict.md) | Turns a map or dict into a dict |
 |  [makeMap(val)](./js-utils.makemap.md) | Clone a map or map-like object into a new map. |
+|  [mergeArray(parts)](./js-utils.mergearray.md) | Merge arguments, which may or may not be arrays, into one return that is definitely an array. |
+|  [mergeArray(parts)](./js-utils.mergearray_1.md) |  |
 |  [mergeArrays(parts)](./js-utils.mergearrays.md) |  |
 |  [mergeArrays(parts)](./js-utils.mergearrays_1.md) |  |
 |  [mergeMap(target, source)](./js-utils.mergemap.md) | Merge the <code>source</code> map into the <code>target</code> map, replacing keys that already exist. |
@@ -68,8 +78,12 @@
 |  [setOrPush(map, key, val)](./js-utils.setorpush.md) | Set a map key to a new array or push to the existing value. |
 |  [signal(signals)](./js-utils.signal.md) |  |
 |  [spyLogger(spies)](./js-utils.spylogger.md) | Create a spy logger using the provided methods, which returns itself as a child. |
+|  [sum(a, b)](./js-utils.sum.md) | Add numbers. PredicateR2<!-- -->&lt;<!-- -->number, number<!-- -->&gt; |
 |  [timeout(ms, oper)](./js-utils.timeout.md) | Reject after a set amount of time if the original promise has not yet resolved. |
+|  [toArray(val)](./js-utils.toarray.md) |  |
+|  [toArray(val)](./js-utils.toarray_1.md) |  |
 |  [trim(val, max, tail)](./js-utils.trim.md) |  |
+|  [waitFor(cb, step, count)](./js-utils.waitfor.md) | Reject after a set number of attempts if the given predicate does not return true. |
 |  [waitForChild(child)](./js-utils.waitforchild.md) | Wait for a child process to exit, collecting output, errors, and exit status. |
 |  [writeValue(stream, value)](./js-utils.writevalue.md) |  |
 
@@ -96,6 +110,7 @@
 
 |  Type Alias | Description |
 |  --- | --- |
+|  [AllowedBufferEncoding](./js-utils.allowedbufferencoding.md) |  |
 |  [ChildSpawner](./js-utils.childspawner.md) |  |
 |  [MapLike](./js-utils.maplike.md) | A <code>Map</code> or dictionary object with string keys and <code>TVal</code> values. |
 |  [Maybe](./js-utils.maybe.md) | Value that may be nil. |

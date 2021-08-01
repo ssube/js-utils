@@ -3,7 +3,7 @@ import { array, uint8Array } from 'fast-check';
 import { over } from 'mocha-foam';
 
 import { concat, encode } from '../../src/Buffer';
-import { sum } from '../../src/Predicate';
+import { sum } from '../../src/Math';
 
 describe('buffer utils', async () => {
   describe('concat', async () => {

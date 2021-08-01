@@ -6,14 +6,28 @@ export { NotImplementedError } from './error/NotImplementedError';
 export { TimeoutError } from './error/TimeoutError';
 
 export {
+  mergeArray,
+  mergeArrays,
+  hasItems,
+  ensureArray,
+  toArray,
+  isArray,
+  isEmpty,
+  filterZip,
+  lengthOf,
+} from './Array';
+export {
   ArrayMapper,
   ArrayMapperOptions,
 } from './ArrayMapper';
 export {
   defer,
+  deferValue,
   timeout,
+  waitFor,
 } from './Async';
 export {
+  AllowedBufferEncoding,
   concat,
   encode,
 } from './Buffer';
@@ -29,14 +43,13 @@ export {
   waitForChild,
   writeValue,
 } from './Child';
-export { ExternalModule, ModuleCtor } from './ExternalModule';
-export { isDebug } from './Env';
 export {
-  ensureArray,
-  hasItems,
-  lengthOf,
-  mergeArrays,
-} from './Array';
+  isDebug
+} from './Env';
+export {
+  ExternalModule,
+  ModuleCtor,
+} from './ExternalModule';
 export {
   getTestLogger,
   spyLogger,
@@ -57,6 +70,9 @@ export {
   pushMergeMap,
   setOrPush,
 } from './Map';
+export {
+  sum,
+} from './Math';
 export {
   Maybe,
   None,

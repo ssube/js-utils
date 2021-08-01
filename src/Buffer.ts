@@ -1,4 +1,4 @@
-import { sum } from './Predicate';
+import { sum } from './Math';
 
 export type AllowedBufferEncoding = 'ascii' | 'utf-8';
 

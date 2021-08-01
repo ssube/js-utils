@@ -47,12 +47,3 @@ export type PredicateR1<RVal, TVal = RVal> = (val: TVal, idx: number, list: Arra
  * @beta
  */
 export type PredicateR2<RVal, TVal = RVal> = (pval: TVal, nval: TVal, idx: number, list: Array<TVal>) => RVal;
-
-/**
- * Add numbers.
- *
- * @implements PredicateR2<number, number>
- */
-export function sum(a: number, b: number): number {
-  return a + b;
-}

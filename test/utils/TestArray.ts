@@ -6,7 +6,7 @@ import sinon from 'sinon';
 
 import { isNone } from '../../src';
 import { ensureArray, filterZip, hasItems, isEmpty, lengthOf, mergeArray, toArray } from '../../src/Array';
-import { sum } from '../../src/Predicate';
+import { sum } from '../../src/Math';
 
 const { match, stub } = sinon;
 

@@ -17,7 +17,7 @@ export declare function encode(chunks: Array<Buffer>, encoding: AllowedBufferEnc
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  chunks | Array&lt;Buffer&gt; |  |
-|  encoding | AllowedBufferEncoding |  |
+|  encoding | [AllowedBufferEncoding](./js-utils.allowedbufferencoding.md) |  |
 
 <b>Returns:</b>
 
