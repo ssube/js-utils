@@ -4,12 +4,14 @@
 
 ## waitFor() function
 
-Reject after a set number of attempts if the given predicate does not return true.
+> Warning: This API is now obsolete.
+> 
+> 
 
 <b>Signature:</b>
 
 ```typescript
-export declare function waitFor(cb: PredicateC0, step: number, count: number): Promise<void>;
+export declare function waitFor(cb: PredicateC0, step: number, tries: number): Promise<void>;
 ```
 
 ## Parameters
@@ -18,13 +20,9 @@ export declare function waitFor(cb: PredicateC0, step: number, count: number): P
 |  --- | --- | --- |
 |  cb | PredicateC0 |  |
 |  step | number |  |
-|  count | number |  |
+|  tries | number |  |
 
 <b>Returns:</b>
 
 Promise&lt;void&gt;
-
-## Exceptions
-
-TimeoutError
 

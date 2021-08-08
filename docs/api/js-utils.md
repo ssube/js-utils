@@ -27,10 +27,12 @@
 
 |  Function | Description |
 |  --- | --- |
+|  [childResult(child)](./js-utils.childresult.md) | Wait for a child process to exit, collecting output, errors, and exit status. |
 |  [concat(chunks)](./js-utils.concat.md) | Concatenate a list of buffers. |
 |  [constructorName(val)](./js-utils.constructorname.md) | Get the constructor name from an instance. |
 |  [defaultWhen(condition, items)](./js-utils.defaultwhen.md) | Return the first element when <code>condition</code> is true and the second element when <code>condition</code> is false. |
 |  [defer(ms)](./js-utils.defer.md) | Resolve after a set amount of time. |
+|  [deferUntil(cb, step, tries)](./js-utils.deferuntil.md) | Reject after a set number of attempts if the given predicate does not return true. |
 |  [deferValue(ms, val)](./js-utils.defervalue.md) |  |
 |  [doesExist(val)](./js-utils.doesexist.md) | Check if a variable is some <code>T</code>. |
 |  [encode(chunks, encoding)](./js-utils.encode.md) | Concatenate then encode a list of buffers. |
@@ -77,14 +79,15 @@
 |  [removeNone(list)](./js-utils.removenone.md) | Remove any null or undefined items from the list. |
 |  [setOrPush(map, key, val)](./js-utils.setorpush.md) | Set a map key to a new array or push to the existing value. |
 |  [signal(signals)](./js-utils.signal.md) |  |
-|  [spyLogger(spies)](./js-utils.spylogger.md) | Create a spy logger using the provided methods, which returns itself as a child. |
+|  [spyLogger(spies)](./js-utils.spylogger.md) | Create a spy logger using the provided methods, which returns itself as a child. ensure all methods are present by extending null logger |
 |  [sum(a, b)](./js-utils.sum.md) | Add numbers. PredicateR2<!-- -->&lt;<!-- -->number, number<!-- -->&gt; |
-|  [timeout(ms, oper)](./js-utils.timeout.md) | Reject after a set amount of time if the original promise has not yet resolved. |
+|  [timeout(ms, inner)](./js-utils.timeout.md) | Reject after a set amount of time if the original promise has not yet resolved. |
 |  [toArray(val)](./js-utils.toarray.md) |  |
 |  [toArray(val)](./js-utils.toarray_1.md) |  |
 |  [trim(val, max, tail)](./js-utils.trim.md) |  |
-|  [waitFor(cb, step, count)](./js-utils.waitfor.md) | Reject after a set number of attempts if the given predicate does not return true. |
-|  [waitForChild(child)](./js-utils.waitforchild.md) | Wait for a child process to exit, collecting output, errors, and exit status. |
+|  [waitFor(cb, step, tries)](./js-utils.waitfor.md) |  |
+|  [waitForChild(child)](./js-utils.waitforchild.md) |  |
+|  [writeInput(stream, value)](./js-utils.writeinput.md) |  |
 |  [writeValue(stream, value)](./js-utils.writevalue.md) |  |
 
 ## Interfaces
@@ -96,7 +99,6 @@
 |  [ChildOptions](./js-utils.childoptions.md) |  |
 |  [ChildResult](./js-utils.childresult.md) |  |
 |  [Dict](./js-utils.dict.md) |  |
-|  [ExternalModule](./js-utils.externalmodule.md) |  |
 
 ## Variables
 
@@ -114,7 +116,6 @@
 |  [ChildSpawner](./js-utils.childspawner.md) |  |
 |  [MapLike](./js-utils.maplike.md) | A <code>Map</code> or dictionary object with string keys and <code>TVal</code> values. |
 |  [Maybe](./js-utils.maybe.md) | Value that may be nil. |
-|  [ModuleCtor](./js-utils.modulector.md) |  |
 |  [Nil](./js-utils.nil.md) | Old name for None. |
 |  [None](./js-utils.none.md) | Unset value. |
 |  [Optional](./js-utils.optional.md) | Old name for Maybe. |

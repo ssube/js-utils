@@ -4,7 +4,9 @@
 
 ## waitForChild() function
 
-Wait for a child process to exit, collecting output, errors, and exit status.
+> Warning: This API is now obsolete.
+> 
+> 
 
 <b>Signature:</b>
 

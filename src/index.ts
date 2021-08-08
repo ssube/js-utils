@@ -24,6 +24,7 @@ export {
   defer,
   deferValue,
   timeout,
+  deferUntil,
   waitFor,
 } from './Async';
 export {
@@ -40,16 +41,14 @@ export {
   ChildOptions,
   ChildResult,
   ChildSpawner,
+  childResult,
   waitForChild,
+  writeInput,
   writeValue,
 } from './Child';
 export {
   isDebug
 } from './Env';
-export {
-  ExternalModule,
-  ModuleCtor,
-} from './ExternalModule';
 export {
   getTestLogger,
   spyLogger,

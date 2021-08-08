@@ -37,7 +37,7 @@ const CHILD_OUTPUT = 'child process emitted error output';
  *
  * @public
  */
-export function waitForChild(child: ChildStreams): Promise<ChildResult> {
+export function childResult(child: ChildStreams): Promise<ChildResult> {
   return new Promise((res, rej) => {
     const stderr: Array<Buffer> = [];
     const stdout: Array<Buffer> = [];
@@ -78,7 +78,15 @@ export function waitForChild(child: ChildStreams): Promise<ChildResult> {
   });
 }
 
-export function writeValue(stream: Writable, value: string): Promise<boolean> {
+/**
+ * @public
+ * @deprecated
+ */
+export function waitForChild(child: ChildStreams): Promise<ChildResult> {
+  return childResult(child);
+}
+
+export function writeInput(stream: Writable, value: string): Promise<boolean> {
   return new Promise<boolean>((res, rej) => {
     stream.write(value, (err: Maybe<Error>) => {
       if (doesExist(err)) {
@@ -90,4 +98,12 @@ export function writeValue(stream: Writable, value: string): Promise<boolean> {
       }
     });
   });
+}
+
+/**
+ * @public
+ * @deprecated
+ */
+export function writeValue(stream: Writable, value: string): Promise<boolean> {
+  return writeInput(stream, value);
 }

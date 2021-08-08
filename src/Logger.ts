@@ -14,11 +14,14 @@ export function getTestLogger(verbose = false): Logger {
 
 /**
  * Create a spy logger using the provided methods, which returns itself as a child.
+ *
+ * @todo ensure all methods are present by extending null logger
  */
 export function spyLogger(spies: Partial<Logger>): Logger {
   const logger = {
     ...spies,
     child: () => logger,
   } as Logger;
+
   return logger;
 }

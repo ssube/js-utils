@@ -63,55 +63,79 @@ The library is bundled and has no dependencies.
 
 ## Features
 
-- array mapper
-  - map elements to keys by order
-  - skip initial, gather remaining
-- async
-  - defer
-  - promise timeout
-  - wait for predicate
-- async tracker
-  - track and log leaking async resources for tests
-- buffer
-- checklist
-  - include/exclude mode (whitelist/blacklist)
-- child process
-  - wait for exit and gather output
-  - write and flush
-- env
-  - check `DEBUG`
-- list
-  - concat lists
-- logger
-  - get test logger (null or console depending on `DEBUG`)
-- map
-  - must get (assertion)
-  - get or default
-  - get head from list value
-  - get head or default
-  - set or push to key
-  - merge maps
-  - push-merge maps
-  - convert dict to map and vice versa
-  - normalize map values to lists
-  - create map from name-value pairs
-- maybe
-  - is nil test (negative nil test)
-  - count array or maybe
-  - filter nil from list
-  - must find (assertion)
-  - does exist (positive nil test)
-  - must exist (assertion)
-  - must default (assertion)
-- pid file
-  - write pid file
-  - delete pid file
-- reflect
-  - get constructor name
-  - get methods from prototype chain
-- signals
-  - wait for OS signal
-- string
-  - left pad (please don't import just for this)
-  - trim with suffix
+Features utilities and helpers for:
 
+- Array
+  - assertions/guards:
+    - `hasItems`
+    - `isArray` for both `Array`/`ReadonlyArray`
+    - `isEmpty`
+    - `lengthOf`
+  - conversion
+    - `filterZip`
+    - `toArray`
+- Array Mapper
+  - array-to-map converter, reduces an array of values to a map, using an array of keys
+- Async
+  - timed promises
+    - `defer`/`deferValue`
+    - `deferUntil`
+    - `timeout`
+- Buffer
+  - concatenation
+    - `concat`
+    - `encode`
+- Checklist
+  - allow/deny list
+- Child Process
+  - `childResult`
+  - `writeInput`
+- Env Vars
+  - `isDebug`
+- Logger
+  - test logging helpers
+- Map
+  - types
+    - `MapLike`
+  - assertions/guards:
+    - `mustGet`
+  - null-safe helpers
+    - `getOrDefault`
+  - helpers for `Map<K, Array<V>>`
+    - `getHead`/`getHeadOrDefault`
+    - `setOrPush`
+  - concat/merge
+    - `mergeMap`
+    - `pushMergeMap`
+  - conversion
+    - `entriesOf`
+    - `makeDict`
+    - `makeMap`
+    - `pairsToMap`
+- Math
+  - predicates for functional methods
+    - `sum`
+- Maybe
+  - types
+    - `Maybe`
+    - `None`
+  - assertions/guards
+    - `doesExist`
+    - `mustExist`
+    - `mustDefault`
+    - `mustFind`
+    - `removeNone`
+  - null-safe helpers
+    - `isNone`
+    - `isSome`
+- Predicate
+  - types for functional methods
+- Reflect
+  - `getConstructor`
+  - `getMethods`
+- Signal
+  - wait for OS signal
+    - `signal`
+- String
+  - `leftPad`
+  - `trim` with suffix

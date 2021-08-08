@@ -6,6 +6,8 @@
 
 Create a spy logger using the provided methods, which returns itself as a child.
 
+ ensure all methods are present by extending null logger
+
 <b>Signature:</b>
 
 ```typescript

@@ -25,14 +25,14 @@ export function deferValue<T>(ms: number, val: T): Promise<T> {
  * Reject after a set amount of time if the original promise has not yet resolved.
  * @public
  */
-export function timeout<T>(ms: number, oper: Promise<T>): Promise<T> {
+export function timeout<T>(ms: number, inner: Promise<T>): Promise<T> {
   const limit = new Promise<T>((_res, rej) => {
     setTimeout(() => {
       rej(new TimeoutError());
     }, ms);
   });
 
-  return Promise.race([limit, oper]);
+  return Promise.race([limit, inner]);
 }
 
 /**
@@ -40,15 +40,23 @@ export function timeout<T>(ms: number, oper: Promise<T>): Promise<T> {
  * @public
  * @throws TimeoutError
  */
-export async function waitFor(cb: PredicateC0, step: number, count: number): Promise<void> {
-  let accum = 0;
-  while (accum < count) {
+export async function deferUntil(cb: PredicateC0, step: number, tries: number): Promise<void> {
+  let count = 0;
+  while (count < tries) {
     await defer(step);
     if (cb()) {
       return;
     }
-    accum += 1;
+    count += 1;
   }
 
   throw new TimeoutError();
+}
+
+/**
+ * @public
+ * @deprecated
+ */
+export async function waitFor(cb: PredicateC0, step: number, tries: number): Promise<void> {
+  return deferUntil(cb, step, tries);
 }

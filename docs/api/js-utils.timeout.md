@@ -9,7 +9,7 @@ Reject after a set amount of time if the original promise has not yet resolved.
 <b>Signature:</b>
 
 ```typescript
-export declare function timeout<T>(ms: number, oper: Promise<T>): Promise<T>;
+export declare function timeout<T>(ms: number, inner: Promise<T>): Promise<T>;
 ```
 
 ## Parameters
@@ -17,7 +17,7 @@ export declare function timeout<T>(ms: number, oper: Promise<T>): Promise<T>;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  ms | number |  |
-|  oper | Promise&lt;T&gt; |  |
+|  inner | Promise&lt;T&gt; |  |
 
 <b>Returns:</b>
 

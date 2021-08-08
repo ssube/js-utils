@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
 import { ChildProcessError } from '../../src';
-import { ChildStreams, waitForChild } from '../../src/Child';
+import { ChildStreams, childResult } from '../../src/Child';
 import { Maybe, mustExist } from '../../src/Maybe';
 
 type Closer = (status: number) => Promise<void>;
@@ -33,7 +33,7 @@ describe('child process utils', async () => {
     it('should read stdout data', async () => {
       const child = createChild();
 
-      const resultPromise = waitForChild(child);
+      const resultPromise = childResult(child);
       await mustExist(child.closer)(0);
 
       const result = await resultPromise;
@@ -46,7 +46,7 @@ describe('child process utils', async () => {
     it('should reject on failure status', async () => {
       const child = createChild();
 
-      const resultPromise = waitForChild(child);
+      const resultPromise = childResult(child);
       await mustExist(child.closer)(1);
 
       return expect(resultPromise).to.eventually.be.rejectedWith(ChildProcessError);
