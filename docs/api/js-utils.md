@@ -21,7 +21,7 @@
 
 |  Enumeration | Description |
 |  --- | --- |
-|  [ChecklistMode](./js-utils.checklistmode.md) |  |
+|  [ChecklistMode](./js-utils.checklistmode.md) | Whether items should be checked for inclusion (allow list) or exclusion (deny list). |
 
 ## Functions
 
@@ -52,13 +52,13 @@
 |  [hasItems(val)](./js-utils.hasitems.md) | Test if a value is an array with some items (length &gt; 0).<!-- -->This is not a general replacement for <code>.length &gt; 0</code>, since it is also a typeguard: <code>if (hasItems(val)) else { val }</code> will complain that <code>val</code> is <code>never</code> in the <code>else</code> branch, since it was proven not to be an array by this function, even if <code>val</code> is simply empty. |
 |  [hasItems(val)](./js-utils.hasitems_1.md) |  |
 |  [isArray(list)](./js-utils.isarray.md) | Wrapper for <code>Array.isArray</code> with better readonly type handling. |
-|  [isArray(list)](./js-utils.isarray_1.md) |  |
+|  [isArray(list)](./js-utils.isarray_1.md) | Wrapper for <code>Array.isArray</code> with better readonly type handling. |
 |  [isDebug()](./js-utils.isdebug.md) | Test if DEBUG mode is set.<!-- -->TODO: check variable value as well |
-|  [isEmpty(val)](./js-utils.isempty.md) |  |
+|  [isEmpty(val)](./js-utils.isempty.md) | Check if a <code>Maybe&lt;Array&lt;T&gt;&gt;</code> does in fact contain an array, and that array has items. |
 |  [isNil(val)](./js-utils.isnil.md) | Check if a value is nil. |
-|  [isNone(val)](./js-utils.isnone.md) |  |
-|  [isSome(val)](./js-utils.issome.md) |  |
-|  [leftPad(val, min, fill)](./js-utils.leftpad.md) |  |
+|  [isNone(val)](./js-utils.isnone.md) | Typeguard to check if a <code>Maybe</code> is <code>None</code> (null or undefined). |
+|  [isSome(val)](./js-utils.issome.md) | Typeguard to check if a <code>Maybe</code> is <code>Some</code> value (not <code>None</code>). |
+|  [leftPad(val, min, fill)](./js-utils.leftpad.md) | Prefix <code>val</code> with <code>fill</code> until it is at least <code>min</code> characters. |
 |  [lengthOf(val)](./js-utils.lengthof.md) | Calculate the length of an array or value.<!-- -->Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add. |
 |  [makeDict(map)](./js-utils.makedict.md) | Turns a map or dict into a dict |
 |  [makeMap(val)](./js-utils.makemap.md) | Clone a map or map-like object into a new map. |
@@ -72,19 +72,19 @@
 |  [mustExist(val, err)](./js-utils.mustexist.md) | Assert that a variable is not <code>None</code> and return the value. Throw if it is <code>None</code>. |
 |  [mustFind(list, predicate)](./js-utils.mustfind.md) | Find a value matching the given predicate or throw. |
 |  [mustGet(map, key)](./js-utils.mustget.md) | Get an element from a Map and guard against nil values. |
-|  [normalizeMap(map)](./js-utils.normalizemap.md) | <b><i>(BETA)</i></b> Normalize a map-like of values into a dict of lists of strings. |
+|  [normalizeMap(map)](./js-utils.normalizemap.md) | Normalize a map-like of values into a dict of lists of strings. |
 |  [pairsToMap(pairs)](./js-utils.pairstomap.md) | Turns a list of name-value pairs into a map. |
 |  [pushMergeMap(args)](./js-utils.pushmergemap.md) | Merge the provided maps into a new map, merging keys that already exist by pushing new items. |
-|  [pushMergeMap(args)](./js-utils.pushmergemap_1.md) |  |
+|  [pushMergeMap(args)](./js-utils.pushmergemap_1.md) | Merge the provided maps into a new map, merging keys that already exist by pushing new items. |
 |  [removeNone(list)](./js-utils.removenone.md) | Remove any null or undefined items from the list. |
 |  [setOrPush(map, key, val)](./js-utils.setorpush.md) | Set a map key to a new array or push to the existing value. |
-|  [signal(signals)](./js-utils.signal.md) |  |
+|  [signal(signals)](./js-utils.signal.md) | Wait for an OS signal. |
 |  [spyLogger(spies)](./js-utils.spylogger.md) | Create a spy logger using the provided methods, which returns itself as a child. ensure all methods are present by extending null logger |
 |  [sum(a, b)](./js-utils.sum.md) | Add numbers. PredicateR2<!-- -->&lt;<!-- -->number, number<!-- -->&gt; |
 |  [timeout(ms, inner)](./js-utils.timeout.md) | Reject after a set amount of time if the original promise has not yet resolved. |
 |  [toArray(val)](./js-utils.toarray.md) | Copy an existing array-like or convert a single value to an array. |
-|  [toArray(val)](./js-utils.toarray_1.md) |  |
-|  [trim(val, max, tail)](./js-utils.trim.md) |  |
+|  [toArray(val)](./js-utils.toarray_1.md) | Copy an existing readonly array-like or convert a single value to a readonly array. |
+|  [trim(val, max, tail)](./js-utils.trim.md) | Return the start of <code>val</code>, up to <code>max</code> characters. If <code>val</code> is longer than <code>max</code> and there is room, suffix with <code>tail</code>. |
 |  [waitFor(cb, step, tries)](./js-utils.waitfor.md) |  |
 |  [waitForChild(child)](./js-utils.waitforchild.md) |  |
 |  [writeInput(stream, value)](./js-utils.writeinput.md) |  |
@@ -95,7 +95,7 @@
 |  Interface | Description |
 |  --- | --- |
 |  [ArrayMapperOptions](./js-utils.arraymapperoptions.md) |  |
-|  [ChecklistOptions](./js-utils.checklistoptions.md) |  |
+|  [ChecklistOptions](./js-utils.checklistoptions.md) | Mode of operation and items to check. |
 |  [ChildOptions](./js-utils.childoptions.md) |  |
 |  [ChildResult](./js-utils.childresult.md) |  |
 |  [Dict](./js-utils.dict.md) |  |

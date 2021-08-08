@@ -4,6 +4,8 @@
 
 ## ChecklistOptions interface
 
+Mode of operation and items to check.
+
 <b>Signature:</b>
 
 ```typescript

@@ -1,5 +1,8 @@
 export const DEFAULT_TRIM = 8;
 
+/**
+ * Prefix `val` with `fill` until it is at least `min` characters.
+ */
 export function leftPad(val: string, min = DEFAULT_TRIM, fill = '0'): string {
   if (val.length < min) {
     const len = min - val.length;
@@ -10,6 +13,10 @@ export function leftPad(val: string, min = DEFAULT_TRIM, fill = '0'): string {
   }
 }
 
+/**
+ * Return the start of `val`, up to `max` characters. If `val` is longer than `max` and there is room,
+ * suffix with `tail`.
+ */
 export function trim(val: string, max: number, tail = '...'): string {
   if (val.length <= max) {
     return val;

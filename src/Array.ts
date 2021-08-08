@@ -57,6 +57,9 @@ export function ensureArray<T>(val: Maybe<ReadonlyArray<T>>): ReadonlyArray<T> {
  * Copy an existing array-like or convert a single value to an array.
  */
 export function toArray<TVal>(val: Maybe<TVal | Array<TVal>>): Array<TVal>;
+/**
+ * Copy an existing readonly array-like or convert a single value to a readonly array.
+ */
 export function toArray<TVal>(val: Maybe<TVal | ReadonlyArray<TVal>>): ReadonlyArray<TVal>;
 export function toArray<TVal>(val: Maybe<TVal | ReadonlyArray<TVal>>): ReadonlyArray<TVal> {
   if (isArray(val)) {
@@ -72,13 +75,25 @@ export function toArray<TVal>(val: Maybe<TVal | ReadonlyArray<TVal>>): ReadonlyA
 
 /**
  * Wrapper for `Array.isArray` with better readonly type handling.
+ *
+ * @public
  */
 export function isArray<TVal>(list: TVal | Array<TVal>): list is Array<TVal>;
+/**
+ * Wrapper for `Array.isArray` with better readonly type handling.
+ *
+ * @public
+ */
 export function isArray<TVal>(list: TVal | ReadonlyArray<TVal>): list is ReadonlyArray<TVal>;
 export function isArray<TVal>(list: TVal | ReadonlyArray<TVal>): list is ReadonlyArray<TVal> {
   return Array.isArray(list);
 }
 
+/**
+ * Check if a `Maybe<Array<T>>` does in fact contain an array, and that array has items.
+ *
+ * @public
+ */
 export function isEmpty(val: Maybe<Array<unknown> | ReadonlyArray<unknown>>): boolean {
   return isNone(val) || lengthOf(val) === 0;
 }

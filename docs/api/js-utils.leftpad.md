@@ -4,6 +4,8 @@
 
 ## leftPad() function
 
+Prefix `val` with `fill` until it is at least `min` characters.
+
 <b>Signature:</b>
 
 ```typescript

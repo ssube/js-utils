@@ -113,6 +113,11 @@ export function mergeMap<TKey, TVal>(target: Map<TKey, TVal>, source: Map<TKey, 
  * @public
  */
 export function pushMergeMap<TKey, TVal>(...args: Array<Map<TKey, TVal | Array<TVal>>>): Map<TKey, Array<TVal>>;
+/**
+ * Merge the provided maps into a new map, merging keys that already exist by pushing new items.
+ *
+ * @public
+ */
 export function pushMergeMap<TKey, TVal>(...args: ReadonlyArray<Map<TKey, TVal | ReadonlyArray<TVal>>>): Map<TKey, ReadonlyArray<TVal>>;
 export function pushMergeMap<TKey, TVal>(...args: ReadonlyArray<Map<TKey, TVal | ReadonlyArray<TVal>>>): Map<TKey, ReadonlyArray<TVal>> {
   const out = new Map();
@@ -199,7 +204,7 @@ export function dictValuesToArrays<TVal>(map: MapLike<TVal>): Dict<Array<TVal>> 
 /**
  * Normalize a map-like of values into a dict of lists of strings.
  *
- * @beta
+ * @public
  * @deprecated
  */
 export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {

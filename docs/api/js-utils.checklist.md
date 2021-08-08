@@ -30,5 +30,5 @@ export declare class Checklist<T> implements ChecklistOptions<T>
 
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
-|  [check(value)](./js-utils.checklist.check.md) |  |  |
+|  [check(value)](./js-utils.checklist.check.md) |  | Check whether a value is included or excluded from this checklist (depending on <code>mode</code>). |
 

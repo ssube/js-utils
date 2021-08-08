@@ -63,6 +63,9 @@ The library is bundled and has no dependencies.
 
 ## Features
 
+[Please see the complete API docs](https://github.com/ssube/js-utils/blob/master/docs/api/js-utils.md) for the full
+function list.
+
 Features utilities and helpers for:
 
 - Array

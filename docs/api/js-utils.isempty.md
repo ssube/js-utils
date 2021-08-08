@@ -4,6 +4,8 @@
 
 ## isEmpty() function
 
+Check if a `Maybe<Array<T>>` does in fact contain an array, and that array has items.
+
 <b>Signature:</b>
 
 ```typescript

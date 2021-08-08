@@ -4,6 +4,8 @@
 
 ## Checklist.check() method
 
+Check whether a value is included or excluded from this checklist (depending on `mode`<!-- -->).
+
 <b>Signature:</b>
 
 ```typescript

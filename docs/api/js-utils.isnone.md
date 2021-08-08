@@ -4,6 +4,8 @@
 
 ## isNone() function
 
+Typeguard to check if a `Maybe` is `None` (null or undefined).
+
 <b>Signature:</b>
 
 ```typescript

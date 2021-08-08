@@ -4,6 +4,8 @@
 
 ## ChecklistMode enum
 
+Whether items should be checked for inclusion (allow list) or exclusion (deny list).
+
 <b>Signature:</b>
 
 ```typescript

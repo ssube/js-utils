@@ -4,6 +4,8 @@
 
 ## trim() function
 
+Return the start of `val`<!-- -->, up to `max` characters. If `val` is longer than `max` and there is room, suffix with `tail`<!-- -->.
+
 <b>Signature:</b>
 
 ```typescript

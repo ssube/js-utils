@@ -4,6 +4,8 @@
 
 ## isArray() function
 
+Wrapper for `Array.isArray` with better readonly type handling.
+
 <b>Signature:</b>
 
 ```typescript

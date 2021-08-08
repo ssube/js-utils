@@ -4,6 +4,8 @@
 
 ## pushMergeMap() function
 
+Merge the provided maps into a new map, merging keys that already exist by pushing new items.
+
 <b>Signature:</b>
 
 ```typescript

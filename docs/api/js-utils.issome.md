@@ -4,6 +4,8 @@
 
 ## isSome() function
 
+Typeguard to check if a `Maybe` is `Some` value (not `None`<!-- -->).
+
 <b>Signature:</b>
 
 ```typescript

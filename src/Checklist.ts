@@ -1,8 +1,14 @@
+/**
+ * Whether items should be checked for inclusion (allow list) or exclusion (deny list).
+ */
 export enum ChecklistMode {
   INCLUDE = 'include',
   EXCLUDE = 'exclude',
 }
 
+/**
+ * Mode of operation and items to check.
+ */
 export interface ChecklistOptions<T> {
   data: Array<T>;
   mode: ChecklistMode;
@@ -23,6 +29,9 @@ export class Checklist<T> implements ChecklistOptions<T> {
     this.mode = options.mode;
   }
 
+  /**
+   * Check whether a value is included or excluded from this checklist (depending on `mode`).
+   */
   public check(value: T): boolean {
     switch (this.mode) {
       case ChecklistMode.INCLUDE:

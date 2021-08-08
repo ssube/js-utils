@@ -4,6 +4,8 @@
 
 ## signal() function
 
+Wait for an OS signal.
+
 <b>Signature:</b>
 
 ```typescript
@@ -19,4 +21,6 @@ export declare function signal(...signals: Array<NodeJS.Signals>): Promise<NodeJ
 <b>Returns:</b>
 
 Promise&lt;NodeJS.Signals&gt;
+
+the fired signal
 

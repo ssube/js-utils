@@ -4,6 +4,8 @@
 
 ## toArray() function
 
+Copy an existing readonly array-like or convert a single value to a readonly array.
+
 <b>Signature:</b>
 
 ```typescript

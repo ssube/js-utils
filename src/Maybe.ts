@@ -16,11 +16,21 @@ export type None = null | undefined;
  */
 export type Maybe<T> = T | None;
 
+/**
+ * Typeguard to check if a `Maybe` is `None` (null or undefined).
+ *
+ * @public
+ */
 export function isNone<T>(val: Maybe<T>): val is None {
   /* eslint-disable-next-line no-null/no-null */
   return val === null || val === undefined;
 }
 
+/**
+ * Typeguard to check if a `Maybe` is `Some` value (not `None`).
+ *
+ * @public
+ */
 export function isSome<T>(val: Maybe<T>): val is T {
   return isNone(val) === false;
 }
