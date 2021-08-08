@@ -1,7 +1,7 @@
 # JS Utils
 
-This project is a collection of utilities meant to extend lodash, collected from my
-other Typescript projects, lightly documented, and heavily tested.
+This project is a collection of utilities, collected from my other Typescript projects, lightly documented and heavily
+tested.
 
 ## Contents
 
@@ -14,7 +14,7 @@ other Typescript projects, lightly documented, and heavily tested.
 
 ## Status
 
-[![Pipeline status](https://img.shields.io/gitlab/pipeline/ssube/js-utils.svg?gitlab_url=https%3A%2F%2Fgit.apextoaster.com&logo=gitlab)](https://git.apextoaster.com/ssube/js-utils/commits/master)
+[![Pipeline status](https://img.shields.io/gitlab/pipeline/ssube/js-utils/master.svg?gitlab_url=https%3A%2F%2Fgit.apextoaster.com&logo=gitlab)](https://git.apextoaster.com/ssube/js-utils/commits/master)
 [![Lines of Code](https://sonarcloud.io/api/project_badges/measure?project=ssube_js-utils&metric=ncloc)](https://sonarcloud.io/dashboard?id=ssube_js-utils)
 [![Test coverage](https://codecov.io/gh/ssube/js-utils/branch/master/graph/badge.svg)](https://codecov.io/gh/ssube/js-utils)
 [![MIT license](https://img.shields.io/github/license/ssube/js-utils.svg)](https://github.com/ssube/js-utils/blob/master/LICENSE.md)
@@ -24,7 +24,7 @@ other Typescript projects, lightly documented, and heavily tested.
 [![Open issue count](https://img.shields.io/github/issues-raw/ssube/js-utils.svg)](https://github.com/ssube/js-utils/issues?q=is%3Aopen+is%3Aissue)
 [![Closed issue count](https://img.shields.io/github/issues-closed-raw/ssube/js-utils.svg)](https://github.com/ssube/js-utils/issues?q=is%3Aissue+is%3Aclosed)
 
-[![Renovate badge](https://badges.renovateapi.com/github/ssube/js-utils)](https://renovatebot.com)
+[![Renovate badge](https://img.shields.io/badge/renovate-enabled-brightgreen.svg)](https://renovatebot.com)
 [![Dependency status](https://img.shields.io/david/ssube/js-utils.svg)](https://david-dm.org/ssube/js-utils)
 [![Dev dependency status](https://img.shields.io/david/dev/ssube/js-utils.svg)](https://david-dm.org/ssube/js-utils?type=dev)
 [![Known vulnerabilities](https://snyk.io/test/github/ssube/js-utils/badge.svg)](https://snyk.io/test/github/ssube/js-utils)
@@ -92,6 +92,14 @@ Features utilities and helpers for:
   - `writeInput`
 - Env Vars
   - `isDebug`
+- Errors
+  - nestable, typed error
+    - `ChildProcessError`
+    - `InvalidArgumentError`
+    - `MissingKeyError`
+    - `NotFoundError`
+    - `NotImplementedError`
+    - `TimeoutError`
 - Logger
   - test logging helpers
 - Map
