@@ -4,12 +4,12 @@
 
 ## deferUntil() function
 
-Reject after a set number of attempts if the given predicate does not return true.
+Resolve if `cb` returns true within `max` tries, otherwise reject with a `TimeoutError`<!-- -->.
 
 <b>Signature:</b>
 
 ```typescript
-export declare function deferUntil(cb: PredicateC0, step: number, tries: number): Promise<void>;
+export declare function deferUntil(cb: PredicateC0, step: number, max: number): Promise<void>;
 ```
 
 ## Parameters
@@ -18,7 +18,7 @@ export declare function deferUntil(cb: PredicateC0, step: number, tries: number)
 |  --- | --- | --- |
 |  cb | PredicateC0 |  |
 |  step | number |  |
-|  tries | number |  |
+|  max | number |  |
 
 <b>Returns:</b>
 

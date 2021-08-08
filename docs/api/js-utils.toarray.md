@@ -4,6 +4,8 @@
 
 ## toArray() function
 
+Copy an existing array-like or convert a single value to an array.
+
 <b>Signature:</b>
 
 ```typescript

@@ -4,6 +4,8 @@
 
 ## deferValue() function
 
+Resolve with the given value, after a set amount of time.
+
 <b>Signature:</b>
 
 ```typescript

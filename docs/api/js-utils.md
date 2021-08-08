@@ -32,14 +32,14 @@
 |  [constructorName(val)](./js-utils.constructorname.md) | Get the constructor name from an instance. |
 |  [defaultWhen(condition, items)](./js-utils.defaultwhen.md) | Return the first element when <code>condition</code> is true and the second element when <code>condition</code> is false. |
 |  [defer(ms)](./js-utils.defer.md) | Resolve after a set amount of time. |
-|  [deferUntil(cb, step, tries)](./js-utils.deferuntil.md) | Reject after a set number of attempts if the given predicate does not return true. |
-|  [deferValue(ms, val)](./js-utils.defervalue.md) |  |
+|  [deferUntil(cb, step, max)](./js-utils.deferuntil.md) | Resolve if <code>cb</code> returns true within <code>max</code> tries, otherwise reject with a <code>TimeoutError</code>. |
+|  [deferValue(ms, val)](./js-utils.defervalue.md) | Resolve with the given value, after a set amount of time. |
 |  [doesExist(val)](./js-utils.doesexist.md) | Check if a variable is some <code>T</code>. |
 |  [encode(chunks, encoding)](./js-utils.encode.md) | Concatenate then encode a list of buffers. |
 |  [ensureArray(val)](./js-utils.ensurearray.md) |  |
 |  [ensureArray(val)](./js-utils.ensurearray_1.md) |  |
 |  [entriesOf(map)](./js-utils.entriesof.md) | Get entries of a map-like. |
-|  [filterZip(cb, l1)](./js-utils.filterzip.md) |  |
+|  [filterZip(cb, l1)](./js-utils.filterzip.md) | Filter and zip some arrays. The <code>cb</code> is called for each slice, which is kept if <code>cb</code> returns true. |
 |  [filterZip(cb, l1, l2)](./js-utils.filterzip_1.md) |  |
 |  [filterZip(cb, l1, l2, l3)](./js-utils.filterzip_2.md) |  |
 |  [filterZip(cb, l1, l2, l3, l4)](./js-utils.filterzip_3.md) |  |
@@ -82,7 +82,7 @@
 |  [spyLogger(spies)](./js-utils.spylogger.md) | Create a spy logger using the provided methods, which returns itself as a child. ensure all methods are present by extending null logger |
 |  [sum(a, b)](./js-utils.sum.md) | Add numbers. PredicateR2<!-- -->&lt;<!-- -->number, number<!-- -->&gt; |
 |  [timeout(ms, inner)](./js-utils.timeout.md) | Reject after a set amount of time if the original promise has not yet resolved. |
-|  [toArray(val)](./js-utils.toarray.md) |  |
+|  [toArray(val)](./js-utils.toarray.md) | Copy an existing array-like or convert a single value to an array. |
 |  [toArray(val)](./js-utils.toarray_1.md) |  |
 |  [trim(val, max, tail)](./js-utils.trim.md) |  |
 |  [waitFor(cb, step, tries)](./js-utils.waitfor.md) |  |

@@ -53,6 +53,9 @@ export function ensureArray<T>(val: Maybe<ReadonlyArray<T>>): ReadonlyArray<T> {
   return toArray(val);
 }
 
+/**
+ * Copy an existing array-like or convert a single value to an array.
+ */
 export function toArray<TVal>(val: Maybe<TVal | Array<TVal>>): Array<TVal>;
 export function toArray<TVal>(val: Maybe<TVal | ReadonlyArray<TVal>>): ReadonlyArray<TVal>;
 export function toArray<TVal>(val: Maybe<TVal | ReadonlyArray<TVal>>): ReadonlyArray<TVal> {
@@ -80,6 +83,9 @@ export function isEmpty(val: Maybe<Array<unknown> | ReadonlyArray<unknown>>): bo
   return isNone(val) || lengthOf(val) === 0;
 }
 
+/**
+ * Filter and zip some arrays. The `cb` is called for each slice, which is kept if `cb` returns true.
+ */
 export function filterZip<T1>(cb: (a: T1) => boolean, l1: Array<T1>): Array<T1>;
 export function filterZip<T1, T2>(cb: (a: T1, b: T2) => boolean, l1: Array<T1>, l2: Array<T2>): [Array<T1>, Array<T2>];
 export function filterZip<T1, T2, T3>(cb: (a: T1, b: T2) => boolean, l1: Array<T1>, l2: Array<T2>, l3: Array<T3>): [Array<T1>, Array<T2>, Array<T3>];

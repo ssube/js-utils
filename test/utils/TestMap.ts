@@ -43,6 +43,13 @@ describe('map utils', async () => {
       const input = {};
       expect(makeDict(input)).to.equal(input);
     });
+
+    over('maps of strings', dictionary(string(), string()), (it) => {
+      it('should convert map to dict', async (data) => {
+        const map = new Map(Object.entries(data));
+        expect(makeDict(map)).to.deep.equal(data);
+      });
+    });
   });
 
   describe('make map', async () => {

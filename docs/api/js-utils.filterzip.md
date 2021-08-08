@@ -4,6 +4,8 @@
 
 ## filterZip() function
 
+Filter and zip some arrays. The `cb` is called for each slice, which is kept if `cb` returns true.
+
 <b>Signature:</b>
 
 ```typescript

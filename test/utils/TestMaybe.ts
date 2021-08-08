@@ -5,6 +5,7 @@ import { over } from 'mocha-foam';
 
 import { NotFoundError } from '../../src/error/NotFoundError';
 import { defaultWhen, doesExist, isNone, isSome, mustCoalesce, mustDefault, mustFind, removeNone } from '../../src/Maybe';
+import { isNil } from '../../src/Optional';
 
 describe('maybe utils', () => {
   describe('remove none', () => {
@@ -72,6 +73,14 @@ describe('maybe utils', () => {
       });
     }, {
       numRuns: 1_000,
+    });
+  });
+
+  describe('is nil guard', () => {
+    over('any value', anything(), (it) => {
+      it('should be an alias for is none', async (x) => {
+        expect(isNone(x)).to.equal(isNil(x));
+      });
     });
   });
 
