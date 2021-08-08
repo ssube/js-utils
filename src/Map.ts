@@ -1,17 +1,20 @@
-import { mergeArrays, toArray } from './Array';
+import { isArray, mergeArrays, toArray } from './Array';
 import { NotFoundError } from './error/NotFoundError';
 import { doesExist, isNone, Maybe, mustExist } from './Maybe';
 
-export interface Dict<TVal> {
-  [key: string]: TVal;
-}
+/**
+ * A `Record<string, TVal>`.
+ */
+export type Dict<TVal> = Record<string, TVal>;
+
+export type KeyLike = string | symbol | number;
 
 /**
- * A `Map` or dictionary object with string keys and `TVal` values.
+ * A `Map` or `Record`/`Dict`, if `TKey` is a valid `Record` key.
  *
  * @public
  */
-export type MapLike<TVal> = Map<string, TVal> | Dict<TVal>;
+export type MapLike<TKey, TVal> = TKey extends KeyLike ? Map<TKey, TVal> | Record<TKey, TVal> : Map<TKey, TVal>;
 
 /**
  * Get an element from a Map and guard against nil values.
@@ -134,7 +137,9 @@ export function pushMergeMap<TKey, TVal>(...args: ReadonlyArray<Map<TKey, TVal |
  *
  * @public
  */
-export function makeMap<TVal>(val: Maybe<MapLike<TVal>>): Map<string, TVal> {
+export function makeMap<TKey, TVal>(val: Maybe<Map<TKey, TVal>>): Map<TKey, TVal>;
+export function makeMap<TKey extends KeyLike, TVal>(val: Maybe<Record<TKey, TVal>>): Map<string, TVal>;
+export function makeMap<TKey, TVal>(val: Maybe<MapLike<TKey, TVal>>): Map<TKey | string, TVal> {
   // none: empty map
   if (isNone(val)) {
     return new Map();
@@ -154,14 +159,23 @@ export function makeMap<TVal>(val: Maybe<MapLike<TVal>>): Map<string, TVal> {
  *
  * @public
  */
-export function makeDict<TVal>(map: Maybe<MapLike<TVal>>): Dict<TVal> {
+export function makeDict<TKey extends KeyLike, TVal>(map: Maybe<MapLike<TKey, TVal>>): Dict<TVal> {
+  return makeRecord(map);
+}
+
+/**
+ * Turns a map or dict into a dict
+ *
+ * @public
+ */
+export function makeRecord<TKey extends KeyLike, TVal>(map: Maybe<MapLike<TKey, TVal>>): Record<TKey | string, TVal> {
   if (isNone(map)) {
     return {};
   }
 
   if (map instanceof Map) {
-    const result: Dict<TVal> = {};
-    for (const [key, val] of map) {
+    const result: Record<TKey, TVal> = {};
+    for (const [key, val] of (map as Map<TKey, TVal>)) {
       result[key] = val;
     }
     return result;
@@ -188,10 +202,10 @@ export function pairsToMap<TVal>(pairs: ReadonlyArray<NameValuePair<TVal>>): Map
   return map;
 }
 
-export function dictValuesToArrays<TVal>(map: MapLike<TVal>): Dict<Array<TVal>> {
-  const data: Dict<Array<TVal>> = {};
+export function dictValuesToArrays<TKey extends KeyLike, TVal>(map: MapLike<TKey, TVal>): Dict<Array<TVal>> {
+  const data: Record<TKey, Array<TVal>> = {};
   for (const [key, value] of entriesOf(map)) {
-    if (Array.isArray(value)) {
+    if (isArray(value)) {
       data[key] = value;
     } else {
       data[key] = [value];
@@ -207,7 +221,7 @@ export function dictValuesToArrays<TVal>(map: MapLike<TVal>): Dict<Array<TVal>> 
  * @public
  * @deprecated
  */
-export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
+export function normalizeMap(map: MapLike<string, unknown>): Dict<Array<string>> {
   const data: Dict<Array<string>> = {};
   for (const [key, value] of makeMap(map)) {
     // eslint-disable-next-line no-restricted-syntax
@@ -232,7 +246,7 @@ export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
  *
  * @public
  */
-export function entriesOf<TVal>(map: Maybe<MapLike<TVal>>): Array<[string, TVal]> {
+export function entriesOf<TKey, TVal>(map: Maybe<MapLike<TKey, TVal>>): Array<[TKey, TVal]> {
   if (map instanceof Map) {
     return Array.from(map.entries());
   }
