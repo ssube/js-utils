@@ -49,7 +49,7 @@
     "fast-check": "2.17.0",
     "mocha": "9.1.1",
     "mocha-foam": "0.1.8",
-    "mock-fs": "5.0.0",
+    "mock-fs": "5.1.0",
     "noicejs": "4.0.0",
     "rollup": "2.56.2",
     "rollup-plugin-commonjs": "10.1.0",
