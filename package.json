@@ -51,7 +51,7 @@
     "mocha-foam": "0.1.8",
     "mock-fs": "5.1.0",
     "noicejs": "4.0.0",
-    "rollup": "2.56.2",
+    "rollup": "2.57.0",
     "rollup-plugin-commonjs": "10.1.0",
     "rollup-plugin-eslint": "7.0.0",
     "rollup-plugin-json": "4.0.0",
