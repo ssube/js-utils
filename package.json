@@ -23,8 +23,8 @@
   "license": "MIT",
   "devDependencies": {
     "@istanbuljs/nyc-config-typescript": "1.0.1",
-    "@microsoft/api-documenter": "7.13.50",
-    "@microsoft/api-extractor": "7.18.9",
+    "@microsoft/api-documenter": "7.13.63",
+    "@microsoft/api-extractor": "7.18.16",
     "@types/chai": "4.2.22",
     "@types/chai-as-promised": "7.1.4",
     "@types/mocha": "9.0.0",
