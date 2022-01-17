@@ -46,7 +46,7 @@
     "eslint-plugin-mocha": "9.0.0",
     "eslint-plugin-no-null": "1.0.2",
     "eslint-plugin-sonarjs": "0.10.0",
-    "fast-check": "2.17.0",
+    "fast-check": "2.21.0",
     "mocha": "9.1.3",
     "mocha-foam": "0.1.8",
     "mock-fs": "5.1.0",
