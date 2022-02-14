@@ -2,6 +2,18 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.4.1](https://github.com/ssube/js-utils/compare/v0.4.0...v0.4.1) (2022-02-14)
+
+
+### Bug Fixes
+
+* **build:** add docker TLS options, remove codecov job ([04de2b2](https://github.com/ssube/js-utils/commit/04de2b2bd53c1dac3c81d6c6e65aee7e34393659))
+* **build:** move signature to release options ([b31767e](https://github.com/ssube/js-utils/commit/b31767eab072f7ef7277da6c39b6a7c243ae9a8b))
+* **deps:** add istanbul schema for c8 ([38e2c70](https://github.com/ssube/js-utils/commit/38e2c7099d68c8472d0700a150ecff01e767debe))
+* **docs:** correct badges, list error types ([50b029f](https://github.com/ssube/js-utils/commit/50b029ff8cd854a394706ab5d8b66ec2afbb873f))
+* **types:** mark newer array functions as public ([2b72af5](https://github.com/ssube/js-utils/commit/2b72af526255ca7f66bed309282b93530ad22806))
+* export missing symbols ([52e0822](https://github.com/ssube/js-utils/commit/52e08220e82a79d3a5608c8ece2275444bbd308c))
+
 ## [0.4.0](https://github.com/ssube/js-utils/compare/v0.4.0-1...v0.4.0) (2021-07-28)
 
 
