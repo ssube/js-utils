@@ -10,11 +10,11 @@ export {
   mergeArrays,
   hasItems,
   ensureArray,
-  toArray,
   isArray,
   isEmpty,
   filterZip,
   lengthOf,
+  toArray,
 } from './Array';
 export {
   ArrayMapper,
@@ -22,9 +22,9 @@ export {
 } from './ArrayMapper';
 export {
   defer,
+  deferUntil,
   deferValue,
   timeout,
-  deferUntil,
   waitFor,
 } from './Async';
 export {

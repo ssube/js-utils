@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> renamed to `toArray`
 > 
 
 <b>Signature:</b>

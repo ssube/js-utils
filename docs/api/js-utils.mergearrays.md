@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> renamed to `mergeArray`
 > 
 
 <b>Signature:</b>

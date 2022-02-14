@@ -4,7 +4,7 @@
 
 ## hasItems() function
 
-Test if a value is an array with some items (length &gt; 0).
+Test if a value is an array with some items (`length > 0`<!-- -->).
 
 This is not a general replacement for `.length > 0`<!-- -->, since it is also a typeguard: `if (hasItems(val)) else { val }` will complain that `val` is `never` in the `else` branch, since it was proven not to be an array by this function, even if `val` is simply empty.
 

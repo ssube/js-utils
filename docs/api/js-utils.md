@@ -49,7 +49,7 @@
 |  [getMethods(value)](./js-utils.getmethods.md) | Get the methods from an instance and its prototypes. |
 |  [getOrDefault(map, key, defaultValue)](./js-utils.getordefault.md) | Get a map key or default value when the key does not exist or is nil. |
 |  [getTestLogger(verbose)](./js-utils.gettestlogger.md) | Get a test logger. Returns a null logger unless <code>verbose</code> is true or run under debug mode. |
-|  [hasItems(val)](./js-utils.hasitems.md) | Test if a value is an array with some items (length &gt; 0).<!-- -->This is not a general replacement for <code>.length &gt; 0</code>, since it is also a typeguard: <code>if (hasItems(val)) else { val }</code> will complain that <code>val</code> is <code>never</code> in the <code>else</code> branch, since it was proven not to be an array by this function, even if <code>val</code> is simply empty. |
+|  [hasItems(val)](./js-utils.hasitems.md) | Test if a value is an array with some items (<code>length &gt; 0</code>).<!-- -->This is not a general replacement for <code>.length &gt; 0</code>, since it is also a typeguard: <code>if (hasItems(val)) else { val }</code> will complain that <code>val</code> is <code>never</code> in the <code>else</code> branch, since it was proven not to be an array by this function, even if <code>val</code> is simply empty. |
 |  [hasItems(val)](./js-utils.hasitems_1.md) |  |
 |  [isArray(list)](./js-utils.isarray.md) | Wrapper for <code>Array.isArray</code> with better readonly type handling. |
 |  [isArray(list)](./js-utils.isarray_1.md) | Wrapper for <code>Array.isArray</code> with better readonly type handling. |
