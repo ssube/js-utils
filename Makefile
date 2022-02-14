@@ -151,12 +151,14 @@ license-check: ## check license status
 	licensed cache
 	licensed status
 
+RELEASE_OPTS ?= --sign
+
 release: ## create a release
-	$(NODE_BIN)/standard-version --sign $(RELEASE_OPTS)
+	$(NODE_BIN)/standard-version $(RELEASE_OPTS)
 	GIT_OPTIONS=--tags $(MAKE) git-push
 
 release-dry: ## test creating a release
-	$(NODE_BIN)/standard-version --sign $(RELEASE_OPTS) --dry-run
+	$(NODE_BIN)/standard-version $(RELEASE_OPTS) --dry-run
 
 upload-climate:
 	cc-test-reporter format-coverage -t lcov -o $(TARGET_PATH)/coverage/codeclimate.json -p $(ROOT_PATH) $(TARGET_PATH)/coverage/lcov.info
