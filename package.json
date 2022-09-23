@@ -30,7 +30,7 @@
     "@types/chai-as-promised": "7.1.5",
     "@types/mocha": "9.1.1",
     "@types/mock-fs": "4.13.1",
-    "@types/node": "16.11.59",
+    "@types/node": "16.11.60",
     "@types/sinon-chai": "3.2.8",
     "@types/source-map-support": "0.5.4",
     "@typescript-eslint/eslint-plugin": "5.31.0",
