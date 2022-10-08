@@ -2,8 +2,8 @@ import { expect } from 'chai';
 import { array, uint8Array } from 'fast-check';
 import { over } from 'mocha-foam';
 
-import { concat, encode } from '../../src/Buffer';
-import { sum } from '../../src/Math';
+import { concat, encode } from '../../src/Buffer.js';
+import { sum } from '../../src/Math.js';
 
 describe('buffer utils', async () => {
   describe('concat', async () => {

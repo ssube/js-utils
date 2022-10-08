@@ -1,6 +1,6 @@
-import { mergeArrays, toArray } from './Array';
-import { NotFoundError } from './error/NotFoundError';
-import { doesExist, isNone, Maybe, mustExist } from './Maybe';
+import { mergeArrays, toArray } from './Array.js';
+import { NotFoundError } from './error/NotFoundError.js';
+import { doesExist, isNone, Maybe, mustExist } from './Maybe.js';
 
 export interface Dict<TVal> {
   [key: string]: TVal;

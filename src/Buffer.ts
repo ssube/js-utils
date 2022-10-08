@@ -1,4 +1,4 @@
-import { sum } from './Math';
+import { sum } from './Math.js';
 
 export type AllowedBufferEncoding = 'ascii' | 'utf-8';
 

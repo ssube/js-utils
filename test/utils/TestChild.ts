@@ -1,9 +1,9 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 
-import { ChildProcessError } from '../../src';
-import { ChildStreams, childResult } from '../../src/Child';
-import { Maybe, mustExist } from '../../src/Maybe';
+import { ChildProcessError } from '../../src/error/ChildProcessError.js';
+import { ChildStreams, childResult } from '../../src/Child.js';
+import { Maybe, mustExist } from '../../src/Maybe.js';
 
 const { match, stub } = sinon;
 

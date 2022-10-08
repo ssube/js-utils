@@ -1,5 +1,5 @@
-import { TimeoutError } from './error/TimeoutError';
-import { PredicateC0 } from './Predicate';
+import { TimeoutError } from './error/TimeoutError.js';
+import { PredicateC0 } from './Predicate.js';
 
 /**
  * Resolve after a set amount of time.

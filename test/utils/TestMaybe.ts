@@ -3,9 +3,9 @@ import { expect } from 'chai';
 import { anything, array, boolean, integer, tuple } from 'fast-check';
 import { over } from 'mocha-foam';
 
-import { NotFoundError } from '../../src/error/NotFoundError';
-import { defaultWhen, doesExist, isNone, isSome, mustCoalesce, mustDefault, mustFind, removeNone } from '../../src/Maybe';
-import { isNil } from '../../src/Optional';
+import { NotFoundError } from '../../src/error/NotFoundError.js';
+import { defaultWhen, doesExist, isNone, isSome, mustCoalesce, mustDefault, mustFind, removeNone } from '../../src/Maybe.js';
+import { isNil } from '../../src/Optional.js';
 
 describe('maybe utils', () => {
   describe('remove none', () => {

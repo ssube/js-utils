@@ -4,9 +4,9 @@ import { array, falsy, integer } from 'fast-check';
 import { over } from 'mocha-foam';
 import sinon from 'sinon';
 
-import { isNone } from '../../src';
-import { ensureArray, filterZip, hasItems, isEmpty, lengthOf, mergeArray, toArray } from '../../src/Array';
-import { sum } from '../../src/Math';
+import { isNone } from '../../src/index.js';
+import { ensureArray, filterZip, hasItems, isEmpty, lengthOf, mergeArray, toArray } from '../../src/Array.js';
+import { sum } from '../../src/Math.js';
 
 const { match, stub } = sinon;
 
