@@ -2,6 +2,27 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [0.5.0-0](https://github.com/ssube/js-utils/compare/v0.4.1...v0.5.0-0) (2022-10-08)
+
+
+### ⚠ BREAKING CHANGES
+
+* **build:** the library will now be published as loose ES modules.
+Library users are better informed on bundling needs, and repeated bundling introduces extra boilerplate code.
+
+### Features
+
+* **build:** remove rollup, do not bundle the output ([faeff2c](https://github.com/ssube/js-utils/commit/faeff2c645470853fa11122d814403e1b9ada849))
+
+
+### Bug Fixes
+
+* **build:** add target to upload coverage to codeclimate ([9230532](https://github.com/ssube/js-utils/commit/92305327429b1f128b95ba2a52b4f0d28b5f5858))
+* **build:** swap in standard build ([c83651d](https://github.com/ssube/js-utils/commit/c83651d3201095798d40e0b053959b56c08c9c3b))
+* **docs:** typedef and doc warnings ([d3e52d9](https://github.com/ssube/js-utils/commit/d3e52d9363425ca9862bbcbf088fac8d19755ef1))
+* add missing typedef visibility comments ([a9d49cd](https://github.com/ssube/js-utils/commit/a9d49cd41dbac0e79ecd835807c1dd76979d4e63))
+* internal module imports ([95bf7ac](https://github.com/ssube/js-utils/commit/95bf7ac982fb9e193cca90aa2b5b9bf2ab30662f))
+
 ### [0.4.1](https://github.com/ssube/js-utils/compare/v0.4.0...v0.4.1) (2022-02-14)
 
 
