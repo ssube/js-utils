@@ -1,5 +1,7 @@
 /**
  * Whether items should be checked for inclusion (allow list) or exclusion (deny list).
+ *
+ * @public
  */
 export enum ChecklistMode {
   INCLUDE = 'include',
@@ -8,6 +10,8 @@ export enum ChecklistMode {
 
 /**
  * Mode of operation and items to check.
+ *
+ * @public
  */
 export interface ChecklistOptions<T> {
   data: Array<T>;
@@ -15,7 +19,9 @@ export interface ChecklistOptions<T> {
 }
 
 /**
- * Check whether items are included or not (blacklist or whitelist, depending on `mode`).
+ * Check whether items are included or not.
+ *
+ * @public
  */
 export class Checklist<T> implements ChecklistOptions<T> {
   /**

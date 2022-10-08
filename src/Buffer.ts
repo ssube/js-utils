@@ -1,5 +1,8 @@
 import { sum } from './Math.js';
 
+/**
+ * @public
+ */
 export type AllowedBufferEncoding = 'ascii' | 'utf-8';
 
 /**

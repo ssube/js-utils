@@ -2,6 +2,9 @@ import { mergeArrays, toArray } from './Array.js';
 import { NotFoundError } from './error/NotFoundError.js';
 import { doesExist, isNone, Maybe, mustExist } from './Maybe.js';
 
+/**
+ * @public
+ */
 export interface Dict<TVal> {
   [key: string]: TVal;
 }
@@ -78,9 +81,9 @@ export function getHeadOrDefault<TKey, TVal>(map: Map<TKey, ReadonlyArray<Maybe<
 
 /**
  * Set a map key to a new array or push to the existing value.
- * @param map The destination map and source of existing values.
- * @param key The key to get and set.
- * @param val The value to add.
+ * @param map - The destination map and source of existing values.
+ * @param key - The key to get and set.
+ * @param val - The value to add.
  *
  * @public
  */
@@ -205,7 +208,7 @@ export function dictValuesToArrays<TVal>(map: MapLike<TVal>): Dict<Array<TVal>> 
  * Normalize a map-like of values into a dict of lists of strings.
  *
  * @public
- * @deprecated
+ * @deprecated the conversion behavior here was not reliable, better to provide your own `T -> string` mapper
  */
 export function normalizeMap(map: MapLike<unknown>): Dict<Array<string>> {
   const data: Dict<Array<string>> = {};

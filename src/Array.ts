@@ -23,6 +23,7 @@ export function mergeArray<TItem>(...parts: ReadonlyArray<TItem | ReadonlyArray<
 
 /**
  * @deprecated renamed to `mergeArray`
+ * @public
  */
 export function mergeArrays<TItem>(...parts: Array<TItem | Array<TItem>>): Array<TItem>;
 export function mergeArrays<TItem>(...parts: ReadonlyArray<TItem | ReadonlyArray<TItem>>): ReadonlyArray<TItem>;
@@ -48,6 +49,7 @@ export function hasItems<T>(val: Maybe<ReadonlyArray<T>>): val is ReadonlyArray<
 
 /**
  * @deprecated renamed to `toArray`
+ * @public
  */
 export function ensureArray<T>(val: Maybe<Array<T>>): Array<T>;
 export function ensureArray<T>(val: Maybe<ReadonlyArray<T>>): ReadonlyArray<T>;

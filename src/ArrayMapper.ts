@@ -1,5 +1,8 @@
 import { setOrPush } from './Map.js';
 
+/**
+ * @public
+ */
 export interface ArrayMapperOptions {
   /**
    * Key for any remaining, unmatched elements.
