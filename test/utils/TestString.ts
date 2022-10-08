@@ -3,7 +3,7 @@ import { expect } from 'chai';
 import { integer, nat, string, tuple } from 'fast-check';
 import { over } from 'mocha-foam';
 
-import { leftPad, trim } from '../../src/String';
+import { leftPad, trim } from '../../src/String.js';
 
 const TEST_SHORT = 'hello';
 const TEST_LONG = 'hello world';

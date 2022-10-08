@@ -1,5 +1,5 @@
-import { InvalidArgumentError } from './error/InvalidArgumentError';
-import { doesExist, isNone } from './Maybe';
+import { InvalidArgumentError } from './error/InvalidArgumentError.js';
+import { doesExist, isNone } from './Maybe.js';
 
 /* eslint-disable-next-line @typescript-eslint/ban-types */
 type Reflectable = object;

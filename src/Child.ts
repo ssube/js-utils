@@ -2,10 +2,10 @@ import { ChildProcessWithoutNullStreams, spawn } from 'child_process';
 import { BaseError } from 'noicejs';
 import { Writable } from 'stream';
 
-import { encode } from './Buffer';
-import { ChildProcessError } from './error/ChildProcessError';
-import { NameValuePair } from './Map';
-import { doesExist, Maybe } from './Maybe';
+import { encode } from './Buffer.js';
+import { ChildProcessError } from './error/ChildProcessError.js';
+import { NameValuePair } from './Map.js';
+import { doesExist, Maybe } from './Maybe.js';
 
 export interface ChildProcessOptions {
   cwd: string;

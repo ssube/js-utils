@@ -1,5 +1,5 @@
 // deprecated alternative names for Maybe
-import { isNone, Maybe, None } from '.';
+import { isNone, Maybe, None } from './Maybe.js';
 
 
 /**

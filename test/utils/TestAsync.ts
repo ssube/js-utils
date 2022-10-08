@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
-import { defer, deferValue, timeout } from '../../src/Async';
-import { TimeoutError } from '../../src/error/TimeoutError';
+import { defer, deferValue, timeout } from '../../src/Async.js';
+import { TimeoutError } from '../../src/error/TimeoutError.js';
 
 const TEST_DEFER = 10;
 const TEST_TOO_LONG = 25;

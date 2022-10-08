@@ -2,7 +2,7 @@ import { expect } from 'chai';
 import { array, constant, integer, record } from 'fast-check';
 import { over } from 'mocha-foam';
 
-import { Checklist, ChecklistMode } from '../../src/Checklist';
+import { Checklist, ChecklistMode } from '../../src/Checklist.js';
 
 const EXISTING_ITEM = 'foo';
 const MISSING_ITEM = 'bin';

@@ -1,5 +1,6 @@
 import { ConsoleLogger, Logger, NullLogger } from 'noicejs';
-import { isDebug } from './Env';
+
+import { isDebug } from './Env.js';
 
 /**
  * Get a test logger. Returns a null logger unless `verbose` is true or run under debug mode.

@@ -1,6 +1,6 @@
 import { expect } from 'chai';
 
-import { ArrayMapper } from '../../src/ArrayMapper';
+import { ArrayMapper } from '../../src/ArrayMapper.js';
 
 describe('utils', async () => {
   describe('array mapper', async () => {

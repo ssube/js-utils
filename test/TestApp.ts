@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 import sinon from 'sinon';
 
-import { main } from '../src/app';
+import { main } from '../src/app.js';
 
 const { spy } = sinon;
 

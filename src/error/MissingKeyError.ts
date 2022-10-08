@@ -1,4 +1,4 @@
-import { NotFoundError } from './NotFoundError';
+import { NotFoundError } from './NotFoundError.js';
 
 /**
  * Error indicating that a required key did not exist in a map-like.

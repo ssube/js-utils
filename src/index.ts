@@ -1,9 +1,9 @@
-export { ChildProcessError } from './error/ChildProcessError';
-export { InvalidArgumentError } from './error/InvalidArgumentError';
-export { MissingKeyError } from './error/MissingKeyError';
-export { NotFoundError } from './error/NotFoundError';
-export { NotImplementedError } from './error/NotImplementedError';
-export { TimeoutError } from './error/TimeoutError';
+export { ChildProcessError } from './error/ChildProcessError.js';
+export { InvalidArgumentError } from './error/InvalidArgumentError.js';
+export { MissingKeyError } from './error/MissingKeyError.js';
+export { NotFoundError } from './error/NotFoundError.js';
+export { NotImplementedError } from './error/NotImplementedError.js';
+export { TimeoutError } from './error/TimeoutError.js';
 
 export {
   mergeArray,
@@ -15,28 +15,28 @@ export {
   filterZip,
   lengthOf,
   toArray,
-} from './Array';
+} from './Array.js';
 export {
   ArrayMapper,
   ArrayMapperOptions,
-} from './ArrayMapper';
+} from './ArrayMapper.js';
 export {
   defer,
   deferUntil,
   deferValue,
   timeout,
   waitFor,
-} from './Async';
+} from './Async.js';
 export {
   AllowedBufferEncoding,
   concat,
   encode,
-} from './Buffer';
+} from './Buffer.js';
 export {
   Checklist,
   ChecklistMode,
   ChecklistOptions,
-} from './Checklist';
+} from './Checklist.js';
 export {
   ChildOptions,
   ChildResult,
@@ -45,14 +45,14 @@ export {
   waitForChild,
   writeInput,
   writeValue,
-} from './Child';
+} from './Child.js';
 export {
   isDebug
-} from './Env';
+} from './Env.js';
 export {
   getTestLogger,
   spyLogger,
-} from './Logger';
+} from './Logger.js';
 export {
   Dict,
   MapLike,
@@ -68,10 +68,10 @@ export {
   pairsToMap,
   pushMergeMap,
   setOrPush,
-} from './Map';
+} from './Map.js';
 export {
   sum,
-} from './Math';
+} from './Math.js';
 export {
   Maybe,
   None,
@@ -84,24 +84,24 @@ export {
   mustExist,
   mustFind,
   removeNone,
-} from './Maybe';
+} from './Maybe.js';
 export {
   Nil,
   Optional,
   isNil,
-} from './Optional';
+} from './Optional.js';
 export {
   constructorName,
   getConstructor,
   getMethods,
-} from './Reflect';
+} from './Reflect.js';
 export {
   SIGNAL_RELOAD,
   SIGNAL_RESET,
   SIGNAL_STOP,
   signal,
-} from './Signal';
+} from './Signal.js';
 export {
   leftPad,
   trim,
-} from './String';
+} from './String.js';

@@ -1,5 +1,5 @@
-import { NotFoundError } from './error/NotFoundError';
-import { PredicateC1 } from './Predicate';
+import { NotFoundError } from './error/NotFoundError.js';
+import { PredicateC1 } from './Predicate.js';
 
 /**
  * Unset value.

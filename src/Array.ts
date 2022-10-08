@@ -1,4 +1,4 @@
-import { doesExist, isNone, Maybe } from './Maybe';
+import { doesExist, isNone, Maybe } from './Maybe.js';
 
 /**
  * Merge arguments, which may or may not be arrays, into one return that is definitely an array.

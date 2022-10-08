@@ -1,7 +1,7 @@
 import { expect } from 'chai';
 
-import { timeout } from '../../src/Async';
-import { signal, SIGNAL_RESET } from '../../src/Signal';
+import { timeout } from '../../src/Async.js';
+import { signal, SIGNAL_RESET } from '../../src/Signal.js';
 
 const MAX_SIGNAL_TIME = 500;
 
