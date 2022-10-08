@@ -63,7 +63,7 @@ export async function deferUntil(cb: PredicateC0, step: number, max: number): Pr
 
 /**
  * @public
- * @deprecated
+ * @deprecated use `deferUntil` instead
  */
 export async function waitFor(cb: PredicateC0, step: number, tries: number): Promise<void> {
   return deferUntil(cb, step, tries);

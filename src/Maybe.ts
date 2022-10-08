@@ -78,7 +78,7 @@ export function mustExist<T>(val: Maybe<T>, err?: string): T {
  * Return the first value that is not nil.
  *
  * @public
- * @deprecated
+ * @deprecated use `mustDefault` instead
  */
 export function mustCoalesce<T>(...values: Array<Maybe<T>>): T {
   return mustDefault(...values);
