@@ -4,6 +4,7 @@
 
 ## SIGNAL\_STOP variable
 
+
 <b>Signature:</b>
 
 ```typescript

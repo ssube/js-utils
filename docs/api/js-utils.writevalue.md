@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> call `writeInput` directly instead
 > 
 
 <b>Signature:</b>

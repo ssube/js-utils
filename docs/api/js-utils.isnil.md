@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> use `isNone` instead
 > 
 
 Check if a value is nil.

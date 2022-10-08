@@ -4,6 +4,7 @@
 
 ## filterZip() function
 
+
 <b>Signature:</b>
 
 ```typescript

@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> use `mustDefault` instead
 > 
 
 Return the first value that is not nil.

@@ -4,6 +4,7 @@
 
 ## hasItems() function
 
+
 <b>Signature:</b>
 
 ```typescript

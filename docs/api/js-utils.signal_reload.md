@@ -4,6 +4,7 @@
 
 ## SIGNAL\_RELOAD variable
 
+
 <b>Signature:</b>
 
 ```typescript

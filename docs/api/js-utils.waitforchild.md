@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> there are better libraries for this, like zx
 > 
 
 <b>Signature:</b>

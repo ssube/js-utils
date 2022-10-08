@@ -4,6 +4,7 @@
 
 ## ChildResult interface
 
+
 <b>Signature:</b>
 
 ```typescript
@@ -12,9 +13,9 @@ export interface ChildResult
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [status](./js-utils.childresult.status.md) | number |  |
-|  [stderr](./js-utils.childresult.stderr.md) | string |  |
-|  [stdout](./js-utils.childresult.stdout.md) | string |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [status](./js-utils.childresult.status.md) |  | number |  |
+|  [stderr](./js-utils.childresult.stderr.md) |  | string |  |
+|  [stdout](./js-utils.childresult.stdout.md) |  | string |  |
 

@@ -19,9 +19,9 @@ export function getTestLogger(verbose = false): Logger {
  * Create a spy logger using the provided methods, which returns itself as a child.
  *
  * @internal
- * @todo ensure all methods are present by extending null logger
  */
 export function spyLogger(spies: Partial<Logger>): Logger {
+  // TODO: ensure all methods are present by extending null logger
   const logger = {
     ...spies,
     child: () => logger,

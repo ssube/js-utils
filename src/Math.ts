@@ -1,7 +1,6 @@
 /**
  * Add numbers.
  *
- * @implements PredicateR2<number, number>
  * @public
  */
 export function sum(a: number, b: number): number {

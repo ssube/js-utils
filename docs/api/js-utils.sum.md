@@ -6,8 +6,6 @@
 
 Add numbers.
 
- PredicateR2<!-- -->&lt;<!-- -->number, number<!-- -->&gt;
-
 <b>Signature:</b>
 
 ```typescript

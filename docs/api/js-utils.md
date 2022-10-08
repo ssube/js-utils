@@ -9,7 +9,7 @@
 |  Class | Description |
 |  --- | --- |
 |  [ArrayMapper](./js-utils.arraymapper.md) | Map an array of items into a map of arrays using the specified keys, able to <code>skip</code> initial items and gather remaining items into a <code>rest</code> key. |
-|  [Checklist](./js-utils.checklist.md) | Check whether items are included or not (blacklist or whitelist, depending on <code>mode</code>). |
+|  [Checklist](./js-utils.checklist.md) | Check whether items are included or not. |
 |  [ChildProcessError](./js-utils.childprocesserror.md) | Error indicating that a child process exited with an error status. |
 |  [InvalidArgumentError](./js-utils.invalidargumenterror.md) | Error indicating that an invalid argument was passed to a function call. |
 |  [MissingKeyError](./js-utils.missingkeyerror.md) | Error indicating that a required key did not exist in a map-like. |
@@ -49,17 +49,16 @@
 |  [getMethods(value)](./js-utils.getmethods.md) | Get the methods from an instance and its prototypes. |
 |  [getOrDefault(map, key, defaultValue)](./js-utils.getordefault.md) | Get a map key or default value when the key does not exist or is nil. |
 |  [getTestLogger(verbose)](./js-utils.gettestlogger.md) | Get a test logger. Returns a null logger unless <code>verbose</code> is true or run under debug mode. |
-|  [hasItems(val)](./js-utils.hasitems.md) | Test if a value is an array with some items (<code>length &gt; 0</code>).<!-- -->This is not a general replacement for <code>.length &gt; 0</code>, since it is also a typeguard: <code>if (hasItems(val)) else { val }</code> will complain that <code>val</code> is <code>never</code> in the <code>else</code> branch, since it was proven not to be an array by this function, even if <code>val</code> is simply empty. |
+|  [hasItems(val)](./js-utils.hasitems.md) | <p>Test if a value is an array with some items (<code>length &gt; 0</code>).</p><p>This is not a general replacement for <code>.length &gt; 0</code>, since it is also a typeguard: <code>if (hasItems(val)) else { val }</code> will complain that <code>val</code> is <code>never</code> in the <code>else</code> branch, since it was proven not to be an array by this function, even if <code>val</code> is simply empty.</p> |
 |  [hasItems(val)](./js-utils.hasitems_1.md) |  |
 |  [isArray(list)](./js-utils.isarray.md) | Wrapper for <code>Array.isArray</code> with better readonly type handling. |
 |  [isArray(list)](./js-utils.isarray_1.md) | Wrapper for <code>Array.isArray</code> with better readonly type handling. |
-|  [isDebug()](./js-utils.isdebug.md) | Test if DEBUG mode is set.<!-- -->TODO: check variable value as well |
 |  [isEmpty(val)](./js-utils.isempty.md) | Check if a <code>Maybe&lt;Array&lt;T&gt;&gt;</code> does in fact contain an array, and that array has items. |
 |  [isNil(val)](./js-utils.isnil.md) | Check if a value is nil. |
 |  [isNone(val)](./js-utils.isnone.md) | Typeguard to check if a <code>Maybe</code> is <code>None</code> (null or undefined). |
 |  [isSome(val)](./js-utils.issome.md) | Typeguard to check if a <code>Maybe</code> is <code>Some</code> value (not <code>None</code>). |
 |  [leftPad(val, min, fill)](./js-utils.leftpad.md) | Prefix <code>val</code> with <code>fill</code> until it is at least <code>min</code> characters. |
-|  [lengthOf(val)](./js-utils.lengthof.md) | Calculate the length of an array or value.<!-- -->Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add. |
+|  [lengthOf(val)](./js-utils.lengthof.md) | <p>Calculate the length of an array or value.</p><p>Arrays return their length, single values return 1, and nil values return 0. This counts the number of elements that setOrPush would add.</p> |
 |  [makeDict(map)](./js-utils.makedict.md) | Turns a map or dict into a dict |
 |  [makeMap(val)](./js-utils.makemap.md) | Clone a map or map-like object into a new map. |
 |  [mergeArray(parts)](./js-utils.mergearray.md) | Merge arguments, which may or may not be arrays, into one return that is definitely an array. |
@@ -79,8 +78,7 @@
 |  [removeNone(list)](./js-utils.removenone.md) | Remove any null or undefined items from the list. |
 |  [setOrPush(map, key, val)](./js-utils.setorpush.md) | Set a map key to a new array or push to the existing value. |
 |  [signal(signals)](./js-utils.signal.md) | Wait for an OS signal. |
-|  [spyLogger(spies)](./js-utils.spylogger.md) | Create a spy logger using the provided methods, which returns itself as a child. ensure all methods are present by extending null logger |
-|  [sum(a, b)](./js-utils.sum.md) | Add numbers. PredicateR2<!-- -->&lt;<!-- -->number, number<!-- -->&gt; |
+|  [sum(a, b)](./js-utils.sum.md) | Add numbers. |
 |  [timeout(ms, inner)](./js-utils.timeout.md) | Reject after a set amount of time if the original promise has not yet resolved. |
 |  [toArray(val)](./js-utils.toarray.md) | Copy an existing array-like or convert a single value to an array. |
 |  [toArray(val)](./js-utils.toarray_1.md) | Copy an existing readonly array-like or convert a single value to a readonly array. |
