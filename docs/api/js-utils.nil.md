@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> use `None` instead
 > 
 
 Old name for None.

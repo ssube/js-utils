@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> use `deferUntil` instead
 > 
 
 <b>Signature:</b>

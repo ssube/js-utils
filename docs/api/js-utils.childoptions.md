@@ -4,6 +4,7 @@
 
 ## ChildOptions interface
 
+
 <b>Signature:</b>
 
 ```typescript
@@ -13,8 +14,8 @@ export interface ChildOptions extends ChildProcessOptions
 
 ## Properties
 
-|  Property | Type | Description |
-|  --- | --- | --- |
-|  [args](./js-utils.childoptions.args.md) | Array&lt;string&gt; |  |
-|  [command](./js-utils.childoptions.command.md) | string |  |
+|  Property | Modifiers | Type | Description |
+|  --- | --- | --- | --- |
+|  [args](./js-utils.childoptions.args.md) |  | Array&lt;string&gt; |  |
+|  [command](./js-utils.childoptions.command.md) |  | string |  |
 

@@ -4,6 +4,7 @@
 
 ## SIGNAL\_RESET variable
 
+
 <b>Signature:</b>
 
 ```typescript

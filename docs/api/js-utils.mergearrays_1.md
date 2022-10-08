@@ -4,6 +4,7 @@
 
 ## mergeArrays() function
 
+
 <b>Signature:</b>
 
 ```typescript

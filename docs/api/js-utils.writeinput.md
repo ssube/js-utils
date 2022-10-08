@@ -4,6 +4,7 @@
 
 ## writeInput() function
 
+
 <b>Signature:</b>
 
 ```typescript

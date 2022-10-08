@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> the conversion behavior here was not reliable, better to provide your own `T -> string` mapper
 > 
 
 Normalize a map-like of values into a dict of lists of strings.

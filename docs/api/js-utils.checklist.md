@@ -4,7 +4,7 @@
 
 ## Checklist class
 
-Check whether items are included or not (blacklist or whitelist, depending on `mode`<!-- -->).
+Check whether items are included or not.
 
 <b>Signature:</b>
 
@@ -23,8 +23,8 @@ export declare class Checklist<T> implements ChecklistOptions<T>
 
 |  Property | Modifiers | Type | Description |
 |  --- | --- | --- | --- |
-|  [data](./js-utils.checklist.data.md) |  | Array&lt;T&gt; | TODO: switch to Set |
-|  [mode](./js-utils.checklist.mode.md) |  | [ChecklistMode](./js-utils.checklistmode.md) |  |
+|  [data](./js-utils.checklist.data.md) | <code>readonly</code> | Array&lt;T&gt; | TODO: switch to Set |
+|  [mode](./js-utils.checklist.mode.md) | <code>readonly</code> | [ChecklistMode](./js-utils.checklistmode.md) |  |
 
 ## Methods
 

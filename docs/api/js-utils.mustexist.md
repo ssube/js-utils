@@ -17,7 +17,7 @@ export declare function mustExist<T>(val: Maybe<T>, err?: string): T;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  val | [Maybe](./js-utils.maybe.md)<!-- -->&lt;T&gt; |  |
-|  err | string |  |
+|  err | string | <i>(Optional)</i> |
 
 <b>Returns:</b>
 

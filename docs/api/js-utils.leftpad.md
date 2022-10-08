@@ -17,8 +17,8 @@ export declare function leftPad(val: string, min?: number, fill?: string): strin
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  val | string |  |
-|  min | number |  |
-|  fill | string |  |
+|  min | number | <i>(Optional)</i> |
+|  fill | string | <i>(Optional)</i> |
 
 <b>Returns:</b>
 

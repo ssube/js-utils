@@ -6,6 +6,7 @@
 
 > Warning: This API is now obsolete.
 > 
+> use Maybe instead
 > 
 
 Old name for Maybe.

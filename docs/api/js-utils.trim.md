@@ -18,7 +18,7 @@ export declare function trim(val: string, max: number, tail?: string): string;
 |  --- | --- | --- |
 |  val | string |  |
 |  max | number |  |
-|  tail | string |  |
+|  tail | string | <i>(Optional)</i> |
 
 <b>Returns:</b>
 

@@ -6,6 +6,9 @@ import { doesExist, isNone, Maybe } from './Maybe.js';
  * @public
  */
 export function mergeArray<TItem>(...parts: Array<TItem | Array<TItem>>): Array<TItem>;
+/**
+ * @public
+ */
 export function mergeArray<TItem>(...parts: ReadonlyArray<TItem | ReadonlyArray<TItem>>): ReadonlyArray<TItem>;
 export function mergeArray<TItem>(...parts: ReadonlyArray<TItem | ReadonlyArray<TItem>>): ReadonlyArray<TItem> {
   const out = [];
@@ -26,6 +29,9 @@ export function mergeArray<TItem>(...parts: ReadonlyArray<TItem | ReadonlyArray<
  * @public
  */
 export function mergeArrays<TItem>(...parts: Array<TItem | Array<TItem>>): Array<TItem>;
+/**
+ * @public
+ */
 export function mergeArrays<TItem>(...parts: ReadonlyArray<TItem | ReadonlyArray<TItem>>): ReadonlyArray<TItem>;
 export function mergeArrays<TItem>(...parts: ReadonlyArray<TItem | ReadonlyArray<TItem>>): ReadonlyArray<TItem> {
   return mergeArray(...parts);
@@ -42,6 +48,9 @@ export function mergeArrays<TItem>(...parts: ReadonlyArray<TItem | ReadonlyArray
  * @public
  */
 export function hasItems<T>(val: Maybe<Array<T>>): val is Array<T>;
+/**
+ * @public
+ */
 export function hasItems<T>(val: Maybe<ReadonlyArray<T>>): val is ReadonlyArray<T>;
 export function hasItems<T>(val: Maybe<ReadonlyArray<T>>): val is ReadonlyArray<T> {
   return isArray(val) && lengthOf(val) > 0;
@@ -52,6 +61,9 @@ export function hasItems<T>(val: Maybe<ReadonlyArray<T>>): val is ReadonlyArray<
  * @public
  */
 export function ensureArray<T>(val: Maybe<Array<T>>): Array<T>;
+/**
+ * @public
+ */
 export function ensureArray<T>(val: Maybe<ReadonlyArray<T>>): ReadonlyArray<T>;
 export function ensureArray<T>(val: Maybe<ReadonlyArray<T>>): ReadonlyArray<T> {
   return toArray(val);
@@ -112,8 +124,17 @@ export function isEmpty(val: Maybe<Array<unknown> | ReadonlyArray<unknown>>): bo
  * @public
  */
 export function filterZip<T1>(cb: (a: T1) => boolean, l1: Array<T1>): Array<T1>;
+/**
+ * @public
+ */
 export function filterZip<T1, T2>(cb: (a: T1, b: T2) => boolean, l1: Array<T1>, l2: Array<T2>): [Array<T1>, Array<T2>];
+/**
+ * @public
+ */
 export function filterZip<T1, T2, T3>(cb: (a: T1, b: T2) => boolean, l1: Array<T1>, l2: Array<T2>, l3: Array<T3>): [Array<T1>, Array<T2>, Array<T3>];
+/**
+ * @public
+ */
 export function filterZip<T1, T2, T3, T4>(cb: (a: T1, b: T2) => boolean, l1: Array<T1>, l2: Array<T2>, l3: Array<T3>, l4: Array<T4>): [Array<T1>, Array<T2>, Array<T3>, Array<T4>];
 export function filterZip(cb: (...d: Array<unknown>) => boolean, ...l: Array<Array<unknown>>): Array<Array<unknown>> {
   const results = [];
