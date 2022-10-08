@@ -58,20 +58,6 @@
         "schedule:daily"
       ],
       "groupName": "eslint-plugins"
-    },
-    {
-      "matchPackagePatterns": [
-        "rollup",
-        "rollup-plugin-.+",
-        "@rollup/plugin-.+"
-      ],
-      "matchPackagePrefixes": [
-        "@rollup"
-      ],
-      "extends": [
-        "schedule:earlyMondays"
-      ],
-      "groupName": "rollup-plugins"
     }
   ]
 }
