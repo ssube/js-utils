@@ -3,7 +3,7 @@
   "version": "0.5.0-0",
   "description": "utility functions",
   "type": "module",
-  "main": "out/main.js",
+  "main": "out/src/index.js",
   "types": "out/index.d.ts",
   "typings": "out/index.d.ts",
   "directories": {
