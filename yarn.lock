@@ -2492,10 +2492,10 @@ minimist@^1.2.6:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/minimist/-/minimist-1.2.6.tgz#8637a5b759ea0d6e98702cfb3a9283323c93af44"
   integrity sha512-Jsjnk4bw3YJqYzbdyBiNsPWHPfO++UGG749Cxs6peCu5Xg4nrena6OVxOYxrQTqww0Jmwt+Ref8rggumkTLz9Q==
 
-mocha-foam@0.1.8:
-  version "0.1.8"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/mocha-foam/-/mocha-foam-0.1.8.tgz#cede81d51d495876d26cbaf5b69b2cfd622f555b"
-  integrity sha512-IPf/psPJJEtop6qJUdU5KYQwOLGIZ2ibB+yPqmvOAXBrNpNvSA9S1xmRGEwQsaNLxFE4muXx4xu1dn7o3MLsdw==
+mocha-foam@0.1.10:
+  version "0.1.10"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/mocha-foam/-/mocha-foam-0.1.10.tgz#9efd3fcde28cb2cab8b5e84534e68af12f6b1326"
+  integrity sha512-e2aonJNdjiKveO6Nu3HBbGmEAIkVK12yfSYdA19Uec0alaEDaZX6BT5I9ostC8Y1wE/+k2gGe67vf1jqmcPBZg==
 
 mocha@10.1.0:
   version "10.1.0"

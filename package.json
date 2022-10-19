@@ -49,7 +49,7 @@
     "eslint-plugin-sonarjs": "0.16.0",
     "fast-check": "3.2.0",
     "mocha": "10.1.0",
-    "mocha-foam": "0.1.8",
+    "mocha-foam": "0.1.10",
     "mock-fs": "5.1.4",
     "noicejs": "4.0.0",
     "sinon": "14.0.1",
