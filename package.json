@@ -50,7 +50,7 @@
     "fast-check": "3.3.0",
     "mocha": "10.1.0",
     "mocha-foam": "0.1.10",
-    "mock-fs": "5.1.4",
+    "mock-fs": "5.2.0",
     "noicejs": "4.0.0",
     "sinon": "14.0.1",
     "sinon-chai": "3.7.0",
