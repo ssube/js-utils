@@ -14,7 +14,7 @@ Old name for Maybe.
 <b>Signature:</b>
 
 ```typescript
-export declare type Optional<T> = Maybe<T>;
+export type Optional<T> = Maybe<T>;
 ```
 <b>References:</b> [Maybe](./js-utils.maybe.md)
 

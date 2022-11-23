@@ -9,5 +9,5 @@ Unset value.
 <b>Signature:</b>
 
 ```typescript
-export declare type None = null | undefined;
+export type None = null | undefined;
 ```
