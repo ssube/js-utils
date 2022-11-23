@@ -8,5 +8,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type ChildSpawner = typeof spawn;
+export type ChildSpawner = typeof spawn;
 ```

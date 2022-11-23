@@ -46,6 +46,8 @@ describe('map utils', async () => {
 
     over('maps of strings', dictionary(string(), string()), (it) => {
       it('should convert map to dict', async (data) => {
+        delete data.__proto__; // hack for chai, https://github.com/chaijs/chai/issues/518
+
         const map = new Map(Object.entries(data));
         expect(makeDict(map)).to.deep.equal(data);
       });

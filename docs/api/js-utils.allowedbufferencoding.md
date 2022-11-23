@@ -8,5 +8,5 @@
 <b>Signature:</b>
 
 ```typescript
-export declare type AllowedBufferEncoding = 'ascii' | 'utf-8';
+export type AllowedBufferEncoding = 'ascii' | 'utf-8';
 ```

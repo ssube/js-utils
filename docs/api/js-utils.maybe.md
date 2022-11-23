@@ -9,7 +9,7 @@ Value that may be nil.
 <b>Signature:</b>
 
 ```typescript
-export declare type Maybe<T> = T | None;
+export type Maybe<T> = T | None;
 ```
 <b>References:</b> [None](./js-utils.none.md)
 

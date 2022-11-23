@@ -9,7 +9,7 @@ A `Map` or dictionary object with string keys and `TVal` values.
 <b>Signature:</b>
 
 ```typescript
-export declare type MapLike<TVal> = Map<string, TVal> | Dict<TVal>;
+export type MapLike<TVal> = Map<string, TVal> | Dict<TVal>;
 ```
 <b>References:</b> [Dict](./js-utils.dict.md)
 

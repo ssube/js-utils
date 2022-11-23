@@ -14,7 +14,7 @@ Old name for None.
 <b>Signature:</b>
 
 ```typescript
-export declare type Nil = None;
+export type Nil = None;
 ```
 <b>References:</b> [None](./js-utils.none.md)
 
