@@ -52,7 +52,7 @@
     "mocha-foam": "0.1.10",
     "mock-fs": "5.2.0",
     "noicejs": "4.0.0",
-    "sinon": "14.0.2",
+    "sinon": "15.0.1",
     "sinon-chai": "3.7.0",
     "source-map-support": "0.5.21",
     "standard-version": "9.5.0",
