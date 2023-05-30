@@ -1413,10 +1413,10 @@ esutils@^2.0.2:
   resolved "https://artifacts.apextoaster.com/repository/group-npm/esutils/-/esutils-2.0.3.tgz#74d2eb4de0b8da1293711910d50775b9b710ef64"
   integrity sha512-kVscqXk4OCp68SZ0dkgEKVi6/8ij300KBWTJq32P/dYeWTSwK41WyTxalN1eRmA5Z9UU/LX9D7FWSmV9SAYx6g==
 
-fast-check@3.8.1:
-  version "3.8.1"
-  resolved "https://artifacts.apextoaster.com/repository/group-npm/fast-check/-/fast-check-3.8.1.tgz#804db0496e16bd0c4a27d3cba23bb2114b512ba3"
-  integrity sha512-WRll9CUIz6jWKgByFlHT2M/1BY3F7lewKl5BBIz5VHAy7B8y5iklK9rVm922kx+0x1hJqdkffuTs008xfIgytQ==
+fast-check@3.10.0:
+  version "3.10.0"
+  resolved "https://artifacts.apextoaster.com/repository/group-npm/fast-check/-/fast-check-3.10.0.tgz#dccdf925c123f65910754454118ff3d6461b1733"
+  integrity sha512-I2FldZwnCbcY6iL+H0rp9m4D+O3PotuFu9FasWjMCzUedYHMP89/37JbSt6/n7Yq/IZmJDW0B2h30sPYdzrfzw==
   dependencies:
     pure-rand "^6.0.0"
 
